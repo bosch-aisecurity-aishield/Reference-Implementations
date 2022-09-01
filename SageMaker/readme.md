@@ -9,4 +9,4 @@ Steps :
 1. Create a SageMaker notebook with configuration as - Python 3 (Tensorflow 2.3 Python 3.7). 'CPU optimized' configuration should solve the purpose if its not compute heavy.
 2. Import and open the provided notebook and code folder to the environment.
 3. Follow the steps as mentioned in the notebook.
-4. Variable/parameter values need to be changed as per run configuration.
+4. Variable/parameter values need to be changed as per run configuration in the above notebook.
