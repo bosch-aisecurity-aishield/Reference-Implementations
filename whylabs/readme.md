@@ -23,13 +23,3 @@ if pred is non int :
     generate alert in whylabs 
 
 
-alert and baseline buttons in whylabs . For alerts to work , need to have logs for more than one day
-
-
-Four monitors run on all dataset profiles uploaded to the platform.
-
-They monitor:
-    Distribution drift
-    Ratio of missing values
-    Ratio of unique values
-    Changes in data type
