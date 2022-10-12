@@ -1,14 +1,18 @@
 """ View functions for every endpoint. """
 import app
 import numpy as np
-from api.utils import get_prediction_iris, get_prediction_mnist, initialize_logger , prenet_iris , prenet_mnist
+from api.utils import get_prediction_iris, get_prediction_mnist , prenet_iris , prenet_mnist
 from flask import Blueprint, request
 from flask_pydantic import validate
 from schemas import FeatureVector_IRIS , FeatureVector_MNIST
 from utils import object_response
 
+import whylogs as why
+import datetime
+from whylogs.api.writer.whylabs import WhyLabsWriter
+writer = WhyLabsWriter()
+
 blueprint = Blueprint("api", __name__, url_prefix="/api/v1")
-initialize_logger()
 
 
 @blueprint.route("/health", methods=["GET"])
@@ -46,10 +50,18 @@ def predict(body : FeatureVector_MNIST):  #body is a dict
     if def_out == 1 :
         pred = "A"
 
-    # log prenet output
-    app.whylabs_logger.log({"attack": def_out})
+    # select timestamp
+    current_date = datetime.datetime.utcnow() - datetime.timedelta(days=2)
+
+    # log prenet output    
+    profile = why.log({"attack": def_out}).profile()
+    profile.set_dataset_timestamp(current_date)
+    writer.write(file=profile.view())
+
 
     # Log predicted class
-    app.whylabs_logger.log({"class": pred})
+    profile = why.log({"class": pred}).profile()
+    profile.set_dataset_timestamp(current_date)
+    writer.write(file=profile.view())
 
     return object_response({"class": pred,"attack": def_out}, 200)

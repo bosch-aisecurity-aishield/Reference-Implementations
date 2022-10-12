@@ -14,25 +14,6 @@ import numpy as np
 from utils import MessageException
 
 
-def initialize_logger():
-    # Initialize session
-    n_attemps = 3
-    dt = datetime.datetime.utcnow() - datetime.timedelta(days=1)
-    while n_attemps > 0:
-        # Initialize logger
-        app.whylabs_logger = app.whylabs_session.logger(
-            dataset_name=os.environ["WHYLABS_DEFAULT_DATASET_ID"],
-            dataset_timestamp=dt ,
-            with_rotation_time= os.environ["ROTATION_TIME"]  # WARNING:whylogs.app.logger:dataset_timestamp specified with log rotation! dataset_timestamp ignored
-        )
-        if app.whylabs_logger is not None:
-            break
-        else:
-            n_attemps -= 1
-    if n_attemps <= 0:
-        raise MessageException("Logger could not be initialized.", 500)
-
-
 def get_prediction_iris(data: List[float]) -> str:
     # Convert into nd-array
     try:
