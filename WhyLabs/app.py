@@ -15,7 +15,6 @@ from flask_cors import CORS
 from joblib import load
 from utils import MessageException, message_exception_handler
 
-from whylogs import get_or_create_session
 
 # Load environment variables from .env file
 load_dotenv()
@@ -29,8 +28,6 @@ load_dotenv()
 # Load model with .h5
 model = keras.models.load_model(os.environ["MODEL_PATH"])
 
-whylabs_session = get_or_create_session(os.environ["WHYLABS_CONFIG"])
-whylabs_logger = None
 
 # # blueprints
 # from api.views import blueprint
