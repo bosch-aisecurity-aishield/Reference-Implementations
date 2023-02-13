@@ -7,7 +7,18 @@
 
 # Getting Started
 
-This repo contains reference implementations, tutorials, samples, and documentation for working with Bosch AIShield
+This repo contains reference implementations, tutorials, samples, and documentation for working with Bosch AIShield.
+
+### Folder Structure
+
+
+* Domain: Tutorials & experimental results for various domains. These are experimental in nature and might not be runnable off-the-shelf. Expect the features to be available in the upcoming product updates.
+
+* Product_Taskpair_wise: Tutorials for vulnerability analysis & defense generation process based on tasks like image classification, tabular classification, etc. The features are available in the released product version & tutorials can be run off-the-shelf.
+
+* Working_with_ML_Pipelines_and_Partner_Tools: Reference implementations for working with/integration with different partners like(SageMaker, whylabs, etc.) and ML pipelines(MLFlow)
+
+
    
 <a name="license"></a>
 # License
