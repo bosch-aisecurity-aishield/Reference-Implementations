@@ -10,10 +10,10 @@ This document provides an overview of the use of the AIShield package.
     import aishield as ais
 
 ### Provide Subscription Details:
-    
-    API_URL = 'https://xxxxxxxxxxx/AIShieldAPI'
-    API_KEY = 'xxxxx'
-    ORG_ID =  'xxxxxxxxxxx'
+    baseurl="XXXXXXXXXXXXXXXXXXXXXXXXXXX" #fill in API endpoint url from AIShield developer portal under API tab 
+    API_URL = baseurl+"/api/ais/v1.5"
+    API_KEY = 'xxxxx' # fill in subscription key from AIShield developer portal under My Dashboard tab
+    ORG_ID =  'xxxxxxxxxxx' # fill in Org_Id provided in welcome email
 
 ### Provide Input and Output Paths:
     
@@ -89,7 +89,7 @@ This document provides an overview of the use of the AIShield package.
 
 
     status: success. Job_id: xxxx-xxxx. Please save this job_id for future reference
-    job_monitor_uri: http://xxxx.xxx/?type=ImageClassification&jobid=xxxx-xxxx
+    job_monitor_uri: http://xxxx.xxx/?jobid=xxxx-xxxx
 
 ### Monitor the Job Status:
     
