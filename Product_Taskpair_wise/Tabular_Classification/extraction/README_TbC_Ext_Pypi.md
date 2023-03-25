@@ -12,21 +12,19 @@ The dataset used in this implementation can be downloaded from the [UCI Machine 
 
 Before running the Jupyter notebook, make sure you have the following dependencies installed:
 
--   
-
 You can install these dependencies by running the following pip commands:
-
+```
 ! pip install xgboost == 1.6.2
 ! pip install pandas == 1.5.1
 ! pip install scikit-learn == 1.1.3
 ! pip install numpy == 1.23.4
 ! pip install pyminizip
-!pip install requests == 2.28.0
-!pip install humanfriendly == 9.2
-
+! pip install requests == 2.28.0
+! pip install humanfriendly == 9.2
+```
 
 Alternatively, you can create a virtual environment and install the dependencies using the `requirements.txt` file included in the repository by running:
-
+```
 #Create a virtual environment
 python -m venv env
 
@@ -35,7 +33,7 @@ source env/bin/activate
 
 #Install dependencies
 pip install -r requirements.txt
-
+```
 ## Obtaining AIShield Credentials
 
 Before running the notebook, you will need to obtain your Org ID and API Key from the AIShield Developer Portal and welcome email, respectively.
