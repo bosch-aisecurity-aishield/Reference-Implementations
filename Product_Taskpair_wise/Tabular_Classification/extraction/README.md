@@ -4,6 +4,14 @@
 
 This repository contains a reference implementation of an XGBoost model for tabular classification, focused on banking marketing campaign data. It also integrates the AIShield package for model vulnerability analysis and defense generation.
 
+Note: You can click the "Open in Colab" button below to open the notebook directly in Google Colab:
+
+Reference Implementation using AIShield PyPi package:
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Tabular_Classification/extraction/PyPi_Extraction_Reference_Implementation_BFSI.ipynb)
+
+Reference Implementation using AIShield APIs:
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Tabular_Classification/extraction/Extraction_Reference_Implementation_BFSI.ipynb)
+
 ## Dataset
 
 The dataset used in this implementation can be downloaded from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/bank+marketing).
@@ -50,14 +58,6 @@ Before running the notebook, you will need to obtain your Org ID and API Key fro
 This repository contains two reference implementations for the XGBoost model with AIShield integration. The first implementation uses the AIShield Python package to perform vulnerability analysis and defense generation. The second implementation calls the underlying AIShield APIs directly to perform these tasks.
 
 To run the Jupyter notebook, first make sure you have installed all the required dependencies and obtained your AIShield credentials. Then, open the notebook in Jupyter and follow the instructions provided in the notebook to train and evaluate the model.
-
-You can also click the "Open in Colab" button below to open the notebook directly in Google Colab:
-
-Reference Implementation using AIShield PyPi package:
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Tabular_Classification/extraction/PyPi_Extraction_Reference_Implementation_BFSI.ipynb)
-
-Reference Implementation using AIShield APIs:
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Tabular_Classification/extraction/PyPi_Extraction_Reference_Implementation_BFSI.ipynb)
 
 ## Contact
 
