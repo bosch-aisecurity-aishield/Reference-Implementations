@@ -4,7 +4,8 @@
 
 This repository contains a reference implementation of an XGBoost model for tabular classification, focused on banking marketing campaign data. It also integrates the AIShield package for model vulnerability analysis and defense generation.
 
-Note: You can click the "Open in Colab" button below to open the notebook directly in Google Colab. You will need a active subscription to get API keys, if you dont have one yet, please find details [here](#Obtaining-AIShield-Credential), 
+*Note* : You can click the "Open in Colab" button below to open the notebook directly in Google Colab. 
+You will need a active subscription to get API keys, click [here](#credential) to get access.
 
 Reference Implementation using AIShield PyPi package:
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Tabular_Classification/extraction/PyPi_Extraction_Reference_Implementation_BFSI.ipynb)
@@ -45,7 +46,7 @@ pip install -r requirements.txt
 ```
 Note: If you choose to use the pip install commands, you should uncomment the relevant code in the notebook before running it.
 
-
+`<a name="credential"></a>`
 ## Obtaining AIShield Credentials
 
 In order to use AIShield, you will need to obtain API keys, org ID, and other necessary details. Here are the steps to obtain them:
