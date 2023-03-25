@@ -21,6 +21,7 @@ You can install these dependencies by running the following pip commands:
 ! pip install pyminizip
 ! pip install requests == 2.28.0
 ! pip install humanfriendly == 9.2
+! pip install aishield
 ```
 
 Alternatively, you can create a virtual environment and install the dependencies using the `requirements.txt` file included in the repository by running:
@@ -34,6 +35,8 @@ source env/bin/activate
 #Install dependencies
 pip install -r requirements.txt
 ```
+Note: If you choose to use the pip install commands, you should uncomment the relevant code in the notebook before running it.
+
 ## Obtaining AIShield Credentials
 
 Before running the notebook, you will need to obtain your Org ID and API Key from the AIShield Developer Portal and welcome email, respectively.
@@ -44,11 +47,16 @@ Before running the notebook, you will need to obtain your Org ID and API Key fro
 4.  In the welcome email you received after signing up for AIShield, copy the **Org_Id**.
 
 ## Running the notebook
+This repository contains two reference implementations for the XGBoost model with AIShield integration. The first implementation uses the AIShield Python package to perform vulnerability analysis and defense generation. The second implementation calls the underlying AIShield APIs directly to perform these tasks.
 
 To run the Jupyter notebook, first make sure you have installed all the required dependencies and obtained your AIShield credentials. Then, open the notebook in Jupyter and follow the instructions provided in the notebook to train and evaluate the model.
 
 You can also click the "Open in Colab" button below to open the notebook directly in Google Colab:
 
+Reference Implementation using AIShield PyPi package:
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Tabular_Classification/extraction/PyPi_Extraction_Reference_Implementation_BFSI.ipynb)
+
+Reference Implementation using AIShield APIs:
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Tabular_Classification/extraction/PyPi_Extraction_Reference_Implementation_BFSI.ipynb)
 
 ## Contact
