@@ -14,8 +14,8 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Your ML workflow goes here
-          pip install -r MLOPS/requirement.txt
-          python MLOPS/extraction_reference_implementation_mnist.py
+          pip install -r ./requirement.txt
+          python ./extraction_reference_implementation_mnist.py
           
           echo "## extraction implementationModel Metrics" > report.md
           #cat /home/runner/work/ml-ops-ci/ml-ops-ci/reports/Attack_samples.zip >> Attack_samples.zip
