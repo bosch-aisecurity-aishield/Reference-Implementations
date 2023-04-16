@@ -5,7 +5,7 @@
 This repository contains a reference implementation of a MNIST model for image classification, focused on handwritten digit data. It integrates the AIShield package for model vulnerability analysis and defense generation, alongwith flow to deploy it to the Edge Device with the help of AWS IoT GreenGrass.
 
 ## Architectural Overview
-<p align="center"> <img src="" alt="Architectural Overview"> </p>
+<p align="center"> <img src="https://github.com/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Working_with_ML_Pipelines_and_Partner_Tools/AWS%20Iot%20Greengrass/Architectural%20Overview.jpg" alt="Architectural Overview"> </p>
 
 ## Dependencies
 Before running the Jupyter notebook, make sure you have the following dependencies installed:
