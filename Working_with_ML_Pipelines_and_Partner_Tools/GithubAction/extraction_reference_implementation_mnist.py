@@ -447,11 +447,11 @@ else:
 """
 Description: AIShield API URL and subscription key
 """ 
-baseurl = "https://api.awsqa.boschaishield.com/aishieldqa" # fill in API endpoint url from AIShield developer portal under API tab 
+baseurl = "xxxxxxxx" # fill in API endpoint url from AIShield developer portal under API tab 
 url = baseurl + "/api/ais/v1.5"
 headers={'Cache-Control': 'no-cache',
-'x-api-key': "39QPD7W6dr7PXwqTvJaZ11GCyYWFTRKL7ZIjrT9S", # fill in subscription key from AIShield developer portal under My Dashboard tab
-'Org-Id' : "gAAAAABj2OY823R0IlQY0rMwkPTNrxHodB5x39TjcIe_x2GR0-2ekVHhNUxRpVBJppWmq4SXxXYXeak0QZ5GI8N1Ek_E2ZkDFA=="  # fill in Org_Id provided in welcome email
+'x-api-key': "xxxxxxxx", # fill in subscription key from AIShield developer portal under My Dashboard tab
+'Org-Id' : "xxxxxx"  # fill in Org_Id provided in welcome email
 }
 
 """### 5.1 Model Registration"""
