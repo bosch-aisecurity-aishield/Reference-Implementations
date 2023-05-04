@@ -1,0 +1,12 @@
+numpy==1.22
+pandas
+matplotlib
+tensorflow==2.9.1
+scikit-learn==1.0.2
+requests==2.28.0
+zipp
+opencv-python
+pydot==1.4.2
+pydotplus
+graphviz==0.20.1
+tqdm
