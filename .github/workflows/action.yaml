@@ -25,7 +25,7 @@ jobs:
           DEFENSE_GENERATE: "True"
         run: |
           # Your ML workflow goes here
-          cd Working_with_ML_Pipelines_and_Partner_Tools/GithubAction/
+          #cd Working_with_ML_Pipelines_and_Partner_Tools/GithubAction/
           pip install -r requirement.txt
           #pip install -r Working_with_ML_Pipelines_and_Partner_Tools/GithubAction/requirement.txt
           #python extraction_reference_implementation_mnist.py
