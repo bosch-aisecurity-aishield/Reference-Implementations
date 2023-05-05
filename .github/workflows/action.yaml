@@ -11,7 +11,7 @@ jobs:
       - name: Set up Python
       - uses: actions/setup-python@v4
       - uses: iterative/setup-cml@v1
-      - name: 'Train my model'
+      - name: Run AIShield Tests
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           AISHIELD_API_URL: ${{ secrets.AISHIELD_API_URL }}
@@ -25,7 +25,6 @@ jobs:
           ATTACK_QUERIES: "10000"
           ENCRYPTION_STRATEGY: "0"
           DEFENSE_GENERATE: "True" 
-      - name: Run AIShield Tests
         run: |
           # Your ML workflow goes here
           cd Working_with_ML_Pipelines_and_Partner_Tools/GithubAction/
