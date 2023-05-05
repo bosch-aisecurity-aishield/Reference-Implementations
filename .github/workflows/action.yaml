@@ -9,27 +9,15 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v4
       - uses: iterative/setup-cml@v1
-      - name: Run AIShield Tests
+      - name: 'Train my model'
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          AISHIELD_API_URL: ${{ secrets.AISHIELD_API_URL }}
-          AISHIELD_API_KEY: ${{ secrets.AISHIELD_API_KEY }}
-          AISHIELD_ORG_ID: ${{ secrets.AISHIELD_ORG_ID }}
-          TASK_TYPE: image_classification
-          ANALYSIS_TYPE: extraction
-          INPUT_SHAPE: "28,28,1"
-          NUM_CLASSES: "10"
-          ATTACK_TYPE: greybox
-          ATTACK_QUERIES: "10000"
-          ENCRYPTION_STRATEGY: "0"
-          DEFENSE_GENERATE: "True"
         run: |
           # Your ML workflow goes here
           cd Working_with_ML_Pipelines_and_Partner_Tools/GithubAction/
           pip install -r requirement.txt
           #pip install -r Working_with_ML_Pipelines_and_Partner_Tools/GithubAction/requirement.txt
-          #python extraction_reference_implementation_mnist.py
-          python aishield_tests.py
+          python extraction_reference_implementation_mnist.py
           #python Working_with_ML_Pipelines_and_Partner_Tools/GithubAction/extraction_reference_implementation_mnist.py
           
           echo "## extraction implementationModel Metrics" > report.md
