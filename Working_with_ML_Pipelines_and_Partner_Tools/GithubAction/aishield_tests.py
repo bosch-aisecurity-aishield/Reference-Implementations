@@ -11,7 +11,7 @@ def str_to_bool(s):
     return s.lower() == "true"
  
 # Load your trained model
-model = tf.keras.models.load_model('/path/to/your/trained/model')
+#model = tf.keras.models.load_model('/path/to/your/trained/model')
 
 # Save the model to disk as a zip file
 model_path = "/path/to/model/folder"
