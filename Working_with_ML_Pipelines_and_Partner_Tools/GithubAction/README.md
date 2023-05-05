@@ -18,6 +18,7 @@ About GitHub Actions: allow you to automate your workflows, making it faster to 
 2.	Create a “.github” folder in the root directory of your repository (if it doesn't already exist), and inside it, create another folder called “workflows”.
 3.	Inside the workflows folder, create a new YAML file named action.yaml(file name can be anything). This file will define the GitHub Actions workflow for your project.
 4.	If you want to keep rest of the files in the same root directory, please commented out 17th line in yaml file. if not no changes are required, Please follow same folder structure for the below files.
+   folder structure should be - root directory/Working_with_ML_Pipelines_and_Partner_Tools/GithubAction/
    I.	requirement.txt
    II.	extraction_reference_implementation_mnist.py
 5.	Next you must update the file: “extraction_reference_implementation_mnist.py” with api-key, org-id and baseurl details below
