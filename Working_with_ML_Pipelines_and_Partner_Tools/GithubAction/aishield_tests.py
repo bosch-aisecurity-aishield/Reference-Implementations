@@ -4,7 +4,7 @@ import tensorflow as tf
 import aishield as ais
 from shutil import make_archive
 
-#field converter
+##field converter
 def str_to_tuple(s):
     return tuple(map(int, s.split(',')))
 def str_to_bool(s):
