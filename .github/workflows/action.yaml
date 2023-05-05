@@ -32,7 +32,7 @@ jobs:
           #pip install -r Working_with_ML_Pipelines_and_Partner_Tools/GithubAction/requirement.txt
           #python extraction_reference_implementation_mnist.py
           python aishield_tests.py
-          #python Working_with_ML_Pipelines_and_Partner_Tools/GithubAction/extraction_reference_implementation_mnist.py
+          ##python Working_with_ML_Pipelines_and_Partner_Tools/GithubAction/extraction_reference_implementation_mnist.py
           
           echo "## extraction implementationModel Metrics" > report.md
           #cat /home/runner/work/ml-ops-ci/ml-ops-ci/reports/Attack_samples.zip >> Attack_samples.zip
