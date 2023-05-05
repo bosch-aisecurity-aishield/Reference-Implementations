@@ -2,16 +2,20 @@ name: AIShield Tests
 on: [push]
     
 jobs:
-  run:
+  aishield_tests:
     runs-on: [ubuntu-latest]
     #container: docker://dvcorg/cml-py3:latest
     steps:
       - name: Check out repository
       - uses: actions/checkout@v2
+      
       - name: Set up Python
       - uses: actions/setup-python@v4
+      
       - name: Set up Iterative
       - uses: iterative/setup-cml@v1
+      
+      - name: Run AIShield Tests
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           AISHIELD_API_URL: ${{ secrets.AISHIELD_API_URL }}
@@ -25,7 +29,6 @@ jobs:
           ATTACK_QUERIES: "10000"
           ENCRYPTION_STRATEGY: "0"
           DEFENSE_GENERATE: "True" 
-      - name: Run AIShield Tests
         run: |
           # Your ML workflow goes here
           cd Working_with_ML_Pipelines_and_Partner_Tools/GithubAction/
