@@ -14633,7 +14633,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -14654,7 +14654,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_code_input_scrollable</span><span class="p">():</span>
@@ -15867,8 +15867,8 @@ Epoch 41: early stopping
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="3.0-Vulnerability-Analysis-by-AIShield">3.0 Vulnerability Analysis by AIShield<a class="anchor-link" href="#3.0-Vulnerability-Analysis-by-AIShield">&#182;</a></h2><p><strong>STEP 5 : Before initiating the Vulnerability Analysis conducted by AIShield, it is recommended to go through the sample dasboard images of an completed vulnearbility analysis and functionalities and sample reports <span style="color:brown">(embeded in next code cell/blocks below)</span> for both Vulnerability Assessment and Defense. These reports offer valuable insights into the structure, content, and outcomes of the analysis.</strong></p>
-<p>By examining these reports, we can gain a comprehensive understanding of the assessment process, including the methodology employed and the valuable insights it provides. This will help us prepare effectively for the upcoming Vulnerability Analysis conducted by AIShield.</p>
+<h2 id="3.0-Vulnerability-Analysis-by-AIShield">3.0 Vulnerability Analysis by AIShield<a class="anchor-link" href="#3.0-Vulnerability-Analysis-by-AIShield">&#182;</a></h2><p><strong>STEP 5 :You can move to trigger the AIShield analysis by following steps given below. If you want to preview the generated artifact by vulnerability analysis like the report and dashboard, please find below a few samples of same, all without having to trigger an actual analysis.</strong></p>
+<p>By examining these Reports, we can gain a comprehensive understanding of the upcoming Vulnerability Analysis conducted by AIShield, which will enable us to prepare more effectively.</p>
 
 </div>
 </div>
@@ -15902,7 +15902,7 @@ Epoch 41: early stopping
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">hosted_pdf_url</span> <span class="o">=</span> <span class="s1">&#39;https://aisdocs.blob.core.windows.net/reference/Reports/Image/ImageSegmentation/MEA/VulnerabilityReport.pdf&#39;</span>
@@ -15943,7 +15943,7 @@ Epoch 41: early stopping
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">hosted_defense_pdf_url</span> <span class="o">=</span> <span class="s1">&#39;https://aisdocs.blob.core.windows.net/reference/Reports/Image/ImageSegmentation/MEA/Defense.pdf&#39;</span>
@@ -16062,9 +16062,9 @@ Epoch 41: early stopping
 <span class="sd">Description : AIShield URL , subscription key and orgid</span>
 <span class="sd">              Initialize the</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="n">base_url</span> <span class="o">=</span> <span class="s2">&quot;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;</span>
+<span class="n">base_url</span> <span class="o">=</span> <span class="s2">&quot;https://api.aws.boschaishield.com/prod&quot;</span>
 <span class="n">url</span><span class="o">=</span><span class="n">base_url</span><span class="o">+</span><span class="s2">&quot;/api/ais/v1.5&quot;</span>
-<span class="n">org_id</span> <span class="o">=</span> <span class="s1">&#39;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&#39;</span>
+<span class="n">org_id</span> <span class="o">=</span> <span class="s1">&#39;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&#39;</span> <span class="c1">#&lt;&lt;Copy Org_id mentioned in welcome mail after AIShield Subscription&gt;&gt;</span>
 
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -16072,9 +16072,12 @@ Epoch 41: early stopping
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>
+    <span class="c1">#if pypi then , x-api-key generation is taken care from pypi side using given org_id</span>
     <span class="n">aishield_client</span> <span class="o">=</span> <span class="n">ais</span><span class="o">.</span><span class="n">AIShieldApi</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span><span class="n">org_id</span><span class="o">=</span><span class="n">org_id</span><span class="p">)</span>
 
 <span class="k">else</span><span class="p">:</span>
+    <span class="c1">#if using AIShield API then , need an x-api-key for accessing AIShield registration / Analysis APIs</span>
+    <span class="c1"># below function will get insight of how to generate the x-api-key</span>
     <span class="k">def</span> <span class="nf">get_aws_api_key</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">org_id</span><span class="p">):</span>
 
         <span class="sd">&quot;&quot;&quot;</span>
@@ -16097,6 +16100,7 @@ Epoch 41: early stopping
             <span class="nb">print</span><span class="p">(</span><span class="n">x_api_key_request</span><span class="p">)</span>
             <span class="k">return</span> <span class="kc">None</span>
 
+    <span class="c1">#generate the x-api-key</span>
     <span class="n">x_api_key</span> <span class="o">=</span> <span class="n">get_aws_api_key</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">org_id</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x_api_key is :&quot;</span><span class="p">,</span><span class="n">x_api_key</span><span class="p">)</span>
 
@@ -16144,6 +16148,9 @@ Epoch 41: early stopping
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Description: Define the task and analysis type for model registration</span>
+<span class="sd">              &quot;task_type&quot; : refers to the specific type of task being performed, for eg : &quot;image_segmentation.&quot;</span>
+<span class="sd">              &quot;analysis_type&quot; : refers to the specific type of attack simulation analysis being performed,for eg : &quot;extraction&quot;.</span>
+<span class="sd">              For more information, check out [https://docs.boschaishield.com/api-docs/lesspostgreater-model-registration#-a-xGGsdVJB3d09cBAck-]</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>

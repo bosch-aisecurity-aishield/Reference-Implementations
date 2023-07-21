@@ -24,7 +24,7 @@ To utilize AIShield's capabilities, you need to obtain AIShield URL, org ID, and
 3. Once you have access to AIShield, retrieve your API keys and org ID by following the instructions provided in your welcome email:
    - After Subscription, you will receive a **welcome email with your Organization ID**, which is required to set up AIShield for vulnerability analysis and reports.
    - Copy the **Org_ID** from the welcome email you received upon signing up and Generate API Key.
-   - For **generating an API key**, refer to [https://docs.boschaishield.com/generate-api-key].
+   - For **generating an API key**, refer to [https://docs.boschaishield.com/api-docs].
 
 ## Running the Notebook
 
