@@ -14633,7 +14633,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -14641,7 +14641,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="sd">              if PyPi = True (this notebook will use aishield pypi package for vulnerability analysis)</span>
 <span class="sd">              else = False (this notebook will use aishield api for vulnerability analysis)</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="n">pypi</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">pypi</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
 
      </div>
@@ -14654,7 +14654,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_code_input_scrollable</span><span class="p">():</span>
@@ -14802,7 +14802,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="2.0-Below-code-cell/block-performs-Step-1-to-4-with-following-these-sequential-steps-:">2.0 Below code cell/block performs Step 1 to 4 with following these sequential steps :<a class="anchor-link" href="#2.0-Below-code-cell/block-performs-Step-1-to-4-with-following-these-sequential-steps-:">&#182;</a></h2><p><strong>STEP 1 : Installing libraries:</strong> The required libraries will be installed to provide necessary functionalities for the task at hand.</p>
-<p><strong>STEP 2 : Loading the dataset:</strong> The dataset containing the relevant information will be loaded into the program, allowing access to the data for analysis and modeling. <strong>Before Running the notebook need to download the dataset from the mentioned link : <a href="https://www.kaggle.com/code/winternguyen/water-pump-maintenance-shutdown-prediction/input?select=sensor.csv">https://www.kaggle.com/code/winternguyen/water-pump-maintenance-shutdown-prediction/input?select=sensor.csv</a></strong>. <strong>Once downloaded just place the zipped file to the notebook location.</strong></p>
+<p><strong>STEP 2 : Loading the dataset:</strong> The dataset containing the relevant information will be loaded into the program, allowing access to the data for analysis and modeling.</p>
 <p><strong>STEP 3 : Model development and training:</strong> A sophisticated model will be developed to analyze and interpret the dataset. The model will then be trained using appropriate techniques to optimize its performance.</p>
 <p><strong>STEP 4 : Preparing the Data, Model, and Label:</strong> Prior to further analysis, essential steps such as data preprocessing, model configuration, and label preparation will be carried out. This will ensure that the data, model, and labels are properly structured and ready for subsequent stages needed for aishield.</p>
 
@@ -14814,7 +14814,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@title Show/Hide Code</span>
@@ -14856,9 +14856,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="kn">import</span> <span class="nn">pickle</span>
 <span class="kn">import</span> <span class="nn">shutil</span>
 <span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">import</span> <span class="nn">py_compile</span>
-<span class="c1"># import pyminizip</span>
 <span class="kn">import</span> <span class="nn">zipfile</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -14890,6 +14888,17 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <span class="n">zObject</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Extraction completed.&quot;</span><span class="p">)</span>
 
+
+<span class="k">def</span> <span class="nf">download_data</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">save_file_name</span><span class="o">=</span><span class="s2">&quot;dataset.zip&quot;</span><span class="p">):</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Starting downlaoding the dataset&quot;</span><span class="p">)</span>
+    <span class="c1"># Download the file</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">save_file_name</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;downlaoding dataset completed&quot;</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">series_to_supervised</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">n_vars_out</span><span class="p">,</span> <span class="n">n_in</span><span class="p">,</span> <span class="n">n_out</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fillnan</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
@@ -15279,10 +15288,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
             <span class="k">if</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
                 <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
+                <span class="n">file_path</span> <span class="o">=</span> <span class="s2">&quot;https://aisdocs.blob.core.windows.net/reference/tsf_ref_dataset/sensor.csv.zip&quot;</span>
                 <span class="n">zipped_file_path</span> <span class="o">=</span> <span class="s2">&quot;sensor.csv.zip&quot;</span>
                 <span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;sensor.csv&#39;</span>
+                <span class="n">download_data</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span><span class="n">zipped_file_path</span><span class="p">)</span>
                 <span class="n">df</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="n">zipped_file_path</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span>
-
 
             <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
                 <span class="n">data_path</span><span class="p">,</span> <span class="n">model_path</span><span class="p">,</span> <span class="n">minmax_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span> <span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span> <span class="o">=</span> <span class="n">create_folders</span><span class="p">()</span>
@@ -15357,54 +15367,155 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Started of installing all the prerequisites packages
-Requirement already satisfied: pandas==1.1.5 in /usr/local/lib/python3.10/dist-packages (1.1.5)
+Collecting pandas==1.1.5
+  Downloading pandas-1.1.5.tar.gz (5.2 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">5.2/5.2 MB</span> <span class="ansi-red-fg">12.6 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
 Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.10/dist-packages (from pandas==1.1.5) (2.8.2)
 Requirement already satisfied: pytz&gt;=2017.2 in /usr/local/lib/python3.10/dist-packages (from pandas==1.1.5) (2022.7.1)
-Requirement already satisfied: numpy&gt;=1.15.4 in /usr/local/lib/python3.10/dist-packages (from pandas==1.1.5) (1.22.0)
+Requirement already satisfied: numpy&gt;=1.15.4 in /usr/local/lib/python3.10/dist-packages (from pandas==1.1.5) (1.22.4)
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas==1.1.5) (1.16.0)
-Requirement already satisfied: scikit-learn==1.0.2 in /usr/local/lib/python3.10/dist-packages (1.0.2)
-Requirement already satisfied: numpy&gt;=1.14.6 in /usr/local/lib/python3.10/dist-packages (from scikit-learn==1.0.2) (1.22.0)
+Building wheels for collected packages: pandas
+  Building wheel for pandas (pyproject.toml) ... done
+  Created wheel for pandas: filename=pandas-1.1.5-cp310-cp310-linux_x86_64.whl size=33253625 sha256=90f84d32481ec0a0bd6fda835e1cdaa4110e86104eea968c010940143789e255
+  Stored in directory: /root/.cache/pip/wheels/92/41/92/769e05cd303040fdae625c9f5a8d38f1d37c423aa2a30b3d0d
+Successfully built pandas
+Installing collected packages: pandas
+  Attempting uninstall: pandas
+    Found existing installation: pandas 1.5.3
+    Uninstalling pandas-1.5.3:
+      Successfully uninstalled pandas-1.5.3
+<span class="ansi-red-fg">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+arviz 0.15.1 requires pandas&gt;=1.3.0, but you have pandas 1.1.5 which is incompatible.
+google-colab 1.0.0 requires pandas==1.5.3, but you have pandas 1.1.5 which is incompatible.
+mizani 0.8.1 requires pandas&gt;=1.3.5, but you have pandas 1.1.5 which is incompatible.
+plotnine 0.10.1 requires pandas&gt;=1.3.5, but you have pandas 1.1.5 which is incompatible.
+xarray 2022.12.0 requires pandas&gt;=1.3, but you have pandas 1.1.5 which is incompatible.
+yfinance 0.2.22 requires pandas&gt;=1.3.0, but you have pandas 1.1.5 which is incompatible.</span><span class="ansi-red-fg">
+</span>Successfully installed pandas-1.1.5
+Collecting scikit-learn==1.0.2
+  Downloading scikit_learn-1.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (26.5 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">26.5/26.5 MB</span> <span class="ansi-red-fg">39.9 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Requirement already satisfied: numpy&gt;=1.14.6 in /usr/local/lib/python3.10/dist-packages (from scikit-learn==1.0.2) (1.22.4)
 Requirement already satisfied: scipy&gt;=1.1.0 in /usr/local/lib/python3.10/dist-packages (from scikit-learn==1.0.2) (1.10.1)
 Requirement already satisfied: joblib&gt;=0.11 in /usr/local/lib/python3.10/dist-packages (from scikit-learn==1.0.2) (1.3.1)
 Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from scikit-learn==1.0.2) (3.1.0)
-Requirement already satisfied: numpy==1.22 in /usr/local/lib/python3.10/dist-packages (1.22.0)
-Requirement already satisfied: requests==2.28.0 in /usr/local/lib/python3.10/dist-packages (2.28.0)
+Installing collected packages: scikit-learn
+  Attempting uninstall: scikit-learn
+    Found existing installation: scikit-learn 1.2.2
+    Uninstalling scikit-learn-1.2.2:
+      Successfully uninstalled scikit-learn-1.2.2
+Successfully installed scikit-learn-1.0.2
+Collecting numpy==1.22
+  Downloading numpy-1.22.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">16.8/16.8 MB</span> <span class="ansi-red-fg">36.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Installing collected packages: numpy
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.22.4
+    Uninstalling numpy-1.22.4:
+      Successfully uninstalled numpy-1.22.4
+<span class="ansi-red-fg">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+arviz 0.15.1 requires pandas&gt;=1.3.0, but you have pandas 1.1.5 which is incompatible.
+librosa 0.10.0.post2 requires numpy!=1.22.0,!=1.22.1,!=1.22.2,&gt;=1.20.3, but you have numpy 1.22.0 which is incompatible.
+mizani 0.8.1 requires pandas&gt;=1.3.5, but you have pandas 1.1.5 which is incompatible.
+plotnine 0.10.1 requires pandas&gt;=1.3.5, but you have pandas 1.1.5 which is incompatible.
+xarray 2022.12.0 requires pandas&gt;=1.3, but you have pandas 1.1.5 which is incompatible.
+yfinance 0.2.22 requires pandas&gt;=1.3.0, but you have pandas 1.1.5 which is incompatible.</span><span class="ansi-red-fg">
+</span>Successfully installed numpy-1.22.0
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Collecting requests==2.28.0
+  Downloading requests-2.28.0-py3-none-any.whl (62 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">62.8/62.8 kB</span> <span class="ansi-red-fg">1.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
 Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (2.0.12)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (3.4)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (1.26.16)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (2023.5.7)
-Requirement already satisfied: humanfriendly==9.2 in /usr/local/lib/python3.10/dist-packages (9.2)
-Requirement already satisfied: tensorflow==2.9.1 in /usr/local/lib/python3.10/dist-packages (2.9.1)
+Installing collected packages: requests
+  Attempting uninstall: requests
+    Found existing installation: requests 2.27.1
+    Uninstalling requests-2.27.1:
+      Successfully uninstalled requests-2.27.1
+<span class="ansi-red-fg">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+google-colab 1.0.0 requires pandas==1.5.3, but you have pandas 1.1.5 which is incompatible.
+google-colab 1.0.0 requires requests==2.27.1, but you have requests 2.28.0 which is incompatible.
+yfinance 0.2.22 requires pandas&gt;=1.3.0, but you have pandas 1.1.5 which is incompatible.</span><span class="ansi-red-fg">
+</span>Successfully installed requests-2.28.0
+Collecting humanfriendly==9.2
+  Downloading humanfriendly-9.2-py2.py3-none-any.whl (86 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">86.7/86.7 kB</span> <span class="ansi-red-fg">2.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Installing collected packages: humanfriendly
+Successfully installed humanfriendly-9.2
+Collecting tensorflow==2.9.1
+  Downloading tensorflow-2.9.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (511.7 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">511.7/511.7 MB</span> <span class="ansi-red-fg">2.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
 Requirement already satisfied: absl-py&gt;=1.0.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.4.0)
 Requirement already satisfied: astunparse&gt;=1.6.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.6.3)
-Requirement already satisfied: flatbuffers&lt;2,&gt;=1.12 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.12)
+Collecting flatbuffers&lt;2,&gt;=1.12 (from tensorflow==2.9.1)
+  Downloading flatbuffers-1.12-py2.py3-none-any.whl (15 kB)
 Requirement already satisfied: gast&lt;=0.4.0,&gt;=0.2.1 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (0.4.0)
 Requirement already satisfied: google-pasta&gt;=0.1.1 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (0.2.0)
 Requirement already satisfied: grpcio&lt;2.0,&gt;=1.24.3 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.56.0)
 Requirement already satisfied: h5py&gt;=2.9.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (3.8.0)
-Requirement already satisfied: keras&lt;2.10.0,&gt;=2.9.0rc0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (2.9.0)
-Requirement already satisfied: keras-preprocessing&gt;=1.1.1 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.1.2)
+Collecting keras&lt;2.10.0,&gt;=2.9.0rc0 (from tensorflow==2.9.1)
+  Downloading keras-2.9.0-py2.py3-none-any.whl (1.6 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">1.6/1.6 MB</span> <span class="ansi-red-fg">81.6 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting keras-preprocessing&gt;=1.1.1 (from tensorflow==2.9.1)
+  Downloading Keras_Preprocessing-1.1.2-py2.py3-none-any.whl (42 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">42.6/42.6 kB</span> <span class="ansi-red-fg">5.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
 Requirement already satisfied: libclang&gt;=13.0.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (16.0.0)
 Requirement already satisfied: numpy&gt;=1.20 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.22.0)
 Requirement already satisfied: opt-einsum&gt;=2.3.2 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (3.3.0)
 Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (23.1)
-Requirement already satisfied: protobuf&lt;3.20,&gt;=3.9.2 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (3.19.6)
+Collecting protobuf&lt;3.20,&gt;=3.9.2 (from tensorflow==2.9.1)
+  Downloading protobuf-3.19.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">1.1/1.1 MB</span> <span class="ansi-red-fg">75.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
 Requirement already satisfied: setuptools in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (67.7.2)
 Requirement already satisfied: six&gt;=1.12.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.16.0)
-Requirement already satisfied: tensorboard&lt;2.10,&gt;=2.9 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (2.9.1)
+Collecting tensorboard&lt;2.10,&gt;=2.9 (from tensorflow==2.9.1)
+  Downloading tensorboard-2.9.1-py3-none-any.whl (5.8 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">5.8/5.8 MB</span> <span class="ansi-red-fg">103.2 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
 Requirement already satisfied: tensorflow-io-gcs-filesystem&gt;=0.23.1 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (0.32.0)
-Requirement already satisfied: tensorflow-estimator&lt;2.10.0,&gt;=2.9.0rc0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (2.9.0)
+Collecting tensorflow-estimator&lt;2.10.0,&gt;=2.9.0rc0 (from tensorflow==2.9.1)
+  Downloading tensorflow_estimator-2.9.0-py2.py3-none-any.whl (438 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">438.7/438.7 kB</span> <span class="ansi-red-fg">44.1 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
 Requirement already satisfied: termcolor&gt;=1.1.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (2.3.0)
 Requirement already satisfied: typing-extensions&gt;=3.6.6 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (4.7.1)
 Requirement already satisfied: wrapt&gt;=1.11.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.14.1)
 Requirement already satisfied: wheel&lt;1.0,&gt;=0.23.0 in /usr/local/lib/python3.10/dist-packages (from astunparse&gt;=1.6.0-&gt;tensorflow==2.9.1) (0.40.0)
 Requirement already satisfied: google-auth&lt;3,&gt;=1.6.3 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (2.17.3)
 Collecting google-auth-oauthlib&lt;0.5,&gt;=0.4.1 (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1)
-  Using cached google_auth_oauthlib-0.4.6-py2.py3-none-any.whl (18 kB)
+  Downloading google_auth_oauthlib-0.4.6-py2.py3-none-any.whl (18 kB)
 Requirement already satisfied: markdown&gt;=2.6.8 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (3.4.3)
 Requirement already satisfied: requests&lt;3,&gt;=2.21.0 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (2.28.0)
-Requirement already satisfied: tensorboard-data-server&lt;0.7.0,&gt;=0.6.0 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (0.6.1)
-Requirement already satisfied: tensorboard-plugin-wit&gt;=1.6.0 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (1.8.1)
+Collecting tensorboard-data-server&lt;0.7.0,&gt;=0.6.0 (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1)
+  Downloading tensorboard_data_server-0.6.1-py3-none-manylinux2010_x86_64.whl (4.9 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">4.9/4.9 MB</span> <span class="ansi-red-fg">79.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting tensorboard-plugin-wit&gt;=1.6.0 (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1)
+  Downloading tensorboard_plugin_wit-1.8.1-py3-none-any.whl (781 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">781.3/781.3 kB</span> <span class="ansi-red-fg">41.1 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
 Requirement already satisfied: werkzeug&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (2.3.6)
 Requirement already satisfied: cachetools&lt;6.0,&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (5.3.1)
 Requirement already satisfied: pyasn1-modules&gt;=0.2.1 in /usr/local/lib/python3.10/dist-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (0.3.0)
@@ -15417,25 +15528,92 @@ Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.1
 Requirement already satisfied: MarkupSafe&gt;=2.1.1 in /usr/local/lib/python3.10/dist-packages (from werkzeug&gt;=1.0.1-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (2.1.3)
 Requirement already satisfied: pyasn1&lt;0.6.0,&gt;=0.4.6 in /usr/local/lib/python3.10/dist-packages (from pyasn1-modules&gt;=0.2.1-&gt;google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (0.5.0)
 Requirement already satisfied: oauthlib&gt;=3.0.0 in /usr/local/lib/python3.10/dist-packages (from requests-oauthlib&gt;=0.7.0-&gt;google-auth-oauthlib&lt;0.5,&gt;=0.4.1-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (3.2.2)
-Installing collected packages: google-auth-oauthlib
+Installing collected packages: tensorboard-plugin-wit, keras, flatbuffers, tensorflow-estimator, tensorboard-data-server, protobuf, keras-preprocessing, google-auth-oauthlib, tensorboard, tensorflow
+  Attempting uninstall: keras
+    Found existing installation: keras 2.12.0
+    Uninstalling keras-2.12.0:
+      Successfully uninstalled keras-2.12.0
+  Attempting uninstall: flatbuffers
+    Found existing installation: flatbuffers 23.5.26
+    Uninstalling flatbuffers-23.5.26:
+      Successfully uninstalled flatbuffers-23.5.26
+  Attempting uninstall: tensorflow-estimator
+    Found existing installation: tensorflow-estimator 2.12.0
+    Uninstalling tensorflow-estimator-2.12.0:
+      Successfully uninstalled tensorflow-estimator-2.12.0
+  Attempting uninstall: tensorboard-data-server
+    Found existing installation: tensorboard-data-server 0.7.1
+    Uninstalling tensorboard-data-server-0.7.1:
+      Successfully uninstalled tensorboard-data-server-0.7.1
+  Attempting uninstall: protobuf
+    Found existing installation: protobuf 3.20.3
+    Uninstalling protobuf-3.20.3:
+      Successfully uninstalled protobuf-3.20.3
   Attempting uninstall: google-auth-oauthlib
     Found existing installation: google-auth-oauthlib 1.0.0
     Uninstalling google-auth-oauthlib-1.0.0:
       Successfully uninstalled google-auth-oauthlib-1.0.0
-Successfully installed google-auth-oauthlib-0.4.6
-Requirement already satisfied: tqdm==4.61.1 in /usr/local/lib/python3.10/dist-packages (4.61.1)
+  Attempting uninstall: tensorboard
+    Found existing installation: tensorboard 2.12.3
+    Uninstalling tensorboard-2.12.3:
+      Successfully uninstalled tensorboard-2.12.3
+  Attempting uninstall: tensorflow
+    Found existing installation: tensorflow 2.12.0
+    Uninstalling tensorflow-2.12.0:
+      Successfully uninstalled tensorflow-2.12.0
+<span class="ansi-red-fg">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+tensorflow-datasets 4.9.2 requires protobuf&gt;=3.20, but you have protobuf 3.19.6 which is incompatible.
+tensorflow-metadata 1.13.1 requires protobuf&lt;5,&gt;=3.20.3, but you have protobuf 3.19.6 which is incompatible.</span><span class="ansi-red-fg">
+</span>Successfully installed flatbuffers-1.12 google-auth-oauthlib-0.4.6 keras-2.9.0 keras-preprocessing-1.1.2 protobuf-3.19.6 tensorboard-2.9.1 tensorboard-data-server-0.6.1 tensorboard-plugin-wit-1.8.1 tensorflow-2.9.1 tensorflow-estimator-2.9.0
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Collecting tqdm==4.61.1
+  Downloading tqdm-4.61.1-py2.py3-none-any.whl (75 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">75.8/75.8 kB</span> <span class="ansi-red-fg">282.0 kB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Installing collected packages: tqdm
+  Attempting uninstall: tqdm
+    Found existing installation: tqdm 4.65.0
+    Uninstalling tqdm-4.65.0:
+      Successfully uninstalled tqdm-4.65.0
+<span class="ansi-red-fg">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+tensorflow-datasets 4.9.2 requires protobuf&gt;=3.20, but you have protobuf 3.19.6 which is incompatible.</span><span class="ansi-red-fg">
+</span>Successfully installed tqdm-4.61.1
 Requirement already satisfied: requests==2.28.0 in /usr/local/lib/python3.10/dist-packages (2.28.0)
 Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (2.0.12)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (3.4)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (1.26.16)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (2023.5.7)
 Starting installing aishield library
-Requirement already satisfied: aishield in /usr/local/lib/python3.10/dist-packages (0.1.5)
+Collecting aishield
+  Downloading aishield-0.1.5-py3-none-any.whl (25 kB)
 Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from aishield) (2.28.0)
 Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2.0.12)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (3.4)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (1.26.16)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2023.5.7)
+Installing collected packages: aishield
+Successfully installed aishield-0.1.5
+Installed all the prerequisites packages
 </pre>
 </div>
 </div>
@@ -15458,7 +15636,8 @@ Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.1
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Installed all the prerequisites packages
+<pre>Starting downlaoding the dataset
+downlaoding dataset completed
 Extraction completed.
 Dataset Downloaded Successfully
 Dataset Loaded
@@ -15473,7 +15652,7 @@ Dataset Loaded
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>Model Development and Training:  25%|██▌       | 1/4 [00:04&lt;00:13,  4.46s/it]</pre>
+<pre>Model Development and Training:  25%|██▌       | 1/4 [00:04&lt;00:13,  4.41s/it]</pre>
 </div>
 </div>
 
@@ -15484,12 +15663,12 @@ Dataset Loaded
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Removed: /content/data
-Removed: /content/model
-Removed: /content/minmax
-Removed: /content/encrypt_model
-Removed: /content/reports
-Removed: /content/zip
+<pre>Failed to removed: /content/data
+Failed to removed: /content/model
+Failed to removed: /content/minmax
+Failed to removed: /content/encrypt_model
+Failed to removed: /content/reports
+Failed to removed: /content/zip
 Failed to removed: /content/reports/sample_data
 directory /content/data created successfully
 directory /content/model created successfully
@@ -15499,11 +15678,11 @@ directory /content/encrypt_model created successfully
 directory /content/zip created successfully
 directory /content/reports/sample_data created successfully
 Epoch 1/2
-715/715 - 283s - loss: 0.0104 - val_loss: 8.2840e-04 - 283s/epoch - 396ms/step
+715/715 - 22s - loss: 0.0121 - val_loss: 0.0011 - 22s/epoch - 30ms/step
 Epoch 2/2
-715/715 - 274s - loss: 0.0041 - val_loss: 0.0018 - 274s/epoch - 383ms/step
-5133/5133 [==============================] - 134s 26ms/step
-RMSE score of the model is 0.041978179525351426
+715/715 - 14s - loss: 0.0045 - val_loss: 0.0021 - 14s/epoch - 20ms/step
+5133/5133 [==============================] - 17s 3ms/step
+RMSE score of the model is 0.046235170008346364
 </pre>
 </div>
 </div>
@@ -15515,7 +15694,7 @@ RMSE score of the model is 0.041978179525351426
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>Preparing Data, Model and Label:  50%|█████     | 2/4 [11:57&lt;14:02, 421.03s/it]</pre>
+<pre>Preparing Data, Model and Label:  50%|█████     | 2/4 [01:14&lt;01:26, 43.02s/it]</pre>
 </div>
 </div>
 
@@ -15538,7 +15717,7 @@ RMSE score of the model is 0.041978179525351426
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>AIShield API Call:  75%|███████▌  | 3/4 [12:00&lt;04:00, 240.11s/it]</pre>
+<pre>AIShield API Call:  75%|███████▌  | 3/4 [01:18&lt;00:26, 26.11s/it]</pre>
 </div>
 </div>
 
@@ -15622,8 +15801,8 @@ RMSE score of the model is 0.041978179525351426
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="3.0-Vulnerability-Analysis-by-AIShield">3.0 Vulnerability Analysis by AIShield<a class="anchor-link" href="#3.0-Vulnerability-Analysis-by-AIShield">&#182;</a></h2><p><strong>STEP 5 : Before initiating the Vulnerability Analysis conducted by AIShield, it is recommended to go through the sample dasboard images of an completed vulnearbility analysis and sample reports <span style="color:brown">(embeded in next code cell/blocks below)</span> for both Vulnerability Assessment and Defense. These reports offer valuable insights into the structure, content, and outcomes of the analysis.</strong></p>
-<p>By examining these reports, we can gain a comprehensive understanding of the assessment process, including the methodology employed and the valuable insights it provides. This will help us prepare effectively for the upcoming Vulnerability Analysis conducted by AIShield.</p>
+<h2 id="3.0-Vulnerability-Analysis-by-AIShield">3.0 Vulnerability Analysis by AIShield<a class="anchor-link" href="#3.0-Vulnerability-Analysis-by-AIShield">&#182;</a></h2><p><strong>STEP 5 :You can move to trigger the AIShield analysis by following steps given below. If you want to preview the generated artifact by vulnerability analysis like the report and dashboard, please find below a few samples of same, all without having to trigger an actual analysis.</strong></p>
+<p>By examining these Reports, we can gain a comprehensive understanding of the upcoming Vulnerability Analysis conducted by AIShield, which will enable us to prepare more effectively.</p>
 
 </div>
 </div>
@@ -15657,7 +15836,7 @@ RMSE score of the model is 0.041978179525351426
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">hosted_pdf_url</span> <span class="o">=</span> <span class="s2">&quot;https://aisdocs.blob.core.windows.net/reference/Reports/TimeSeries/Forecasting/MEA/DL/VulnerabilityReport.pdf&quot;</span>
@@ -15698,7 +15877,7 @@ RMSE score of the model is 0.041978179525351426
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">hosted_defense_pdf_url</span> <span class="o">=</span> <span class="s1">&#39;https://aisdocs.blob.core.windows.net/reference/Reports/TimeSeries/Forecasting/MEA/DL/DefenceReport.pdf&#39;</span>
@@ -15810,16 +15989,16 @@ RMSE score of the model is 0.041978179525351426
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Description : AIShield URL , subscription key and orgid</span>
 <span class="sd">              Initialize the</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="n">base_url</span> <span class="o">=</span> <span class="s2">&quot;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;</span>
+<span class="n">base_url</span> <span class="o">=</span> <span class="s2">&quot;https://api.aws.boschaishield.com/prod&quot;</span>
 <span class="n">url</span><span class="o">=</span><span class="n">base_url</span><span class="o">+</span><span class="s2">&quot;/api/ais/v1.5&quot;</span>
-<span class="n">org_id</span> <span class="o">=</span> <span class="s1">&#39;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&#39;</span>
+<span class="n">org_id</span> <span class="o">=</span> <span class="s1">&#39;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&#39;</span> <span class="c1">#&lt;&lt;Copy Org_id mentioned in welcome mail after AIShield Subscription&gt;&gt;</span>
 
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -15827,9 +16006,12 @@ RMSE score of the model is 0.041978179525351426
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>
+    <span class="c1">#if pypi then , x-api-key generation is taken care from pypi side using given org_id</span>
     <span class="n">aishield_client</span> <span class="o">=</span> <span class="n">ais</span><span class="o">.</span><span class="n">AIShieldApi</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span><span class="n">org_id</span><span class="o">=</span><span class="n">org_id</span><span class="p">)</span>
 
 <span class="k">else</span><span class="p">:</span>
+    <span class="c1">#if using AIShield API then , need an x-api-key for accessing AIShield registration / Analysis APIs</span>
+    <span class="c1"># below function will get insight of how to generate the x-api-key</span>
     <span class="k">def</span> <span class="nf">get_aws_api_key</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">org_id</span><span class="p">):</span>
 
         <span class="sd">&quot;&quot;&quot;</span>
@@ -15852,6 +16034,7 @@ RMSE score of the model is 0.041978179525351426
             <span class="nb">print</span><span class="p">(</span><span class="n">x_api_key_request</span><span class="p">)</span>
             <span class="k">return</span> <span class="kc">None</span>
 
+    <span class="c1">#generate the x-api-key</span>
     <span class="n">x_api_key</span> <span class="o">=</span> <span class="n">get_aws_api_key</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">org_id</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x_api_key is :&quot;</span><span class="p">,</span><span class="n">x_api_key</span><span class="p">)</span>
 
@@ -15894,11 +16077,14 @@ RMSE score of the model is 0.041978179525351426
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Description: Define the task and analysis type for model registration</span>
+<span class="sd">              &quot;task_type&quot; : refers to the specific type of task being performed, for eg : &quot;timeseries_forecasting.&quot;</span>
+<span class="sd">              &quot;analysis_type&quot; : refers to the specific type of analysis being performed,for eg : &quot;extraction.</span>
+<span class="sd">              For more information, check out [https://docs.boschaishield.com/api-docs/lesspostgreater-model-registration#-a-xGGsdVJB3d09cBAck-]</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>
@@ -15970,7 +16156,7 @@ RMSE score of the model is 0.041978179525351426
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16075,7 +16261,7 @@ RMSE score of the model is 0.041978179525351426
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16149,7 +16335,7 @@ RMSE score of the model is 0.041978179525351426
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
@@ -16192,7 +16378,7 @@ RMSE score of the model is 0.041978179525351426
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16289,7 +16475,7 @@ RMSE score of the model is 0.041978179525351426
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
@@ -16332,7 +16518,7 @@ RMSE score of the model is 0.041978179525351426
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">report_path</span> <span class="o">=</span> <span class="s2">&quot;reports/&quot;</span>
@@ -16349,7 +16535,7 @@ RMSE score of the model is 0.041978179525351426
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">download_artifact</span><span class="p">(</span><span class="n">job_id</span><span class="p">,</span> <span class="n">report_path</span><span class="p">,</span> <span class="n">report_type</span><span class="o">=</span><span class="s1">&#39;Vulnerability&#39;</span><span class="p">,</span> <span class="n">file_format</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
@@ -16410,7 +16596,7 @@ RMSE score of the model is 0.041978179525351426
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16466,7 +16652,7 @@ INFO:aishield.connection:vulnerability_20230713_0838.pdf is saved in reports/
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16519,7 +16705,7 @@ INFO:aishield.connection:defense_20230713_0838.pdf is saved in reports/
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16573,7 +16759,7 @@ INFO:aishield.connection:defense_artifact_20230713_0838.zip is saved in reports/
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16625,7 +16811,7 @@ INFO:aishield.connection:attack_samples_20230713_0838.zip is saved in reports/
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_file_id</span><span class="p">(</span><span class="n">report_path</span><span class="p">):</span>
@@ -16675,7 +16861,7 @@ INFO:aishield.connection:attack_samples_20230713_0838.zip is saved in reports/
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16766,7 +16952,7 @@ tensorboard 2.9.1 requires google-auth-oauthlib&lt;0.5,&gt;=0.4.1, but you have 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16876,7 +17062,7 @@ Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span> 
