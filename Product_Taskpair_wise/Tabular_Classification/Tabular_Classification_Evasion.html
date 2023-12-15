@@ -15274,7 +15274,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -15290,12 +15290,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
-</div><div id="cell-id=95fb5754" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=95fb5754" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_code_input_scrollable</span><span class="p">():</span>
@@ -15373,6 +15373,41 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+
+        <style>
+        .scrollable-code-input {
+            max-height: 500px;
+            overflow-y: scroll;
+        }
+        </style>
+        <script>
+        var codeInputCells = document.querySelectorAll('div.code_cell .input');
+        codeInputCells.forEach(function(cell) {
+            cell.classList.add('scrollable-code-input');
+        });
+        </script>
+    
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -16303,7 +16338,7 @@ weighted avg       0.91      0.92      0.91     10297
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">hosted_pdf_url</span> <span class="o">=</span> <span class="s2">&quot;https://aisdocs.blob.core.windows.net/reference/Reports/Tabular/TabularClassification/Evasion/VulnerabilityReport.pdf&quot;</span>
@@ -16342,7 +16377,7 @@ weighted avg       0.91      0.92      0.91     10297
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">hosted_defense_pdf_url</span> <span class="o">=</span> <span class="s1">&#39;https://aisdocs.blob.core.windows.net/reference/Reports/Tabular/TabularClassification/MEA/DefenceReport.pdf&#39;</span>
@@ -16582,7 +16617,7 @@ weighted avg       0.91      0.92      0.91     10297
             <span class="n">model_upload_obj</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;urls&#39;</span><span class="p">][</span><span class="s1">&#39;model_upload_url&#39;</span><span class="p">]</span>
             <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;model_id: &#39;</span><span class="p">,</span> <span class="n">model_id</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">new_request</span><span class="p">)</span><span class="n">t</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">new_request</span><span class="p">)</span>
             
     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">new_request</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
