@@ -15290,7 +15290,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
-</div><div id="cell-id=95fb5754" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=95fb5754" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15373,6 +15373,41 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+
+        <style>
+        .scrollable-code-input {
+            max-height: 500px;
+            overflow-y: scroll;
+        }
+        </style>
+        <script>
+        var codeInputCells = document.querySelectorAll('div.code_cell .input');
+        codeInputCells.forEach(function(cell) {
+            cell.classList.add('scrollable-code-input');
+        });
+        </script>
+    
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -15495,7 +15530,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="kn">import</span> <span class="nn">zipfile</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">import</span> <span class="nn">py_compile</span>
-<span class="c1"># import pyminizip</span>
+<span class="kn">import</span> <span class="nn">pyminizip</span>
 <span class="kn">import</span> <span class="nn">zipfile</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -15752,7 +15787,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <span class="k">return</span> <span class="n">model</span>
 
 
-<span class="k">def</span> <span class="nf">encrypt_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">model_framework</span><span class="p">,</span><span class="n">pyc_model_path</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">encrypt_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">modelname</span><span class="p">,</span> <span class="n">model_framework</span><span class="p">,</span><span class="n">pyc_model_path</span><span class="p">):</span>
 
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Description: Create encrypted Model</span>
@@ -15858,7 +15893,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
             <span class="n">pyminizip</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="n">input_path</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">output_path</span><span class="p">,</span>
                                <span class="n">password</span><span class="p">,</span> <span class="n">com_lvl</span><span class="p">)</span>
 
-        <span class="n">zip_model</span><span class="p">(</span><span class="n">input_path</span> <span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">model_path</span><span class="p">,</span><span class="n">modelname</span><span class="p">),</span><span class="n">output_path</span> <span class="o">=</span> <span class="n">pyc_model_path</span><span class="o">+</span><span class="s2">&quot;/modelencrypt.zip&quot;</span> <span class="p">,</span><span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;987654321&quot;</span><span class="p">,</span><span class="n">com_lvl</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">zip_model</span><span class="p">(</span><span class="n">input_path</span> <span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">model_path</span><span class="p">,</span> <span class="n">modelname</span><span class="p">),</span><span class="n">output_path</span> <span class="o">=</span> <span class="n">pyc_model_path</span><span class="o">+</span><span class="s2">&quot;/modelencrypt.zip&quot;</span> <span class="p">,</span><span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;987654321&quot;</span><span class="p">,</span><span class="n">com_lvl</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
 
@@ -15924,14 +15959,13 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
                 <span class="c1">#Creating PYC File</span>
                 <span class="n">model_framework</span> <span class="o">=</span> <span class="s2">&quot;scikit-learn&quot;</span>
-                <span class="n">model_encryption</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#0 for non encrypted file and 1 for encrypted (pyc)</span>
 
                 <span class="c1">#Description: Zip Model</span>
                 <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">&quot;model.zip&quot;</span><span class="p">)):</span>
                     <span class="n">delete_directory</span><span class="p">(</span><span class="n">directorys</span><span class="o">=</span><span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">&quot;model.zip&quot;</span><span class="p">)])</span>
                 <span class="k">if</span> <span class="n">model_encryption</span><span class="p">:</span>
-                    <span class="n">encrypt_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">model_framework</span><span class="p">,</span> <span class="n">encrypt_model_path</span><span class="p">)</span>
-                    <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">&quot;encrypt_model &quot;</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">&#39;zip&#39;</span><span class="p">)</span>
+                    <span class="n">encrypt_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">training_parameters</span><span class="p">[</span><span class="s2">&quot;model_name&quot;</span><span class="p">],</span> <span class="n">model_framework</span><span class="p">,</span> <span class="n">encrypt_model_path</span><span class="p">)</span>
+                    <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">&quot;encrypt_model&quot;</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">&#39;zip&#39;</span><span class="p">)</span>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">&quot;model&quot;</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">&#39;zip&#39;</span><span class="p">)</span>
 
@@ -16294,7 +16328,7 @@ weighted avg       0.91      0.92      0.91     10297
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">hosted_pdf_url</span> <span class="o">=</span> <span class="s2">&quot;https://aisdocs.blob.core.windows.net/reference/Reports/Tabular/TabularClassification/MEA/VulnerabilityReport.pdf&quot;</span>
@@ -16333,10 +16367,10 @@ weighted avg       0.91      0.92      0.91     10297
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hosted_defense_pdf_url</span> <span class="o">=</span> <span class="s1">&#39;https://aisdocs.blob.core.windows.net/reference/Reports/Tabular/TabularClassification/MEA/DefenceReport.pdf&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hosted_defense_pdf_url</span> <span class="o">=</span> <span class="s1">&#39;https://aisdocs.blob.core.windows.net/reference/Reports/Tabular/TabularClassification/MEA/DefenseReport.pdf&#39;</span>
 <span class="n">display_pdf</span><span class="p">(</span><span class="n">output_filename</span> <span class="o">=</span> <span class="s2">&quot;def_sample&quot;</span><span class="p">,</span> <span class="n">runtime_environment</span><span class="o">=</span><span class="n">runtime_environment</span><span class="p">,</span> <span class="n">pdf_path</span> <span class="o">=</span><span class="n">hosted_defense_pdf_url</span><span class="p">)</span>
 </pre></div>
 
@@ -16358,7 +16392,7 @@ weighted avg       0.91      0.92      0.91     10297
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<embed src="https://aisdocs.blob.core.windows.net/reference/Reports/Tabular/TabularClassification/MEA/DefenceReport.pdf" width="100%" height="600px" type="application/pdf">
+<embed src="https://aisdocs.blob.core.windows.net/reference/Reports/Tabular/TabularClassification/MEA/DefenseReport.pdf" width="100%" height="600px" type="application/pdf">
 </div>
 
 </div>
@@ -16734,7 +16768,7 @@ weighted avg       0.91      0.92      0.91     10297
     <span class="n">vuln_config</span><span class="o">.</span><span class="n">categorical_columns_info</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;job&quot;</span><span class="p">,</span><span class="s2">&quot;marital&quot;</span><span class="p">,</span><span class="s2">&quot;education&quot;</span><span class="p">,</span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="s2">&quot;housing&quot;</span><span class="p">,</span><span class="s2">&quot;loan&quot;</span><span class="p">,</span><span class="s2">&quot;contact&quot;</span><span class="p">,</span><span class="s2">&quot;poutcome&quot;</span><span class="p">]</span>  <span class="c1"># name of categorical columns</span>
     <span class="n">vuln_config</span><span class="o">.</span><span class="n">attack_type</span> <span class="o">=</span> <span class="s2">&quot;blackbox&quot;</span>  <span class="c1"># greybox or blackbox depending upon the availability of information about Model, Data and Parameters</span>
     <span class="n">vuln_config</span><span class="o">.</span><span class="n">number_of_attack_queries</span> <span class="o">=</span> <span class="mi">60000</span>  <span class="c1"># Number of attack queries to be generated for testing model vulnerability</span>
-    <span class="n">vuln_config</span><span class="o">.</span><span class="n">encryption_strategy</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># value 0 (or) 1, if model is unencrypted or encrypted(pyc) respectively</span>
+    <span class="n">vuln_config</span><span class="o">.</span><span class="n">encryption_strategy</span> <span class="o">=</span> <span class="n">model_encryption</span>  <span class="c1"># value 0 (or) 1, if model is unencrypted or encrypted(pyc) respectively</span>
 
 
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;TC-Extraction parameters are: </span><span class="se">\n</span><span class="s1"> </span><span class="si">{}</span><span class="s1"> &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vuln_config</span><span class="o">.</span><span class="n">get_all_params</span><span class="p">()))</span>
