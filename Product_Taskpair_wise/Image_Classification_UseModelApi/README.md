@@ -11,7 +11,7 @@ This repository contains reference implementations of an MNIST model for image c
 ## Reference Implementations
 
 - **Extraction:** This implementation demonstrates extraction attacks on the MNIST model using usemodel api.
-  - [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Image_Classification_UseModelApi/Image_Classification_Extraction.ipynb)
+  - [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Image_Classification_UseModelApi/Image_Classification_Extraction_UseModelAPI.ipynb)
 
 ## Dataset
 
