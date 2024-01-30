@@ -11,7 +11,7 @@ This repository contains a reference implementation of an DL model for text clas
 ## Reference Implementations
 
 - **Extraction:** Perform extraction attacks on the DL model trained on IMDB dataset.
-  - [![Open in Colab](https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Text_Classification/Text_Classification_Extraction.ipynb)
+  - [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Text_Classification/Text_Classification_Extraction.ipynb)
 
 ## Dataset
 

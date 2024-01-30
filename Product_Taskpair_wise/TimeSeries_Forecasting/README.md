@@ -38,7 +38,7 @@ To utilize AIShield's capabilities, you need to obtain AIShield URL, org ID, and
 
 ## Running the Notebook
 
-This repository provides reference implementations of the MNIST model with AIShield integration, along with HTML versions of the notebooks for quick access and overview.
+This repository provides reference implementations of the XGBoost Regressor / LSTM model with AIShield integration, along with HTML versions of the notebooks for quick access and overview.
 
 To run the Jupyter notebook, using the obtained AIShield credentials, open the notebook in Jupyter and follow the instructions provided to train, evaluate, and perform vulnerability analysis on your model.
 
