@@ -15488,7 +15488,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#@title Show/Hide Code</span>
@@ -15503,47 +15503,62 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">img_row</span><span class="p">,</span><span class="n">img_col</span><span class="p">,</span><span class="n">channel</span><span class="p">)</span>
 <span class="n">model_encryption</span><span class="o">=</span><span class="mi">0</span> <span class="c1">#0 if model is uploaded directly as a zip, 1 if model is encryted as .pyc and uploaded as a zip</span>
 <span class="n">Normalized</span> <span class="o">=</span>  <span class="s1">&#39;yes&#39;</span>
-<span class="n">run_code</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">run_code</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1">#True if training of model will take place, False if downloading of pretrained model,dataset and label will take place</span>
 <span class="n">install</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1">#to install the prerequisite libraries or not</span>
 
 
 <span class="c1">## installing libraries if not and then importing</span>
 <span class="k">if</span> <span class="n">install</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Started of installing all the prerequisites packages&quot;</span><span class="p">)</span>
-    <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">numpy</span><span class="o">==</span><span class="m">1</span>.22
-    <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">matplotlib</span><span class="o">==</span><span class="m">3</span>.3.4
-    <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">tensorflow</span><span class="o">==</span><span class="m">2</span>.9.1
-    <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>scikit-learn<span class="o">==</span><span class="m">1</span>.0.2
-    <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">humanfriendly</span><span class="o">==</span><span class="m">9</span>.2
-    <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">tqdm</span><span class="o">==</span><span class="m">4</span>.61.1
-    <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">requests</span><span class="o">==</span><span class="m">2</span>.28.0
-    <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>opencv-python
-
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Starting installing aishield library&quot;</span><span class="p">)</span>
     <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>aishield
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">run_code</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Started of installing all the prerequisites packages&quot;</span><span class="p">)</span>
+        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">tqdm</span><span class="o">==</span><span class="m">4</span>.61.1
+        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">requests</span><span class="o">==</span><span class="m">2</span>.28.0
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Started of installing all the prerequisites packages&quot;</span><span class="p">)</span>
+        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">numpy</span><span class="o">==</span><span class="m">1</span>.22
+        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">matplotlib</span><span class="o">==</span><span class="m">3</span>.3.4
+        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">tensorflow</span><span class="o">==</span><span class="m">2</span>.9.1
+        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>scikit-learn<span class="o">==</span><span class="m">1</span>.0.2
+        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">humanfriendly</span><span class="o">==</span><span class="m">9</span>.2
+        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">tqdm</span><span class="o">==</span><span class="m">4</span>.61.1
+        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">requests</span><span class="o">==</span><span class="m">2</span>.28.0
+        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>opencv-python
+
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Installed all the prerequisites packages&quot;</span><span class="p">)</span>
 
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Skipped the installation of all the prerequisites packages&quot;</span><span class="p">)</span>
 
-
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">cv2</span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">tqdm</span>
-<span class="kn">import</span> <span class="nn">shutil</span>
-<span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">zipfile</span>
-<span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
-<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
-<span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span> <span class="nn">tensorflow.keras</span> <span class="kn">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">optimizers</span><span class="p">,</span> <span class="n">Sequential</span>
+<span class="k">if</span> <span class="n">run_code</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">os</span>
+    <span class="kn">import</span> <span class="nn">cv2</span>
+    <span class="kn">import</span> <span class="nn">json</span>
+    <span class="kn">import</span> <span class="nn">time</span>
+    <span class="kn">import</span> <span class="nn">tqdm</span>
+    <span class="kn">import</span> <span class="nn">shutil</span>
+    <span class="kn">import</span> <span class="nn">random</span>
+    <span class="kn">import</span> <span class="nn">zipfile</span>
+    <span class="kn">import</span> <span class="nn">requests</span>
+    <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+    <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+    <span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+    <span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+    <span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
+    <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+    <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+    <span class="kn">from</span> <span class="nn">tensorflow.keras</span> <span class="kn">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">optimizers</span><span class="p">,</span> <span class="n">Sequential</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">os</span>
+    <span class="kn">import</span> <span class="nn">json</span>
+    <span class="kn">import</span> <span class="nn">time</span>
+    <span class="kn">import</span> <span class="nn">tqdm</span>
+    <span class="kn">import</span> <span class="nn">shutil</span>
+    <span class="kn">import</span> <span class="nn">random</span>
+    <span class="kn">import</span> <span class="nn">zipfile</span>
+    <span class="kn">import</span> <span class="nn">requests</span>
+    <span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
 
 <span class="kn">import</span> <span class="nn">aishield</span> <span class="k">as</span> <span class="nn">ais</span>
 
@@ -15589,6 +15604,68 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
             <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
                 <span class="n">list_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="n">file</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">list_id</span>
+
+<span class="k">def</span> <span class="nf">download_artifacts</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Description :</span>
+<span class="sd">    This function will download the dataset from the given file_path</span>
+<span class="sd">    parameter:</span>
+
+<span class="sd">        input:</span>
+<span class="sd">        file_path : url of the dataset from where need to download the dataset</span>
+
+<span class="sd">        output: None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+    <span class="c1"># Download the file</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+
+<span class="c1">#extract content from the nested zip file</span>
+<span class="k">def</span> <span class="nf">extract_zip</span><span class="p">(</span><span class="n">zip_file_path</span><span class="p">,</span> <span class="n">extract_to_folder</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Description :</span>
+<span class="sd">    This function will extract the zipped file to a given destination folder</span>
+
+<span class="sd">        input:</span>
+<span class="sd">        zip_file_path : download zipped file path</span>
+<span class="sd">        extract_to_folder: destination folder to extract the content of zipped files</span>
+
+<span class="sd">        output: None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">zip_file_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">zip_ref</span><span class="p">:</span>
+        <span class="c1"># Extract all contents into the target folder</span>
+        <span class="n">zip_ref</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="n">extract_to_folder</span><span class="p">)</span>
+    <span class="n">zip_ref</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+
+<span class="k">def</span> <span class="nf">download_extract_artifacts</span><span class="p">(</span><span class="n">download_url</span><span class="p">,</span> <span class="n">zipped_file_path</span><span class="p">,</span> <span class="n">destination_path</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Description :</span>
+<span class="sd">    This function will trigger the download and extraction function one by one</span>
+
+<span class="sd">        input:</span>
+<span class="sd">        download_url: url from where content need to be downloaded</span>
+<span class="sd">        zip_file_path : download zipped file path</span>
+<span class="sd">        destination_path: destination folder to extract the content of zipped files</span>
+
+<span class="sd">        output: None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># download the artifcats from the given url</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">download_artifacts</span><span class="p">(</span><span class="n">download_url</span><span class="p">)</span>
+        <span class="c1"># extract the zipped artifacts in to given destination folder</span>
+        <span class="n">extract_zip</span><span class="p">(</span><span class="n">zipped_file_path</span><span class="p">,</span> <span class="n">destination_path</span><span class="p">)</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Download / Extraction of artifacts failed </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)))</span>
+
 
 <span class="k">def</span> <span class="nf">load_data</span><span class="p">(</span><span class="n">train_data_path</span><span class="p">):</span>
 
@@ -15979,64 +16056,87 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
 
-    <span class="kn">import</span> <span class="nn">tqdm</span>
-    <span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
-
     <span class="n">user_workflow</span> <span class="o">=</span> <span class="p">{</span>
-                 <span class="s1">&#39;1&#39;</span> <span class="p">:</span> <span class="s1">&#39;Loading the Dataset&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;1&#39;</span> <span class="p">:</span> <span class="s1">&#39;Loading the Dataset and Label&#39;</span><span class="p">,</span>
                  <span class="s1">&#39;2&#39;</span> <span class="p">:</span> <span class="s1">&#39;Model Development and Training&#39;</span><span class="p">,</span>
                  <span class="s1">&#39;3&#39;</span> <span class="p">:</span> <span class="s1">&#39;Preparing Data, Model and Label&#39;</span><span class="p">,</span>
                  <span class="s1">&#39;4&#39;</span> <span class="p">:</span> <span class="s1">&#39;AIShield API Call&#39;</span>
 
            <span class="p">}</span>
-    <span class="k">if</span> <span class="n">run_code</span><span class="p">:</span>
-        <span class="n">steps_tqdm</span> <span class="o">=</span> <span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-        <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="n">steps_tqdm</span><span class="p">:</span>
+<span class="n">data_path</span><span class="p">,</span> <span class="n">model_path</span><span class="p">,</span> <span class="n">label_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span> <span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span> <span class="o">=</span> <span class="n">create_folders</span><span class="p">()</span>
+<span class="n">steps_tqdm</span> <span class="o">=</span> <span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="n">steps_tqdm</span><span class="p">:</span>
 
-            <span class="k">if</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
-                <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
-                <span class="n">dataset_path</span> <span class="o">=</span> <span class="n">download_data</span><span class="p">()</span>
-                <span class="n">X</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="n">dataset_path</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
+        <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">run_code</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Downloading of the Data Started&quot;</span><span class="p">)</span>
+            <span class="n">data_url</span> <span class="o">=</span> <span class="s2">&quot;https://aisdocs.blob.core.windows.net/reference/upload/Image/ImageSegmentation/left_images.zip&quot;</span>
+            <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">data_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">data_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">data_path</span><span class="p">))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data downloaded succesfully&quot;</span><span class="p">)</span>
+
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Downloading of the Minmax Started&quot;</span><span class="p">)</span>
+            <span class="n">label_url</span> <span class="o">=</span> <span class="s2">&quot;https://aisdocs.blob.core.windows.net/reference/upload/Image/ImageSegmentation/left_groundTruth.zip&quot;</span>
+            <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">label_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">label_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">label_path</span><span class="p">))</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;label downloaded succesfully&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dataset_path</span> <span class="o">=</span> <span class="n">download_data</span><span class="p">()</span>
+            <span class="n">X</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="n">dataset_path</span><span class="p">)</span>
 
 
-            <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-                <span class="n">data_path</span><span class="p">,</span> <span class="n">model_path</span><span class="p">,</span> <span class="n">label_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span> <span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span> <span class="o">=</span> <span class="n">create_folders</span><span class="p">()</span>
-                <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
-                <span class="n">training_parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;X&#39;</span> <span class="p">:</span> <span class="n">X</span> <span class="p">,</span>
-                              <span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="n">y</span> <span class="p">,</span>
-                              <span class="s1">&#39;Normalized&#39;</span> <span class="p">:</span> <span class="n">Normalized</span> <span class="p">,</span>
-                              <span class="s1">&#39;epochs&#39;</span> <span class="p">:</span> <span class="n">epochs</span> <span class="p">,</span>
-                              <span class="s1">&#39;batch_size&#39;</span> <span class="p">:</span> <span class="n">batch_size</span><span class="p">,</span>
-                              <span class="s1">&#39;model_path&#39;</span> <span class="p">:</span> <span class="n">model_path</span> <span class="p">,</span>
-                              <span class="s1">&#39;model_name&#39;</span> <span class="p">:</span> <span class="s1">&#39;pedestrain_model.h5&#39;</span><span class="p">,</span>
-                              <span class="s1">&#39;num_classes&#39;</span> <span class="p">:</span> <span class="n">num_classes</span>
-                             <span class="p">}</span>
+    <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
 
-                <span class="n">model</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_val</span> <span class="o">=</span> <span class="n">training</span><span class="p">(</span><span class="n">parameter_payload</span><span class="o">=</span><span class="n">training_parameters</span><span class="p">)</span>
+        <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">run_code</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Downloading of the Model file Started&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">model_encryption</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+                <span class="n">model_url</span> <span class="o">=</span> <span class="s2">&quot;https://aisdocs.blob.core.windows.net/reference/upload/Image/ImageSegmentation/og_model.zip&quot;</span>
+                <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">model_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_path</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">model_url</span> <span class="o">=</span> <span class="s2">&quot;https://aisdocs.blob.core.windows.net/reference/upload/EncryptedModels/encrypt_model_IS_MEA.zip&quot;</span>
+                <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">model_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">encrypt_model_path</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">training_parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;X&#39;</span> <span class="p">:</span> <span class="n">X</span> <span class="p">,</span>
+                            <span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="n">y</span> <span class="p">,</span>
+                            <span class="s1">&#39;Normalized&#39;</span> <span class="p">:</span> <span class="n">Normalized</span> <span class="p">,</span>
+                            <span class="s1">&#39;epochs&#39;</span> <span class="p">:</span> <span class="n">epochs</span> <span class="p">,</span>
+                            <span class="s1">&#39;batch_size&#39;</span> <span class="p">:</span> <span class="n">batch_size</span><span class="p">,</span>
+                            <span class="s1">&#39;model_path&#39;</span> <span class="p">:</span> <span class="n">model_path</span> <span class="p">,</span>
+                            <span class="s1">&#39;model_name&#39;</span> <span class="p">:</span> <span class="s1">&#39;pedestrain_model.h5&#39;</span><span class="p">,</span>
+                            <span class="s1">&#39;num_classes&#39;</span> <span class="p">:</span> <span class="n">num_classes</span>
+                        <span class="p">}</span>
 
-            <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-                <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
+            <span class="n">model</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_val</span> <span class="o">=</span> <span class="n">training</span><span class="p">(</span><span class="n">parameter_payload</span><span class="o">=</span><span class="n">training_parameters</span><span class="p">)</span>
 
-                <span class="n">prepare_data_label</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">label_path</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">,</span> <span class="n">Normalized</span><span class="p">)</span>
-                <span class="c1">#Description: Zip data</span>
-                <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">&quot;data&quot;</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">data_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">&#39;zip&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
 
-                <span class="c1">#Description: Zip label</span>
-                <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">&quot;label&quot;</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">label_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">&#39;zip&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">run_code</span><span class="p">:</span>
+            <span class="n">prepare_data_label</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">label_path</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">,</span> <span class="n">Normalized</span><span class="p">)</span>
 
-                <span class="c1">#Description: Zip Model</span>
-                <span class="k">if</span> <span class="n">model_encryption</span><span class="p">:</span>
-                    <span class="n">encrypt_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">encrypt_model_path</span><span class="p">)</span>
-                    <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">&quot;encrypt_model&quot;</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">&#39;zip&#39;</span><span class="p">)</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">&quot;model&quot;</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">&#39;zip&#39;</span><span class="p">)</span>
 
-            <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
-                <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Below Cells will see How to integrate and Call AIShield for Vulnerability Analysis&quot;</span><span class="p">)</span>
-                <span class="k">break</span>
+        <span class="c1">#Description: Zip data</span>
+        <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">&quot;data&quot;</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">data_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">&#39;zip&#39;</span><span class="p">)</span>
 
-            <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="c1">#Description: Zip label</span>
+        <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">&quot;label&quot;</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">label_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">&#39;zip&#39;</span><span class="p">)</span>
+
+        <span class="c1">#Description: Zip Model</span>
+        <span class="k">if</span> <span class="n">model_encryption</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">run_code</span><span class="p">:</span>
+                <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">&quot;encrypt_model&quot;</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">&#39;zip&#39;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">encrypt_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">encrypt_model_path</span><span class="p">)</span>
+                <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">&quot;encrypt_model&quot;</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">&#39;zip&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">&quot;model&quot;</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">&#39;zip&#39;</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Below Cells will see How to integrate and Call AIShield for Vulnerability Analysis&quot;</span><span class="p">)</span>
+        <span class="k">break</span>
+
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16670,7 +16770,7 @@ Epoch 41: early stopping
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16758,7 +16858,7 @@ Epoch 41: early stopping
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16837,7 +16937,7 @@ Epoch 41: early stopping
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16939,7 +17039,7 @@ Epoch 41: early stopping
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -17017,7 +17117,7 @@ Epoch 41: early stopping
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
@@ -17060,7 +17160,7 @@ Epoch 41: early stopping
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -17155,7 +17255,7 @@ Epoch 41: early stopping
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
