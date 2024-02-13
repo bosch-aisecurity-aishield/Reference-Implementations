@@ -15549,7 +15549,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 
-<span class="k">def</span> <span class="nf">download_extract_artifcats</span><span class="p">(</span><span class="n">download_url</span><span class="p">,</span> <span class="n">zipped_file_path</span><span class="p">,</span> <span class="n">destination_path</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">download_extract_artifacts</span><span class="p">(</span><span class="n">download_url</span><span class="p">,</span> <span class="n">zipped_file_path</span><span class="p">,</span> <span class="n">destination_path</span><span class="p">):</span>
 
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Description :</span>
@@ -15563,7 +15563,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="sd">        output: None</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="c1"># download the artifcats from the given url</span>
+    <span class="c1"># download the artifacts from the given url</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">download_artifacts</span><span class="p">(</span><span class="n">download_url</span><span class="p">)</span>
         <span class="c1"># extract the zipped artifacts in to given destination folder</span>
@@ -15685,7 +15685,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
                 <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
                 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Downloading of the Data Started&quot;</span><span class="p">)</span>
                 <span class="n">data_url</span> <span class="o">=</span> <span class="s2">&quot;https://aisdocs.blob.core.windows.net/reference/upload/Text/TextClassification/IMDB_Dataset.zip&quot;</span>
-                <span class="n">download_extract_artifcats</span><span class="p">(</span><span class="n">data_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">data_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">data_path</span><span class="p">))</span>
+                <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">data_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">data_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">data_path</span><span class="p">))</span>
                 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data downloaded succesfully&quot;</span><span class="p">)</span>
 
 
@@ -15693,7 +15693,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
                 <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
                 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Downloading of the Model file Started&quot;</span><span class="p">)</span>
                 <span class="n">model_url</span> <span class="o">=</span> <span class="s2">&quot;https://aisdocs.blob.core.windows.net/reference/upload/Text/TextClassification/nlp_model.zip&quot;</span>
-                <span class="n">download_extract_artifcats</span><span class="p">(</span><span class="n">model_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_path</span><span class="p">))</span>
+                <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">model_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_path</span><span class="p">))</span>
                 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model file downloaded succesfully&quot;</span><span class="p">)</span>
 
 
@@ -15734,43 +15734,19 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <pre>Started of installing all the prerequisites packages
 Collecting pandas==1.1.5
   Downloading pandas-1.1.5.tar.gz (5.2 MB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">5.2/5.2 MB</span> <span class="ansi-red-fg">17.8 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">5.2/5.2 MB</span> <span class="ansi-red-fg">20.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
   Installing build dependencies ... done
   Getting requirements to build wheel ... done
   Preparing metadata (pyproject.toml) ... done
 Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.10/dist-packages (from pandas==1.1.5) (2.8.2)
-Requirement already satisfied: pytz&gt;=2017.2 in /usr/local/lib/python3.10/dist-packages (from pandas==1.1.5) (2023.3.post1)
+Requirement already satisfied: pytz&gt;=2017.2 in /usr/local/lib/python3.10/dist-packages (from pandas==1.1.5) (2023.4)
 Requirement already satisfied: numpy&gt;=1.15.4 in /usr/local/lib/python3.10/dist-packages (from pandas==1.1.5) (1.23.5)
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas==1.1.5) (1.16.0)
 Building wheels for collected packages: pandas
-  Building wheel for pandas (pyproject.toml) ... done
-  Created wheel for pandas: filename=pandas-1.1.5-cp310-cp310-linux_x86_64.whl size=33263091 sha256=feb27acb754e5e0533c97053ccef3f6a2bf4f2e93b5b8686484a9f029ec0211b
-  Stored in directory: /root/.cache/pip/wheels/92/41/92/769e05cd303040fdae625c9f5a8d38f1d37c423aa2a30b3d0d
-Successfully built pandas
-Installing collected packages: pandas
-  Attempting uninstall: pandas
-    Found existing installation: pandas 1.5.3
-    Uninstalling pandas-1.5.3:
-      Successfully uninstalled pandas-1.5.3
-<span class="ansi-red-fg">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-lida 0.0.10 requires fastapi, which is not installed.
-lida 0.0.10 requires kaleido, which is not installed.
-lida 0.0.10 requires python-multipart, which is not installed.
-lida 0.0.10 requires uvicorn, which is not installed.
-arviz 0.15.1 requires pandas&gt;=1.3.0, but you have pandas 1.1.5 which is incompatible.
-bigframes 0.18.0 requires pandas&lt;2.1.4,&gt;=1.5.0, but you have pandas 1.1.5 which is incompatible.
-bokeh 3.3.2 requires pandas&gt;=1.2, but you have pandas 1.1.5 which is incompatible.
-google-colab 1.0.0 requires pandas==1.5.3, but you have pandas 1.1.5 which is incompatible.
-ibis-framework 7.1.0 requires pandas&lt;3,&gt;=1.2.5, but you have pandas 1.1.5 which is incompatible.
-mizani 0.9.3 requires pandas&gt;=1.3.5, but you have pandas 1.1.5 which is incompatible.
-panel 1.3.6 requires pandas&gt;=1.2, but you have pandas 1.1.5 which is incompatible.
-plotnine 0.12.4 requires pandas&gt;=1.5.0, but you have pandas 1.1.5 which is incompatible.
-xarray 2023.7.0 requires pandas&gt;=1.4, but you have pandas 1.1.5 which is incompatible.
-yfinance 0.2.33 requires pandas&gt;=1.3.0, but you have pandas 1.1.5 which is incompatible.</span><span class="ansi-red-fg">
-</span>Successfully installed pandas-1.1.5
-Collecting numpy==1.22
+  Building wheel for pandas (pyproject.toml) ... canceled<span class="ansi-red-fg">ERROR: Operation cancelled by user</span><span class="ansi-red-fg">
+</span>Collecting numpy==1.22
   Downloading numpy-1.22.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">16.8/16.8 MB</span> <span class="ansi-red-fg">43.5 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">16.8/16.8 MB</span> <span class="ansi-red-fg">66.9 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
 Installing collected packages: numpy
   Attempting uninstall: numpy
     Found existing installation: numpy 1.23.5
@@ -15781,18 +15757,10 @@ lida 0.0.10 requires fastapi, which is not installed.
 lida 0.0.10 requires kaleido, which is not installed.
 lida 0.0.10 requires python-multipart, which is not installed.
 lida 0.0.10 requires uvicorn, which is not installed.
-arviz 0.15.1 requires pandas&gt;=1.3.0, but you have pandas 1.1.5 which is incompatible.
-bokeh 3.3.2 requires pandas&gt;=1.2, but you have pandas 1.1.5 which is incompatible.
-ibis-framework 7.1.0 requires pandas&lt;3,&gt;=1.2.5, but you have pandas 1.1.5 which is incompatible.
 librosa 0.10.1 requires numpy!=1.22.0,!=1.22.1,!=1.22.2,&gt;=1.20.3, but you have numpy 1.22.0 which is incompatible.
-mizani 0.9.3 requires pandas&gt;=1.3.5, but you have pandas 1.1.5 which is incompatible.
-panel 1.3.6 requires pandas&gt;=1.2, but you have pandas 1.1.5 which is incompatible.
 plotnine 0.12.4 requires numpy&gt;=1.23.0, but you have numpy 1.22.0 which is incompatible.
-plotnine 0.12.4 requires pandas&gt;=1.5.0, but you have pandas 1.1.5 which is incompatible.
 pywavelets 1.5.0 requires numpy&lt;2.0,&gt;=1.22.4, but you have numpy 1.22.0 which is incompatible.
-tensorflow 2.15.0 requires numpy&lt;2.0.0,&gt;=1.23.5, but you have numpy 1.22.0 which is incompatible.
-xarray 2023.7.0 requires pandas&gt;=1.4, but you have pandas 1.1.5 which is incompatible.
-yfinance 0.2.33 requires pandas&gt;=1.3.0, but you have pandas 1.1.5 which is incompatible.</span><span class="ansi-red-fg">
+tensorflow 2.15.0 requires numpy&lt;2.0.0,&gt;=1.23.5, but you have numpy 1.22.0 which is incompatible.</span><span class="ansi-red-fg">
 </span>Successfully installed numpy-1.22.0
 </pre>
 </div>
@@ -15814,14 +15782,14 @@ yfinance 0.2.33 requires pandas&gt;=1.3.0, but you have pandas 1.1.5 which is in
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Collecting requests==2.28.0
   Downloading requests-2.28.0-py3-none-any.whl (62 kB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">62.8/62.8 kB</span> <span class="ansi-red-fg">1.1 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">62.8/62.8 kB</span> <span class="ansi-red-fg">2.2 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
 Collecting charset-normalizer~=2.0.0 (from requests==2.28.0)
   Downloading charset_normalizer-2.0.12-py3-none-any.whl (39 kB)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (3.6)
 Collecting urllib3&lt;1.27,&gt;=1.21.1 (from requests==2.28.0)
   Downloading urllib3-1.26.18-py2.py3-none-any.whl (143 kB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">143.8/143.8 kB</span> <span class="ansi-red-fg">3.2 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (2023.11.17)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">143.8/143.8 kB</span> <span class="ansi-red-fg">9.4 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (2024.2.2)
 Installing collected packages: urllib3, charset-normalizer, requests
   Attempting uninstall: urllib3
     Found existing installation: urllib3 2.0.7
@@ -15836,17 +15804,13 @@ Installing collected packages: urllib3, charset-normalizer, requests
     Uninstalling requests-2.31.0:
       Successfully uninstalled requests-2.31.0
 <span class="ansi-red-fg">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-bigframes 0.18.0 requires pandas&lt;2.1.4,&gt;=1.5.0, but you have pandas 1.1.5 which is incompatible.
-google-colab 1.0.0 requires pandas==1.5.3, but you have pandas 1.1.5 which is incompatible.
 google-colab 1.0.0 requires requests==2.31.0, but you have requests 2.28.0 which is incompatible.
-panel 1.3.6 requires pandas&gt;=1.2, but you have pandas 1.1.5 which is incompatible.
 tensorflow 2.15.0 requires numpy&lt;2.0.0,&gt;=1.23.5, but you have numpy 1.22.0 which is incompatible.
-yfinance 0.2.33 requires pandas&gt;=1.3.0, but you have pandas 1.1.5 which is incompatible.
-yfinance 0.2.33 requires requests&gt;=2.31, but you have requests 2.28.0 which is incompatible.</span><span class="ansi-red-fg">
+yfinance 0.2.36 requires requests&gt;=2.31, but you have requests 2.28.0 which is incompatible.</span><span class="ansi-red-fg">
 </span>Successfully installed charset-normalizer-2.0.12 requests-2.28.0 urllib3-1.26.18
 Collecting humanfriendly==9.2
   Downloading humanfriendly-9.2-py2.py3-none-any.whl (86 kB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">86.7/86.7 kB</span> <span class="ansi-red-fg">1.4 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">86.7/86.7 kB</span> <span class="ansi-red-fg">4.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
 Installing collected packages: humanfriendly
 Successfully installed humanfriendly-9.2
 Starting installing aishield library
@@ -15856,7 +15820,7 @@ Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packag
 Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2.0.12)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (3.6)
 Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (1.26.18)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2023.11.17)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2024.2.2)
 Installing collected packages: aishield
 Successfully installed aishield-0.1.5
 Installed all the prerequisites packages
@@ -15901,7 +15865,7 @@ Data downloaded succesfully
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>Model Development:  25%|██▌       | 1/4 [00:02&lt;00:07,  2.57s/it]   </pre>
+<pre>Model Development:  25%|██▌       | 1/4 [00:04&lt;00:14,  4.71s/it]   </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -15921,7 +15885,7 @@ Model file downloaded succesfully
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>AIShield API Call:  75%|███████▌  | 3/4 [00:13&lt;00:04,  4.48s/it]</pre>
+<pre>AIShield API Call:  75%|███████▌  | 3/4 [00:17&lt;00:05,  5.79s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -16135,7 +16099,7 @@ Model file downloaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16199,7 +16163,7 @@ Model file downloaded succesfully
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
@@ -16242,7 +16206,7 @@ Model file downloaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16290,7 +16254,7 @@ Model file downloaded succesfully
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
@@ -16333,7 +16297,7 @@ Model file downloaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16382,7 +16346,7 @@ Model file downloaded succesfully
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
@@ -16425,7 +16389,7 @@ Model file downloaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16473,7 +16437,7 @@ Model file downloaded succesfully
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
@@ -16516,7 +16480,7 @@ Model file downloaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16603,7 +16567,7 @@ Model file downloaded succesfully
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
@@ -16646,7 +16610,7 @@ Model file downloaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">report_path</span> <span class="o">=</span> <span class="s2">&quot;reports/&quot;</span>
@@ -16663,7 +16627,7 @@ Model file downloaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">download_artifact</span><span class="p">(</span><span class="n">job_id</span><span class="p">,</span> <span class="n">report_path</span><span class="p">,</span> <span class="n">report_type</span><span class="o">=</span><span class="s1">&#39;Vulnerability&#39;</span><span class="p">,</span> <span class="n">file_format</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
@@ -16724,7 +16688,7 @@ Model file downloaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16746,7 +16710,7 @@ Model file downloaded succesfully
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
@@ -16766,7 +16730,7 @@ Model file downloaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16788,7 +16752,7 @@ Model file downloaded succesfully
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
@@ -16808,7 +16772,7 @@ Model file downloaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_file_id</span><span class="p">(</span><span class="n">report_path</span><span class="p">):</span>
@@ -16858,7 +16822,7 @@ Model file downloaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -16885,7 +16849,7 @@ Model file downloaded succesfully
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
 
 
 
