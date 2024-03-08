@@ -7587,7 +7587,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_code_input_scrollable</span><span class="p">():</span>
@@ -7753,6 +7753,74 @@ a.anchor-link {
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a7e7fa37-6eb2-44ae-a659-83e60e978adc">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Before-running-the-notebook,-please-ensure-the-following:">Before running the notebook, please ensure the following:<a class="anchor-link" href="#Before-running-the-notebook,-please-ensure-the-following:">¶</a></h3><ul>
+<li><p><strong><code>run_code</code>:  by default value is set to False</strong></p>
+<ul>
+<li>Set to <strong><code>True</code></strong> to initiate original model training.</li>
+<li>Set to <strong><code>False</code></strong> to download the pre-trained model from the Hugging Face repository <strong><a href="https://huggingface.co/Pankaj001">Hugging Face</a></strong>.</li>
+</ul>
+</li>
+<li><p><strong><code>install</code>: by default value is set to True</strong></p>
+<ul>
+<li>Set to <strong><code>True</code></strong> to automatically download and install all necessary libraries before notebook execution.</li>
+<li>Set to <strong><code>False</code></strong> to proceed with library imports only.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a2066339-8d82-4b82-b902-ed3e3ca7e03e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
+<span class="sd">Description: </span>
+<span class="sd">    run_code : True / False </span>
+<span class="sd">              if run_code is True , Original Model Training will be taken place</span>
+<span class="sd">                run_code is False , Pretrained Model will be downloaded from the hugging face [ https://huggingface.co/Pankaj001 ]</span>
+
+<span class="sd">    install : True / False </span>
+<span class="sd">            if install True , all the libraries needed to run the notebook will download first and then will import</span>
+<span class="sd">               install False, only import of the library will takes place</span>
+<span class="sd">"""</span>
+
+<span class="n">run_code</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1">#True if training of model will take place, False if downloading of pretrained model,dataset and minmax file will take place</span>
+<span class="n">install</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1">#to install the prerequisite libraries or not</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a8287174-7601-4368-9550-1bdb01928a46">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li><strong><code>num_classes</code></strong>: Number of classes for classification tasks.</li>
+<li><strong><code>model_encryption</code></strong>: Indicates whether the model is uploaded directly as a zip file (<strong>0</strong>) or encrypted as <code>.pyc</code> and then uploaded as a zip file (<strong>1</strong>).</li>
+<li><strong><code>number_of_sample</code></strong>: Specifies the total number of samples in the dataset.</li>
+<li><strong><code>input_shape</code></strong>: Shape of the input data, defined as <strong>(number_of_sample, number of features)</strong>.</li>
+<li><strong><code>model_framework</code></strong>: Utilizes the <strong>scikit-learn</strong> framework for model implementation.</li>
+</ul>
+<h4 id="These-values-are-pre-configured-for-seamless-execution-in-the-notebook.-Adjustments-can-be-made-as-per-your-specific-dataset-and-requirements.">These values are pre-configured for seamless execution in the notebook. Adjustments can be made as per your specific dataset and requirements.<a class="anchor-link" href="#These-values-are-pre-configured-for-seamless-execution-in-the-notebook.-Adjustments-can-be-made-as-per-your-specific-dataset-and-requirements.">¶</a></h4>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ef8d9fbc">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7768,8 +7836,6 @@ a.anchor-link {
 
 <span class="n">num_classes</span><span class="o">=</span><span class="mi">2</span>
 <span class="n">model_encryption</span><span class="o">=</span><span class="mi">0</span> <span class="c1">#0 if model is uploaded directly as a zip, 1 if model is encryted as .pyc and uploaded as a zip</span>
-<span class="n">run_code</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1">#True if training of model will take place, False if downloading of pretrained model,dataset and minmax file will take place</span>
-<span class="n">install</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1">#to install the prerequisite libraries or not</span>
 <span class="n">number_of_sample</span> <span class="o">=</span> <span class="mi">22000</span>
 <span class="n">input_shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">number_of_sample</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span> <span class="c1">#length of the dataset , number of features or number of cloumns-1</span>
 
@@ -8276,8 +8342,7 @@ a.anchor-link {
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">file_path</span> <span class="o">=</span> <span class="s2">"https://archive.ics.uci.edu/static/public/222/bank+marketing.zip"</span>
                 <span class="n">df</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
-                <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[:</span><span class="n">number_of_sample</span><span class="p">]</span>
-                <span class="n">number_of_sample</span> <span class="o">=</span> <span class="mi">41188</span>
+                <span class="n">number_of_sample</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
                 <span class="n">input_shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">number_of_sample</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span> <span class="c1">#length of the dataset , number of features or number of cloumns-1</span>
 
         <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
@@ -8368,12 +8433,28 @@ Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/d
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2.0.7)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2024.2.2)
 Started of installing all the prerequisites packages
+Requirement already satisfied: xgboost==2.0.3 in /usr/local/lib/python3.10/dist-packages (2.0.3)
+Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from xgboost==2.0.3) (1.25.2)
+Requirement already satisfied: scipy in /usr/local/lib/python3.10/dist-packages (from xgboost==2.0.3) (1.11.4)
+Requirement already satisfied: pandas==2.2.0 in /usr/local/lib/python3.10/dist-packages (2.2.0)
+Requirement already satisfied: numpy&lt;2,&gt;=1.22.4 in /usr/local/lib/python3.10/dist-packages (from pandas==2.2.0) (1.25.2)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /usr/local/lib/python3.10/dist-packages (from pandas==2.2.0) (2.8.2)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas==2.2.0) (2023.4)
+Requirement already satisfied: tzdata&gt;=2022.7 in /usr/local/lib/python3.10/dist-packages (from pandas==2.2.0) (2024.1)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.8.2-&gt;pandas==2.2.0) (1.16.0)
+Requirement already satisfied: scikit-learn in /usr/local/lib/python3.10/dist-packages (1.2.2)
+Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.10/dist-packages (from scikit-learn) (1.25.2)
+Requirement already satisfied: scipy&gt;=1.3.2 in /usr/local/lib/python3.10/dist-packages (from scikit-learn) (1.11.4)
+Requirement already satisfied: joblib&gt;=1.1.1 in /usr/local/lib/python3.10/dist-packages (from scikit-learn) (1.3.2)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from scikit-learn) (3.3.0)
+Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (1.25.2)
 Requirement already satisfied: pyminizip in /usr/local/lib/python3.10/dist-packages (0.2.6)
 Requirement already satisfied: requests==2.31.0 in /usr/local/lib/python3.10/dist-packages (2.31.0)
 Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (3.3.2)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (3.6)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (2.0.7)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (2024.2.2)
+Requirement already satisfied: humanfriendly==10.0 in /usr/local/lib/python3.10/dist-packages (10.0)
 Installed all the prerequisites packages
 Removed: /content/data
 Removed: /content/model
@@ -8401,31 +8482,43 @@ directory /content/reports/sample_data created successfully
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Downloading of the Data Started
-Data downloaded succesfully
-Downloading of the Minmax Started
-Minmax downloaded succesfully
+<pre>Extraction completed.
+Dataset Downloaded Successfully
+Dataset Loaded
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Model Development and Training:  25%|██▌       | 1/4 [00:02&lt;00:06,  2.13s/it]</pre>
+<pre>Model Development and Training:  25%|██▌       | 1/4 [00:11&lt;00:34, 11.39s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Downloading of the Model file Started
-Model file downloaded succesfully
+<pre>Accuracy score of the Decision Tree model is 0.9073516558220841
+F1 score of the Decision Tree model is 0.5558659217877095
+Confusion Matrix 
+ [[8746  386]
+ [ 568  597]]
+Classification Report 
+               precision    recall  f1-score   support
+
+           0       0.94      0.96      0.95      9132
+           1       0.61      0.51      0.56      1165
+
+    accuracy                           0.91     10297
+   macro avg       0.77      0.74      0.75     10297
+weighted avg       0.90      0.91      0.90     10297
+
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>AIShield API Call:  75%|███████▌  | 3/4 [00:05&lt;00:01,  2.00s/it]</pre>
+<pre>AIShield API Call:  75%|███████▌  | 3/4 [03:41&lt;01:13, 73.96s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -8441,16 +8534,6 @@ Model file downloaded succesfully
 <pre>
 </pre>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9775ce40">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 </div>
 </div>
 </div>
@@ -8534,7 +8617,7 @@ Model file downloaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">hosted_pdf_url</span> <span class="o">=</span> <span class="s2">"https://aisdocs.blob.core.windows.net/reference/Reports/Tabular/TabularClassification/MEA/VulnerabilityReport.pdf"</span>
@@ -8561,7 +8644,7 @@ Model file downloaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">hosted_defense_pdf_url</span> <span class="o">=</span> <span class="s1">'https://aisdocs.blob.core.windows.net/reference/Reports/Tabular/TabularClassification/MEA/DefenseReport.pdf'</span>
@@ -8664,7 +8747,7 @@ Model file downloaded succesfully
 <span class="sd">"""</span>
 <span class="n">base_url</span> <span class="o">=</span> <span class="s2">"https://api.aws.boschaishield.com/prod"</span>
 <span class="n">url</span><span class="o">=</span><span class="n">base_url</span><span class="o">+</span><span class="s2">"/api/ais/v1.5"</span>
-<span class="n">org_id</span> <span class="o">=</span> <span class="s1">'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'</span> <span class="c1">#&lt;&lt;Copy Org_id mentioned in welcome mail after AIShield Subscription&gt;&gt;</span>
+<span class="n">org_id</span> <span class="o">=</span> <span class="s1">'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'</span> <span class="c1">#&lt;&lt;Copy Org_id mentioned in welcome mail after AIShield Subscription&gt;&gt;</span>
 
 <span class="sd">"""</span>
 <span class="sd">Description: Initialize the AIShield API</span>
@@ -8910,7 +8993,7 @@ Model file downloaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -9007,7 +9090,7 @@ Model file downloaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -9119,7 +9202,7 @@ Model file downloaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">report_path</span> <span class="o">=</span> <span class="s2">"reports/"</span>
@@ -9134,7 +9217,7 @@ Model file downloaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">download_artifact</span><span class="p">(</span><span class="n">job_id</span><span class="p">,</span> <span class="n">report_path</span><span class="p">,</span> <span class="n">report_type</span><span class="o">=</span><span class="s1">'Vulnerability'</span><span class="p">,</span> <span class="n">file_format</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
@@ -9193,7 +9276,7 @@ Model file downloaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -9223,10 +9306,10 @@ Model file downloaded succesfully
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>2024-03-04 12:10:09,146 - INFO - directory reports/ already exist
+<pre>2024-03-08 11:52:23,955 - INFO - directory reports/ already exist
 INFO:aishield.utils.util:directory reports/ already exist
-2024-03-04 12:10:10,855 - INFO - vulnerability_20240304_1210.pdf is saved in reports/
-INFO:aishield.connection:vulnerability_20240304_1210.pdf is saved in reports/
+2024-03-08 11:52:24,695 - INFO - vulnerability_20240308_1152.pdf is saved in reports/
+INFO:aishield.connection:vulnerability_20240308_1152.pdf is saved in reports/
 </pre>
 </div>
 </div>
@@ -9237,7 +9320,7 @@ INFO:aishield.connection:vulnerability_20240304_1210.pdf is saved in reports/
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -9264,10 +9347,10 @@ INFO:aishield.connection:vulnerability_20240304_1210.pdf is saved in reports/
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>2024-03-04 12:10:10,869 - INFO - directory reports/ already exist
+<pre>2024-03-08 11:52:24,726 - INFO - directory reports/ already exist
 INFO:aishield.utils.util:directory reports/ already exist
-2024-03-04 12:10:12,480 - INFO - defense_20240304_1210.pdf is saved in reports/
-INFO:aishield.connection:defense_20240304_1210.pdf is saved in reports/
+2024-03-08 11:52:25,324 - INFO - defense_20240308_1152.pdf is saved in reports/
+INFO:aishield.connection:defense_20240308_1152.pdf is saved in reports/
 </pre>
 </div>
 </div>
@@ -9278,7 +9361,7 @@ INFO:aishield.connection:defense_20240304_1210.pdf is saved in reports/
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -9306,10 +9389,10 @@ INFO:aishield.connection:defense_20240304_1210.pdf is saved in reports/
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>2024-03-04 12:10:12,495 - INFO - directory reports/ already exist
+<pre>2024-03-08 11:52:25,351 - INFO - directory reports/ already exist
 INFO:aishield.utils.util:directory reports/ already exist
-2024-03-04 12:10:13,064 - INFO - defense_artifact_20240304_1210.zip is saved in reports/
-INFO:aishield.connection:defense_artifact_20240304_1210.zip is saved in reports/
+2024-03-08 11:52:25,991 - INFO - defense_artifact_20240308_1152.zip is saved in reports/
+INFO:aishield.connection:defense_artifact_20240308_1152.zip is saved in reports/
 </pre>
 </div>
 </div>
@@ -9346,10 +9429,10 @@ INFO:aishield.connection:defense_artifact_20240304_1210.zip is saved in reports/
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>2024-03-04 12:10:13,079 - INFO - directory reports/ already exist
+<pre>2024-03-08 11:52:26,020 - INFO - directory reports/ already exist
 INFO:aishield.utils.util:directory reports/ already exist
-2024-03-04 12:10:13,620 - INFO - attack_samples_20240304_1210.zip is saved in reports/
-INFO:aishield.connection:attack_samples_20240304_1210.zip is saved in reports/
+2024-03-08 11:52:26,722 - INFO - attack_samples_20240308_1152.zip is saved in reports/
+INFO:aishield.connection:attack_samples_20240308_1152.zip is saved in reports/
 </pre>
 </div>
 </div>
@@ -9360,7 +9443,7 @@ INFO:aishield.connection:attack_samples_20240304_1210.zip is saved in reports/
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_file_id</span><span class="p">(</span><span class="n">report_path</span><span class="p">):</span>
@@ -9403,7 +9486,7 @@ INFO:aishield.connection:attack_samples_20240304_1210.zip is saved in reports/
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d0975c57">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d0975c57">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9421,6 +9504,54 @@ INFO:aishield.connection:attack_samples_20240304_1210.zip is saved in reports/
 <span class="k">else</span><span class="p">:</span>
     <span class="n">display_pdf</span><span class="p">(</span><span class="n">output_filename</span> <span class="o">=</span> <span class="s2">"vul_"</span><span class="o">+</span><span class="n">job_id</span><span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">:],</span><span class="n">runtime_environment</span><span class="o">=</span><span class="n">runtime_environment</span><span class="p">,</span> <span class="n">pdf_path</span> <span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">report_path</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">vul_report</span><span class="p">)))</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Requirement already satisfied: google-api-python-client in /usr/local/lib/python3.10/dist-packages (2.84.0)
+Collecting google-api-python-client
+  Downloading google_api_python_client-2.121.0-py2.py3-none-any.whl (12.3 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">12.3/12.3 MB</span> <span class="ansi-red-fg">31.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Requirement already satisfied: google-auth-httplib2 in /usr/local/lib/python3.10/dist-packages (0.1.1)
+Collecting google-auth-httplib2
+  Downloading google_auth_httplib2-0.2.0-py2.py3-none-any.whl (9.3 kB)
+Requirement already satisfied: google-auth-oauthlib in /usr/local/lib/python3.10/dist-packages (1.2.0)
+Requirement already satisfied: httplib2&lt;1.dev0,&gt;=0.15.0 in /usr/local/lib/python3.10/dist-packages (from google-api-python-client) (0.22.0)
+Requirement already satisfied: google-auth&lt;3.0.0.dev0,&gt;=1.19.0 in /usr/local/lib/python3.10/dist-packages (from google-api-python-client) (2.27.0)
+Requirement already satisfied: google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,&lt;3.0.0.dev0,&gt;=1.31.5 in /usr/local/lib/python3.10/dist-packages (from google-api-python-client) (2.11.1)
+Requirement already satisfied: uritemplate&lt;5,&gt;=3.0.1 in /usr/local/lib/python3.10/dist-packages (from google-api-python-client) (4.1.1)
+Requirement already satisfied: requests-oauthlib&gt;=0.7.0 in /usr/local/lib/python3.10/dist-packages (from google-auth-oauthlib) (1.3.1)
+Requirement already satisfied: googleapis-common-protos&lt;2.0.dev0,&gt;=1.56.2 in /usr/local/lib/python3.10/dist-packages (from google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,&lt;3.0.0.dev0,&gt;=1.31.5-&gt;google-api-python-client) (1.62.0)
+Requirement already satisfied: protobuf!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,&lt;5.0.0.dev0,&gt;=3.19.5 in /usr/local/lib/python3.10/dist-packages (from google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,&lt;3.0.0.dev0,&gt;=1.31.5-&gt;google-api-python-client) (3.20.3)
+Requirement already satisfied: requests&lt;3.0.0.dev0,&gt;=2.18.0 in /usr/local/lib/python3.10/dist-packages (from google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,&lt;3.0.0.dev0,&gt;=1.31.5-&gt;google-api-python-client) (2.31.0)
+Requirement already satisfied: cachetools&lt;6.0,&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from google-auth&lt;3.0.0.dev0,&gt;=1.19.0-&gt;google-api-python-client) (5.3.3)
+Requirement already satisfied: pyasn1-modules&gt;=0.2.1 in /usr/local/lib/python3.10/dist-packages (from google-auth&lt;3.0.0.dev0,&gt;=1.19.0-&gt;google-api-python-client) (0.3.0)
+Requirement already satisfied: rsa&lt;5,&gt;=3.1.4 in /usr/local/lib/python3.10/dist-packages (from google-auth&lt;3.0.0.dev0,&gt;=1.19.0-&gt;google-api-python-client) (4.9)
+Requirement already satisfied: pyparsing!=3.0.0,!=3.0.1,!=3.0.2,!=3.0.3,&lt;4,&gt;=2.4.2 in /usr/local/lib/python3.10/dist-packages (from httplib2&lt;1.dev0,&gt;=0.15.0-&gt;google-api-python-client) (3.1.1)
+Requirement already satisfied: oauthlib&gt;=3.0.0 in /usr/local/lib/python3.10/dist-packages (from requests-oauthlib&gt;=0.7.0-&gt;google-auth-oauthlib) (3.2.2)
+Requirement already satisfied: pyasn1&lt;0.6.0,&gt;=0.4.6 in /usr/local/lib/python3.10/dist-packages (from pyasn1-modules&gt;=0.2.1-&gt;google-auth&lt;3.0.0.dev0,&gt;=1.19.0-&gt;google-api-python-client) (0.5.1)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3.0.0.dev0,&gt;=2.18.0-&gt;google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,&lt;3.0.0.dev0,&gt;=1.31.5-&gt;google-api-python-client) (3.3.2)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3.0.0.dev0,&gt;=2.18.0-&gt;google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,&lt;3.0.0.dev0,&gt;=1.31.5-&gt;google-api-python-client) (3.6)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3.0.0.dev0,&gt;=2.18.0-&gt;google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,&lt;3.0.0.dev0,&gt;=1.31.5-&gt;google-api-python-client) (2.0.7)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3.0.0.dev0,&gt;=2.18.0-&gt;google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,&lt;3.0.0.dev0,&gt;=1.31.5-&gt;google-api-python-client) (2024.2.2)
+Installing collected packages: google-auth-httplib2, google-api-python-client
+  Attempting uninstall: google-auth-httplib2
+    Found existing installation: google-auth-httplib2 0.1.1
+    Uninstalling google-auth-httplib2-0.1.1:
+      Successfully uninstalled google-auth-httplib2-0.1.1
+  Attempting uninstall: google-api-python-client
+    Found existing installation: google-api-python-client 2.84.0
+    Uninstalling google-api-python-client-2.84.0:
+      Successfully uninstalled google-api-python-client-2.84.0
+Successfully installed google-api-python-client-2.121.0 google-auth-httplib2-0.2.0
+</pre>
 </div>
 </div>
 </div>
