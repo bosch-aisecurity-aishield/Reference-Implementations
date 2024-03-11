@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Image_Classification_Evasion</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Image_Classification_Evasion 1</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7568,7 +7568,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -7587,7 +7587,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_code_input_scrollable</span><span class="p">():</span>
@@ -7782,16 +7782,16 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
-<span class="sd">Description: </span>
-<span class="sd">    run_code : True / False </span>
+<span class="sd">Description:</span>
+<span class="sd">    run_code : True / False</span>
 <span class="sd">              if run_code is True , Original Model Training will be taken place</span>
 <span class="sd">                run_code is False , Pretrained Model will be downloaded from the hugging face [ https://huggingface.co/Pankaj001 ]</span>
 
-<span class="sd">    install : True / False </span>
+<span class="sd">    install : True / False</span>
 <span class="sd">            if install True , all the libraries needed to run the notebook will download first and then will import</span>
 <span class="sd">               install False, only import of the library will takes place</span>
 <span class="sd">"""</span>
@@ -7828,7 +7828,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#@title Show/Hide Code</span>
@@ -8054,7 +8054,7 @@ a.anchor-link {
     <span class="n">y_test</span> <span class="o">=</span> <span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'y_test'</span><span class="p">]</span>
 
     <span class="c1">#splitting the dataset into train and validation set</span>
-    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_val</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">stratify</span> <span class="o">=</span> <span class="n">y_train</span><span class="p">,</span><span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_val</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">stratify</span> <span class="o">=</span> <span class="n">y_train</span><span class="p">,</span><span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
 
     <span class="c1">#Normalizing and Reshaping the Data</span>
     <span class="k">if</span> <span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'Normalized'</span><span class="p">]:</span>
@@ -8367,223 +8367,45 @@ a.anchor-link {
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Starting installing aishield library
-Requirement already satisfied: aishield in /usr/local/lib/python3.10/dist-packages (0.1.5)
-Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from aishield) (2.28.0)
-Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2.0.12)
+Collecting aishield
+  Downloading aishield-0.1.5-py3-none-any.whl (25 kB)
+Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from aishield) (2.31.0)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (3.3.2)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (3.6)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (1.26.18)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2.0.7)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2024.2.2)
+Installing collected packages: aishield
+Successfully installed aishield-0.1.5
 Started of installing all the prerequisites packages
-Collecting numpy==1.22
-  Downloading numpy-1.22.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">16.8/16.8 MB</span> <span class="ansi-red-fg">53.9 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
-Installing collected packages: numpy
-  Attempting uninstall: numpy
-    Found existing installation: numpy 1.23.5
-    Uninstalling numpy-1.23.5:
-      Successfully uninstalled numpy-1.23.5
-<span class="ansi-red-fg">ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-lida 0.0.10 requires fastapi, which is not installed.
-lida 0.0.10 requires kaleido, which is not installed.
-lida 0.0.10 requires python-multipart, which is not installed.
-lida 0.0.10 requires uvicorn, which is not installed.
-librosa 0.10.1 requires numpy!=1.22.0,!=1.22.1,!=1.22.2,&gt;=1.20.3, but you have numpy 1.22.0 which is incompatible.
-plotnine 0.12.4 requires numpy&gt;=1.23.0, but you have numpy 1.22.0 which is incompatible.
-pywavelets 1.5.0 requires numpy&lt;2.0,&gt;=1.22.4, but you have numpy 1.22.0 which is incompatible.
-tensorflow 2.15.0 requires numpy&lt;2.0.0,&gt;=1.23.5, but you have numpy 1.22.0 which is incompatible.
-yfinance 0.2.36 requires requests&gt;=2.31, but you have requests 2.28.0 which is incompatible.</span><span class="ansi-red-fg">
-</span>Successfully installed numpy-1.22.0
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Collecting matplotlib==3.3.4
-  Downloading matplotlib-3.3.4.tar.gz (37.9 MB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">37.9/37.9 MB</span> <span class="ansi-red-fg">30.5 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
-  Preparing metadata (setup.py) ... done
-Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.3.4) (0.12.1)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.3.4) (1.4.5)
-Requirement already satisfied: numpy&gt;=1.15 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.3.4) (1.22.0)
-Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.3.4) (9.4.0)
-Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,&gt;=2.0.3 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.3.4) (3.1.1)
-Requirement already satisfied: python-dateutil&gt;=2.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.3.4) (2.8.2)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.1-&gt;matplotlib==3.3.4) (1.16.0)
-Building wheels for collected packages: matplotlib
-  Building wheel for matplotlib (setup.py) ... done
-  Created wheel for matplotlib: filename=matplotlib-3.3.4-cp310-cp310-linux_x86_64.whl size=11684788 sha256=7df6c2d6a18e3499ae6bcc137ceec860f459814e6d13aa90df6fd5384580dafc
-  Stored in directory: /root/.cache/pip/wheels/38/c6/49/eaba6d234887d98d9c85185e2a90bd7bb77934e85eefaf317e
-Successfully built matplotlib
-Installing collected packages: matplotlib
-  Attempting uninstall: matplotlib
-    Found existing installation: matplotlib 3.7.1
-    Uninstalling matplotlib-3.7.1:
-      Successfully uninstalled matplotlib-3.7.1
-<span class="ansi-red-fg">ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-lida 0.0.10 requires fastapi, which is not installed.
-lida 0.0.10 requires kaleido, which is not installed.
-lida 0.0.10 requires python-multipart, which is not installed.
-lida 0.0.10 requires uvicorn, which is not installed.
-mizani 0.9.3 requires matplotlib&gt;=3.5.0, but you have matplotlib 3.3.4 which is incompatible.
-plotnine 0.12.4 requires matplotlib&gt;=3.6.0, but you have matplotlib 3.3.4 which is incompatible.
-plotnine 0.12.4 requires numpy&gt;=1.23.0, but you have numpy 1.22.0 which is incompatible.
-seaborn 0.13.1 requires matplotlib!=3.6.1,&gt;=3.4, but you have matplotlib 3.3.4 which is incompatible.</span><span class="ansi-red-fg">
-</span>Successfully installed matplotlib-3.3.4
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Collecting tensorflow==2.9.1
-  Downloading tensorflow-2.9.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (511.7 MB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">511.7/511.7 MB</span> <span class="ansi-red-fg">2.8 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
-Requirement already satisfied: absl-py&gt;=1.0.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.4.0)
-Requirement already satisfied: astunparse&gt;=1.6.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.6.3)
-Collecting flatbuffers&lt;2,&gt;=1.12 (from tensorflow==2.9.1)
-  Downloading flatbuffers-1.12-py2.py3-none-any.whl (15 kB)
-Collecting gast&lt;=0.4.0,&gt;=0.2.1 (from tensorflow==2.9.1)
-  Downloading gast-0.4.0-py3-none-any.whl (9.8 kB)
-Requirement already satisfied: google-pasta&gt;=0.1.1 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (0.2.0)
-Requirement already satisfied: grpcio&lt;2.0,&gt;=1.24.3 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.60.1)
-Requirement already satisfied: h5py&gt;=2.9.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (3.9.0)
-Collecting keras&lt;2.10.0,&gt;=2.9.0rc0 (from tensorflow==2.9.1)
-  Downloading keras-2.9.0-py2.py3-none-any.whl (1.6 MB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">1.6/1.6 MB</span> <span class="ansi-red-fg">79.9 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
-Collecting keras-preprocessing&gt;=1.1.1 (from tensorflow==2.9.1)
-  Downloading Keras_Preprocessing-1.1.2-py2.py3-none-any.whl (42 kB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">42.6/42.6 kB</span> <span class="ansi-red-fg">5.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
-Requirement already satisfied: libclang&gt;=13.0.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (16.0.6)
-Requirement already satisfied: numpy&gt;=1.20 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.22.0)
-Requirement already satisfied: opt-einsum&gt;=2.3.2 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (3.3.0)
-Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (23.2)
-Collecting protobuf&lt;3.20,&gt;=3.9.2 (from tensorflow==2.9.1)
-  Downloading protobuf-3.19.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">1.1/1.1 MB</span> <span class="ansi-red-fg">72.6 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
-Requirement already satisfied: setuptools in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (67.7.2)
-Requirement already satisfied: six&gt;=1.12.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.16.0)
-Collecting tensorboard&lt;2.10,&gt;=2.9 (from tensorflow==2.9.1)
-  Downloading tensorboard-2.9.1-py3-none-any.whl (5.8 MB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">5.8/5.8 MB</span> <span class="ansi-red-fg">103.6 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
-Requirement already satisfied: tensorflow-io-gcs-filesystem&gt;=0.23.1 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (0.35.0)
-Collecting tensorflow-estimator&lt;2.10.0,&gt;=2.9.0rc0 (from tensorflow==2.9.1)
-  Downloading tensorflow_estimator-2.9.0-py2.py3-none-any.whl (438 kB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">438.7/438.7 kB</span> <span class="ansi-red-fg">44.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
-Requirement already satisfied: termcolor&gt;=1.1.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (2.4.0)
-Requirement already satisfied: typing-extensions&gt;=3.6.6 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (4.9.0)
-Requirement already satisfied: wrapt&gt;=1.11.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.14.1)
-Requirement already satisfied: wheel&lt;1.0,&gt;=0.23.0 in /usr/local/lib/python3.10/dist-packages (from astunparse&gt;=1.6.0-&gt;tensorflow==2.9.1) (0.42.0)
-Requirement already satisfied: google-auth&lt;3,&gt;=1.6.3 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (2.17.3)
-Collecting google-auth-oauthlib&lt;0.5,&gt;=0.4.1 (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1)
-  Downloading google_auth_oauthlib-0.4.6-py2.py3-none-any.whl (18 kB)
-Requirement already satisfied: markdown&gt;=2.6.8 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (3.5.2)
-Requirement already satisfied: requests&lt;3,&gt;=2.21.0 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (2.28.0)
-Collecting tensorboard-data-server&lt;0.7.0,&gt;=0.6.0 (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1)
-  Downloading tensorboard_data_server-0.6.1-py3-none-manylinux2010_x86_64.whl (4.9 MB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">4.9/4.9 MB</span> <span class="ansi-red-fg">96.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
-Collecting tensorboard-plugin-wit&gt;=1.6.0 (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1)
-  Downloading tensorboard_plugin_wit-1.8.1-py3-none-any.whl (781 kB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">781.3/781.3 kB</span> <span class="ansi-red-fg">67.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
-Requirement already satisfied: werkzeug&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (3.0.1)
-Requirement already satisfied: cachetools&lt;6.0,&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (5.3.2)
-Requirement already satisfied: pyasn1-modules&gt;=0.2.1 in /usr/local/lib/python3.10/dist-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (0.3.0)
-Requirement already satisfied: rsa&lt;5,&gt;=3.1.4 in /usr/local/lib/python3.10/dist-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (4.9)
-Requirement already satisfied: requests-oauthlib&gt;=0.7.0 in /usr/local/lib/python3.10/dist-packages (from google-auth-oauthlib&lt;0.5,&gt;=0.4.1-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (1.3.1)
-Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3,&gt;=2.21.0-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (2.0.12)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3,&gt;=2.21.0-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (3.6)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3,&gt;=2.21.0-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (1.26.18)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3,&gt;=2.21.0-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (2024.2.2)
-Requirement already satisfied: MarkupSafe&gt;=2.1.1 in /usr/local/lib/python3.10/dist-packages (from werkzeug&gt;=1.0.1-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (2.1.5)
-Requirement already satisfied: pyasn1&lt;0.6.0,&gt;=0.4.6 in /usr/local/lib/python3.10/dist-packages (from pyasn1-modules&gt;=0.2.1-&gt;google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (0.5.1)
-Requirement already satisfied: oauthlib&gt;=3.0.0 in /usr/local/lib/python3.10/dist-packages (from requests-oauthlib&gt;=0.7.0-&gt;google-auth-oauthlib&lt;0.5,&gt;=0.4.1-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (3.2.2)
-Installing collected packages: tensorboard-plugin-wit, keras, flatbuffers, tensorflow-estimator, tensorboard-data-server, protobuf, keras-preprocessing, gast, google-auth-oauthlib, tensorboard, tensorflow
-  Attempting uninstall: keras
-    Found existing installation: keras 2.15.0
-    Uninstalling keras-2.15.0:
-      Successfully uninstalled keras-2.15.0
-  Attempting uninstall: flatbuffers
-    Found existing installation: flatbuffers 23.5.26
-    Uninstalling flatbuffers-23.5.26:
-      Successfully uninstalled flatbuffers-23.5.26
-  Attempting uninstall: tensorflow-estimator
-    Found existing installation: tensorflow-estimator 2.15.0
-    Uninstalling tensorflow-estimator-2.15.0:
-      Successfully uninstalled tensorflow-estimator-2.15.0
-  Attempting uninstall: tensorboard-data-server
-    Found existing installation: tensorboard-data-server 0.7.2
-    Uninstalling tensorboard-data-server-0.7.2:
-      Successfully uninstalled tensorboard-data-server-0.7.2
-  Attempting uninstall: protobuf
-    Found existing installation: protobuf 3.20.3
-    Uninstalling protobuf-3.20.3:
-      Successfully uninstalled protobuf-3.20.3
-  Attempting uninstall: gast
-    Found existing installation: gast 0.5.4
-    Uninstalling gast-0.5.4:
-      Successfully uninstalled gast-0.5.4
-  Attempting uninstall: google-auth-oauthlib
-    Found existing installation: google-auth-oauthlib 1.2.0
-    Uninstalling google-auth-oauthlib-1.2.0:
-      Successfully uninstalled google-auth-oauthlib-1.2.0
-  Attempting uninstall: tensorboard
-    Found existing installation: tensorboard 2.15.1
-    Uninstalling tensorboard-2.15.1:
-      Successfully uninstalled tensorboard-2.15.1
-  Attempting uninstall: tensorflow
-    Found existing installation: tensorflow 2.15.0
-    Uninstalling tensorflow-2.15.0:
-      Successfully uninstalled tensorflow-2.15.0
-<span class="ansi-red-fg">ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-pandas-gbq 0.19.2 requires google-auth-oauthlib&gt;=0.7.0, but you have google-auth-oauthlib 0.4.6 which is incompatible.
-tensorflow-datasets 4.9.4 requires protobuf&gt;=3.20, but you have protobuf 3.19.6 which is incompatible.
-tensorflow-metadata 1.14.0 requires protobuf&lt;4.21,&gt;=3.20.3, but you have protobuf 3.19.6 which is incompatible.</span><span class="ansi-red-fg">
-</span>Successfully installed flatbuffers-1.12 gast-0.4.0 google-auth-oauthlib-0.4.6 keras-2.9.0 keras-preprocessing-1.1.2 protobuf-3.19.6 tensorboard-2.9.1 tensorboard-data-server-0.6.1 tensorboard-plugin-wit-1.8.1 tensorflow-2.9.1 tensorflow-estimator-2.9.0
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Collecting scikit-learn==1.0.2
-  Downloading scikit_learn-1.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (26.5 MB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">26.5/26.5 MB</span> <span class="ansi-red-fg">44.5 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
-Requirement already satisfied: numpy&gt;=1.14.6 in /usr/local/lib/python3.10/dist-packages (from scikit-learn==1.0.2) (1.22.0)
-Requirement already satisfied: scipy&gt;=1.1.0 in /usr/local/lib/python3.10/dist-packages (from scikit-learn==1.0.2) (1.11.4)
-Requirement already satisfied: joblib&gt;=0.11 in /usr/local/lib/python3.10/dist-packages (from scikit-learn==1.0.2) (1.3.2)
-Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from scikit-learn==1.0.2) (3.2.0)
-Installing collected packages: scikit-learn
-  Attempting uninstall: scikit-learn
-    Found existing installation: scikit-learn 1.2.2
-    Uninstalling scikit-learn-1.2.2:
-      Successfully uninstalled scikit-learn-1.2.2
-<span class="ansi-red-fg">ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-bigframes 0.20.0 requires scikit-learn&gt;=1.2.2, but you have scikit-learn 1.0.2 which is incompatible.
-librosa 0.10.1 requires numpy!=1.22.0,!=1.22.1,!=1.22.2,&gt;=1.20.3, but you have numpy 1.22.0 which is incompatible.</span><span class="ansi-red-fg">
-</span>Successfully installed scikit-learn-1.0.2
-Collecting humanfriendly==9.2
-  Downloading humanfriendly-9.2-py2.py3-none-any.whl (86 kB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">86.7/86.7 kB</span> <span class="ansi-red-fg">2.6 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
-Installing collected packages: humanfriendly
-Successfully installed humanfriendly-9.2
-Requirement already satisfied: tqdm==4.61.1 in /usr/local/lib/python3.10/dist-packages (4.61.1)
-Requirement already satisfied: requests==2.28.0 in /usr/local/lib/python3.10/dist-packages (2.28.0)
-Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (2.0.12)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (3.6)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (1.26.18)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (2024.2.2)
-Requirement already satisfied: opencv-python in /usr/local/lib/python3.10/dist-packages (4.8.0.76)
-Requirement already satisfied: numpy&gt;=1.21.2 in /usr/local/lib/python3.10/dist-packages (from opencv-python) (1.22.0)
+Collecting tqdm==4.66.1
+  Downloading tqdm-4.66.1-py3-none-any.whl (78 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">78.3/78.3 kB</span> <span class="ansi-red-fg">1.2 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Installing collected packages: tqdm
+  Attempting uninstall: tqdm
+    Found existing installation: tqdm 4.66.2
+    Uninstalling tqdm-4.66.2:
+      Successfully uninstalled tqdm-4.66.2
+Successfully installed tqdm-4.66.1
+Requirement already satisfied: requests==2.31.0 in /usr/local/lib/python3.10/dist-packages (2.31.0)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (3.3.2)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (3.6)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (2.0.7)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (2024.2.2)
 Installed all the prerequisites packages
+Failed to removed: /content/data
+Failed to removed: /content/model
+Failed to removed: /content/label
+Failed to removed: /content/encrypt_model
+Failed to removed: /content/reports
+Failed to removed: /content/zip
+Failed to removed: /content/reports/sample_data
+directory /content/data created successfully
+directory /content/model created successfully
+directory /content/label created successfully
+directory /content/reports created successfully
+directory /content/encrypt_model created successfully
+directory /content/zip created successfully
+directory /content/reports/sample_data created successfully
 </pre>
 </div>
 </div>
@@ -8596,63 +8418,31 @@ Installed all the prerequisites packages
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Removed: /content/data
-Removed: /content/model
-Removed: /content/label
-Removed: /content/encrypt_model
-Removed: /content/reports
-Removed: /content/zip
-Failed to removed: /content/reports/sample_data
-directory /content/data created successfully
-directory /content/model created successfully
-directory /content/label created successfully
-directory /content/reports created successfully
-directory /content/encrypt_model created successfully
-directory /content/zip created successfully
-directory /content/reports/sample_data created successfully
-Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
-11490434/11490434 [==============================] - 0s 0us/step
-Dataset Loaded
+<pre>loading of the Data Started
+Data loaded succesfully
+loading of the Label Started
+Label loaded succesfully
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Model Development and Training:  25%|██▌       | 1/4 [00:01&lt;00:04,  1.49s/it]</pre>
+<pre>Model Development and Training:  25%|██▌       | 1/4 [00:02&lt;00:06,  2.02s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Normalization of the inputdata being started
-Normalization Done
-844/844 [==============================] - ETA: 0s - loss: 0.2401 - accuracy: 0.9240
-Epoch 1: val_loss improved from inf to 0.04371, saving model to /content/model/mnist_model.h5
-844/844 [==============================] - 340s 402ms/step - loss: 0.2401 - accuracy: 0.9240 - val_loss: 0.0437 - val_accuracy: 0.9871
-313/313 [==============================] - 14s 46ms/step - loss: 0.0437 - accuracy: 0.9871
-* Loss: 0.043711863458156586 
-* Accuracy: 0.9871000051498413
+<pre>loading of the Model file Started
+Model file loaded succesfully
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Preparing Data, Model and Label:  50%|█████     | 2/4 [06:40&lt;07:50, 235.45s/it]</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Preparing and Saving Data and Label file Needed.
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>AIShield API Call:  75%|███████▌  | 3/4 [06:43&lt;02:14, 134.46s/it]</pre>
+<pre>AIShield API Call:  75%|███████▌  | 3/4 [00:05&lt;00:01,  1.73s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -8761,7 +8551,7 @@ Epoch 1: val_loss improved from inf to 0.04371, saving model to /content/model/m
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">hosted_pdf_url</span> <span class="o">=</span> <span class="s2">"https://aisdocs.blob.core.windows.net/reference/Reports/Image/ImageClassification/Evasion/VulnerabilityReport.pdf"</span>
@@ -8788,7 +8578,7 @@ Epoch 1: val_loss improved from inf to 0.04371, saving model to /content/model/m
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">hosted_defense_pdf_url</span> <span class="o">=</span> <span class="s1">'https://aisdocs.blob.core.windows.net/reference/Reports/Image/ImageClassification/Evasion/DefenseReport.pdf'</span>
@@ -9039,7 +8829,7 @@ Epoch 1: val_loss improved from inf to 0.04371, saving model to /content/model/m
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bcb368b4">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=bcb368b4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9092,19 +8882,6 @@ Epoch 1: val_loss improved from inf to 0.04371, saving model to /content/model/m
     <span class="nb">print</span><span class="p">(</span><span class="s1">'label_upload_status: '</span><span class="p">,</span> <span class="n">label_upload_status</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'model_upload_status: '</span><span class="p">,</span> <span class="n">model_upload_status</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Upload status: data file upload successful, label file upload successful, model file upload successful
-</pre>
 </div>
 </div>
 </div>

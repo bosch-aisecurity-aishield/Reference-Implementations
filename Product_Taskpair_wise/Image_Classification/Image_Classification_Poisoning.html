@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Image_Classification_Poisoning</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Image_Classification_Poisoning (2)</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7568,7 +7568,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -7587,7 +7587,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_code_input_scrollable</span><span class="p">():</span>
@@ -7756,12 +7756,12 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
-<span class="sd">Description: </span>
-<span class="sd">    run_code : True / False </span>
+<span class="sd">Description:</span>
+<span class="sd">    run_code : True / False</span>
 <span class="sd">              if run_code is True , Original Model Training will be taken place</span>
 <span class="sd">                run_code is False , Pretrained Model will be downloaded from the hugging face [ https://huggingface.co/Pankaj001 ]</span>
 
-<span class="sd">    install : True / False </span>
+<span class="sd">    install : True / False</span>
 <span class="sd">            if install True , all the libraries needed to run the notebook will download first and then will import</span>
 <span class="sd">               install False, only import of the library will takes place</span>
 <span class="sd">"""</span>
@@ -7797,7 +7797,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#@title Show/Hide Code</span>
@@ -7863,6 +7863,7 @@ a.anchor-link {
     <span class="kn">import</span> <span class="nn">zipfile</span>
     <span class="kn">import</span> <span class="nn">requests</span>
     <span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+    <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">import</span> <span class="nn">aishield</span> <span class="k">as</span> <span class="nn">ais</span>
 
@@ -8020,7 +8021,7 @@ a.anchor-link {
     <span class="n">y_test</span> <span class="o">=</span> <span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'y_test'</span><span class="p">]</span>
 
     <span class="c1">#splitting the dataset into train and validation set</span>
-    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_val</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">stratify</span> <span class="o">=</span> <span class="n">y_train</span><span class="p">,</span><span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_val</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">stratify</span> <span class="o">=</span> <span class="n">y_train</span><span class="p">,</span><span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
 
     <span class="c1">#Normalizing and Reshaping the Data</span>
     <span class="k">if</span> <span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'Normalized'</span><span class="p">]:</span>
@@ -8261,12 +8262,12 @@ a.anchor-link {
                 <span class="n">X_train</span> <span class="p">,</span> <span class="n">y_train</span> <span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">()</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="nb">print</span><span class="p">(</span><span class="s2">"loading of the Data Started"</span><span class="p">)</span>
-                <span class="n">data_url</span> <span class="o">=</span> <span class="s2">"https://aisdocs.blob.core.windows.net/reference/upload/Image/ImageClassification/Poisoning/val_data.zip"</span>
+                <span class="n">data_url</span> <span class="o">=</span> <span class="s2">"https://huggingface.co/Pankaj001/ImageClassification-MNIST-poisoining/blob/main/val_data.zip"</span>
                 <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">data_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">data_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">data_path</span><span class="p">))</span>
                 <span class="nb">print</span><span class="p">(</span><span class="s2">"Data loaded succesfully"</span><span class="p">)</span>
 
                 <span class="nb">print</span><span class="p">(</span><span class="s2">"loading of the Label Started"</span><span class="p">)</span>
-                <span class="n">label_url</span> <span class="o">=</span> <span class="s2">"https://aisdocs.blob.core.windows.net/reference/upload/Image/ImageClassification/Poisoning/val_label.zip"</span>
+                <span class="n">label_url</span> <span class="o">=</span> <span class="s2">"https://huggingface.co/Pankaj001/ImageClassification-MNIST-poisoining/blob/main/val_label.zip"</span>
                 <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">label_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">label_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">label_path</span><span class="p">))</span>
                 <span class="nb">print</span><span class="p">(</span><span class="s2">"Label loaded succesfully"</span><span class="p">)</span>
 
@@ -8295,13 +8296,13 @@ a.anchor-link {
             <span class="k">else</span><span class="p">:</span>
                 <span class="nb">print</span><span class="p">(</span><span class="s2">"loading of the Models file Started"</span><span class="p">)</span>
 
-                <span class="n">model_url1</span> <span class="o">=</span> <span class="s2">"https://aisdocs.blob.core.windows.net/reference/upload/Image/ImageClassification/Poisoning/clean_model1.zip"</span>
+                <span class="n">model_url1</span> <span class="o">=</span> <span class="s2">"https://huggingface.co/Pankaj001/ImageClassification-MNIST-poisoining/blob/main/clean_model1.zip"</span>
                 <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">model_url1</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_url1</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">clean_model1_path</span><span class="p">))</span>
 
-                <span class="n">model_url2</span> <span class="o">=</span> <span class="s2">"https://aisdocs.blob.core.windows.net/reference/upload/Image/ImageClassification/Poisoning/clean_model2.zip"</span>
+                <span class="n">model_url2</span> <span class="o">=</span> <span class="s2">"https://huggingface.co/Pankaj001/ImageClassification-MNIST-poisoining/blob/main/clean_model2.zip"</span>
                 <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">model_url2</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_url2</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">clean_model2_path</span><span class="p">))</span>
 
-                <span class="n">model_url3</span> <span class="o">=</span> <span class="s2">"https://aisdocs.blob.core.windows.net/reference/upload/Image/ImageClassification/Poisoning/fine_tuned_model.zip"</span>
+                <span class="n">model_url3</span> <span class="o">=</span> <span class="s2">"https://huggingface.co/Pankaj001/ImageClassification-MNIST-poisoining/blob/main/fine_tuned_model.zip"</span>
                 <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">model_url3</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_url3</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">fine_tuned_model_path</span><span class="p">))</span>
 
                 <span class="nb">print</span><span class="p">(</span><span class="s2">"Models file loaded succesfully"</span><span class="p">)</span>
@@ -8348,87 +8349,6 @@ Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2024.2.2)
 Installing collected packages: aishield
 Successfully installed aishield-0.1.5
-Started of installing all the prerequisites packages
-Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (1.25.2)
-Collecting matplotlib==3.8.2
-  Downloading matplotlib-3.8.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.6 MB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">11.6/11.6 MB</span> <span class="ansi-red-fg">33.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
-Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.8.2) (1.2.0)
-Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.8.2) (0.12.1)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.8.2) (4.49.0)
-Requirement already satisfied: kiwisolver&gt;=1.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.8.2) (1.4.5)
-Requirement already satisfied: numpy&lt;2,&gt;=1.21 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.8.2) (1.25.2)
-Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.8.2) (23.2)
-Requirement already satisfied: pillow&gt;=8 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.8.2) (9.4.0)
-Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.8.2) (3.1.1)
-Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.8.2) (2.8.2)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.7-&gt;matplotlib==3.8.2) (1.16.0)
-Installing collected packages: matplotlib
-  Attempting uninstall: matplotlib
-    Found existing installation: matplotlib 3.7.1
-    Uninstalling matplotlib-3.7.1:
-      Successfully uninstalled matplotlib-3.7.1
-Successfully installed matplotlib-3.8.2
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Requirement already satisfied: tensorflow==2.15.0 in /usr/local/lib/python3.10/dist-packages (2.15.0)
-Requirement already satisfied: absl-py&gt;=1.0.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (1.4.0)
-Requirement already satisfied: astunparse&gt;=1.6.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (1.6.3)
-Requirement already satisfied: flatbuffers&gt;=23.5.26 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (23.5.26)
-Requirement already satisfied: gast!=0.5.0,!=0.5.1,!=0.5.2,&gt;=0.2.1 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (0.5.4)
-Requirement already satisfied: google-pasta&gt;=0.1.1 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (0.2.0)
-Requirement already satisfied: h5py&gt;=2.9.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (3.9.0)
-Requirement already satisfied: libclang&gt;=13.0.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (16.0.6)
-Requirement already satisfied: ml-dtypes~=0.2.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (0.2.0)
-Requirement already satisfied: numpy&lt;2.0.0,&gt;=1.23.5 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (1.25.2)
-Requirement already satisfied: opt-einsum&gt;=2.3.2 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (3.3.0)
-Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (23.2)
-Requirement already satisfied: protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,&lt;5.0.0dev,&gt;=3.20.3 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (3.20.3)
-Requirement already satisfied: setuptools in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (67.7.2)
-Requirement already satisfied: six&gt;=1.12.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (1.16.0)
-Requirement already satisfied: termcolor&gt;=1.1.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (2.4.0)
-Requirement already satisfied: typing-extensions&gt;=3.6.6 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (4.10.0)
-Requirement already satisfied: wrapt&lt;1.15,&gt;=1.11.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (1.14.1)
-Requirement already satisfied: tensorflow-io-gcs-filesystem&gt;=0.23.1 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (0.36.0)
-Requirement already satisfied: grpcio&lt;2.0,&gt;=1.24.3 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (1.62.0)
-Requirement already satisfied: tensorboard&lt;2.16,&gt;=2.15 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (2.15.2)
-Requirement already satisfied: tensorflow-estimator&lt;2.16,&gt;=2.15.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (2.15.0)
-Requirement already satisfied: keras&lt;2.16,&gt;=2.15.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.15.0) (2.15.0)
-Requirement already satisfied: wheel&lt;1.0,&gt;=0.23.0 in /usr/local/lib/python3.10/dist-packages (from astunparse&gt;=1.6.0-&gt;tensorflow==2.15.0) (0.42.0)
-Requirement already satisfied: google-auth&lt;3,&gt;=1.6.3 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.16,&gt;=2.15-&gt;tensorflow==2.15.0) (2.27.0)
-Requirement already satisfied: google-auth-oauthlib&lt;2,&gt;=0.5 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.16,&gt;=2.15-&gt;tensorflow==2.15.0) (1.2.0)
-Requirement already satisfied: markdown&gt;=2.6.8 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.16,&gt;=2.15-&gt;tensorflow==2.15.0) (3.5.2)
-Requirement already satisfied: requests&lt;3,&gt;=2.21.0 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.16,&gt;=2.15-&gt;tensorflow==2.15.0) (2.31.0)
-Requirement already satisfied: tensorboard-data-server&lt;0.8.0,&gt;=0.7.0 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.16,&gt;=2.15-&gt;tensorflow==2.15.0) (0.7.2)
-Requirement already satisfied: werkzeug&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.16,&gt;=2.15-&gt;tensorflow==2.15.0) (3.0.1)
-Requirement already satisfied: cachetools&lt;6.0,&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&lt;2.16,&gt;=2.15-&gt;tensorflow==2.15.0) (5.3.3)
-Requirement already satisfied: pyasn1-modules&gt;=0.2.1 in /usr/local/lib/python3.10/dist-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&lt;2.16,&gt;=2.15-&gt;tensorflow==2.15.0) (0.3.0)
-Requirement already satisfied: rsa&lt;5,&gt;=3.1.4 in /usr/local/lib/python3.10/dist-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&lt;2.16,&gt;=2.15-&gt;tensorflow==2.15.0) (4.9)
-Requirement already satisfied: requests-oauthlib&gt;=0.7.0 in /usr/local/lib/python3.10/dist-packages (from google-auth-oauthlib&lt;2,&gt;=0.5-&gt;tensorboard&lt;2.16,&gt;=2.15-&gt;tensorflow==2.15.0) (1.3.1)
-Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3,&gt;=2.21.0-&gt;tensorboard&lt;2.16,&gt;=2.15-&gt;tensorflow==2.15.0) (3.3.2)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3,&gt;=2.21.0-&gt;tensorboard&lt;2.16,&gt;=2.15-&gt;tensorflow==2.15.0) (3.6)
-Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3,&gt;=2.21.0-&gt;tensorboard&lt;2.16,&gt;=2.15-&gt;tensorflow==2.15.0) (2.0.7)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3,&gt;=2.21.0-&gt;tensorboard&lt;2.16,&gt;=2.15-&gt;tensorflow==2.15.0) (2024.2.2)
-Requirement already satisfied: MarkupSafe&gt;=2.1.1 in /usr/local/lib/python3.10/dist-packages (from werkzeug&gt;=1.0.1-&gt;tensorboard&lt;2.16,&gt;=2.15-&gt;tensorflow==2.15.0) (2.1.5)
-Requirement already satisfied: pyasn1&lt;0.6.0,&gt;=0.4.6 in /usr/local/lib/python3.10/dist-packages (from pyasn1-modules&gt;=0.2.1-&gt;google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&lt;2.16,&gt;=2.15-&gt;tensorflow==2.15.0) (0.5.1)
-Requirement already satisfied: oauthlib&gt;=3.0.0 in /usr/local/lib/python3.10/dist-packages (from requests-oauthlib&gt;=0.7.0-&gt;google-auth-oauthlib&lt;2,&gt;=0.5-&gt;tensorboard&lt;2.16,&gt;=2.15-&gt;tensorflow==2.15.0) (3.2.2)
-Requirement already satisfied: scikit-learn in /usr/local/lib/python3.10/dist-packages (1.2.2)
-Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.10/dist-packages (from scikit-learn) (1.25.2)
-Requirement already satisfied: scipy&gt;=1.3.2 in /usr/local/lib/python3.10/dist-packages (from scikit-learn) (1.11.4)
-Requirement already satisfied: joblib&gt;=1.1.1 in /usr/local/lib/python3.10/dist-packages (from scikit-learn) (1.3.2)
-Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from scikit-learn) (3.3.0)
-Collecting humanfriendly==10.0
-  Downloading humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">86.8/86.8 kB</span> <span class="ansi-red-fg">3.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
-Installing collected packages: humanfriendly
-Successfully installed humanfriendly-10.0
 Collecting tqdm==4.66.1
   Downloading tqdm-4.66.1-py3-none-any.whl (78 kB)
      <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">78.3/78.3 kB</span> <span class="ansi-red-fg">3.2 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
@@ -8443,27 +8363,6 @@ Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (3.6)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (2.0.7)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (2024.2.2)
-Requirement already satisfied: opencv-python in /usr/local/lib/python3.10/dist-packages (4.8.0.76)
-Requirement already satisfied: numpy&gt;=1.21.2 in /usr/local/lib/python3.10/dist-packages (from opencv-python) (1.25.2)
-Collecting pandas==2.2.0
-  Downloading pandas-2.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.0 MB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">13.0/13.0 MB</span> <span class="ansi-red-fg">44.7 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
-Requirement already satisfied: numpy&lt;2,&gt;=1.22.4 in /usr/local/lib/python3.10/dist-packages (from pandas==2.2.0) (1.25.2)
-Requirement already satisfied: python-dateutil&gt;=2.8.2 in /usr/local/lib/python3.10/dist-packages (from pandas==2.2.0) (2.8.2)
-Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas==2.2.0) (2023.4)
-Collecting tzdata&gt;=2022.7 (from pandas==2.2.0)
-  Downloading tzdata-2024.1-py2.py3-none-any.whl (345 kB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">345.4/345.4 kB</span> <span class="ansi-red-fg">37.2 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
-Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.8.2-&gt;pandas==2.2.0) (1.16.0)
-Installing collected packages: tzdata, pandas
-  Attempting uninstall: pandas
-    Found existing installation: pandas 1.5.3
-    Uninstalling pandas-1.5.3:
-      Successfully uninstalled pandas-1.5.3
-<span class="ansi-red-fg">ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-bigframes 0.22.0 requires pandas&lt;2.1.4,&gt;=1.5.0, but you have pandas 2.2.0 which is incompatible.
-google-colab 1.0.0 requires pandas==1.5.3, but you have pandas 2.2.0 which is incompatible.</span><span class="ansi-red-fg">
-</span>Successfully installed pandas-2.2.0 tzdata-2024.1
 Installed all the prerequisites packages
 Failed to removed: /content/data
 Failed to removed: /content/clean_model1
@@ -8491,75 +8390,31 @@ directory /content/zip created successfully
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
-11490434/11490434 [==============================] - 0s 0us/step
-Dataset Loaded
+<pre>loading of the Data Started
+Data loaded succesfully
+loading of the Label Started
+Label loaded succesfully
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Model Development and Training:  25%|██▌       | 1/4 [00:01&lt;00:04,  1.58s/it]</pre>
+<pre>Model Development and Training:  25%|██▌       | 1/4 [00:03&lt;00:10,  3.37s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Normalization of the inputdata being started
-Normalization Done
-844/844 [==============================] - ETA: 0s - loss: 0.2398 - accuracy: 0.9239
-Epoch 1: val_loss improved from inf to 0.04354, saving model to /content/clean_model1/clean_model1.h5
-844/844 [==============================] - 14s 9ms/step - loss: 0.2398 - accuracy: 0.9239 - val_loss: 0.0435 - val_accuracy: 0.9862
+<pre>loading of the Models file Started
+Models file loaded succesfully
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py:3103: UserWarning: You are saving your model as an HDF5 file via `model.save()`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')`.
-  saving_api.save_model(
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>839/844 [============================&gt;.] - ETA: 0s - loss: 0.2360 - accuracy: 0.9265
-Epoch 1: val_loss improved from inf to 0.04163, saving model to /content/clean_model2/clean_model2.h5
-844/844 [==============================] - 8s 8ms/step - loss: 0.2351 - accuracy: 0.9268 - val_loss: 0.0416 - val_accuracy: 0.9861
-313/313 [==============================] - 1s 3ms/step - loss: 0.0435 - accuracy: 0.9862
-* clean_model1 , Loss: 0.043541088700294495 
-* Accuracy: 0.9861999750137329
-313/313 [==============================] - 1s 3ms/step - loss: 0.0435 - accuracy: 0.9862
-* clean_model2, Loss: 0.043541088700294495 
-* Accuracy: 0.9861999750137329
-839/844 [============================&gt;.] - ETA: 0s - loss: 0.3271 - accuracy: 0.9023
-Epoch 1: val_loss improved from inf to 0.05047, saving model to /content/fine_tuned_model/fine_tuned_model.h5
-844/844 [==============================] - 9s 8ms/step - loss: 0.3258 - accuracy: 0.9027 - val_loss: 0.0505 - val_accuracy: 0.9834
-313/313 [==============================] - 1s 3ms/step - loss: 0.0066 - accuracy: 0.9978
-* fine_tuned_model , Loss: 0.006564299110323191 
-* Accuracy: 0.9977999925613403
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Preparing Data, Model and Label:  50%|█████     | 2/4 [00:50&lt;00:59, 29.60s/it]</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Preparing and Saving Data and Label file Needed.
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>AIShield API Call:  75%|███████▌  | 3/4 [00:54&lt;00:18, 18.05s/it]</pre>
+<pre>AIShield API Call:  75%|███████▌  | 3/4 [00:12&lt;00:04,  4.00s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -8658,7 +8513,7 @@ Epoch 1: val_loss improved from inf to 0.05047, saving model to /content/fine_tu
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">hosted_pdf_url</span> <span class="o">=</span> <span class="s1">'https://aisdocs.blob.core.windows.net/reference/Reports/Image/ImageClassification/Poisoning/VulnerabilityReport.pdf'</span>

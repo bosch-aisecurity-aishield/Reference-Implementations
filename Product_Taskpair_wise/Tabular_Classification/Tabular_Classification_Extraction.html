@@ -7782,16 +7782,16 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
-<span class="sd">Description: </span>
-<span class="sd">    run_code : True / False </span>
+<span class="sd">Description:</span>
+<span class="sd">    run_code : True / False</span>
 <span class="sd">              if run_code is True , Original Model Training will be taken place</span>
 <span class="sd">                run_code is False , Pretrained Model will be downloaded from the hugging face [ https://huggingface.co/Pankaj001 ]</span>
 
-<span class="sd">    install : True / False </span>
+<span class="sd">    install : True / False</span>
 <span class="sd">            if install True , all the libraries needed to run the notebook will download first and then will import</span>
 <span class="sd">               install False, only import of the library will takes place</span>
 <span class="sd">"""</span>
@@ -7826,7 +7826,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#@title Show/Hide Code</span>
@@ -7836,9 +7836,9 @@ a.anchor-link {
 
 <span class="n">num_classes</span><span class="o">=</span><span class="mi">2</span>
 <span class="n">model_encryption</span><span class="o">=</span><span class="mi">0</span> <span class="c1">#0 if model is uploaded directly as a zip, 1 if model is encryted as .pyc and uploaded as a zip</span>
-<span class="n">number_of_sample</span> <span class="o">=</span> <span class="mi">22000</span>
+<span class="n">number_of_sample</span> <span class="o">=</span> <span class="mi">2058</span>
 <span class="n">input_shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">number_of_sample</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span> <span class="c1">#length of the dataset , number of features or number of cloumns-1</span>
-
+<span class="n">model_framework</span> <span class="o">=</span> <span class="s2">"scikit-learn"</span>
 <span class="c1">## installing libraries if not and then importing</span>
 <span class="k">if</span> <span class="n">install</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Starting installing aishield library"</span><span class="p">)</span>
@@ -8059,7 +8059,7 @@ a.anchor-link {
 <span class="sd">    """</span>
     <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.25</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 
-    <span class="k">return</span>  <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span>
+    <span class="k">return</span>  <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span><span class="n">output</span>
 
 <span class="k">def</span> <span class="nf">make_directory</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
@@ -8342,7 +8342,6 @@ a.anchor-link {
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">file_path</span> <span class="o">=</span> <span class="s2">"https://archive.ics.uci.edu/static/public/222/bank+marketing.zip"</span>
                 <span class="n">df</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
-                <span class="n">number_of_sample</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
                 <span class="n">input_shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">number_of_sample</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span> <span class="c1">#length of the dataset , number of features or number of cloumns-1</span>
 
         <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
@@ -8358,7 +8357,7 @@ a.anchor-link {
 
                 <span class="nb">print</span><span class="p">(</span><span class="s2">"Model file downloaded succesfully"</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">preprocess_data</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+                <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span><span class="n">output</span> <span class="o">=</span> <span class="n">preprocess_data</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 
                 <span class="n">training_parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'X_train'</span> <span class="p">:</span> <span class="n">X_train</span> <span class="p">,</span>
                               <span class="s1">'y_train'</span><span class="p">:</span><span class="n">y_train</span> <span class="p">,</span>
@@ -8385,7 +8384,26 @@ a.anchor-link {
             <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
 
             <span class="k">if</span> <span class="n">run_code</span><span class="p">:</span>
-                <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span><span class="s2">"banking_final_dataset.csv"</span><span class="p">),</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">))</span>
+                <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
+
+                <span class="c1"># Create a DataFrame from the concatenated data</span>
+                <span class="n">final_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+                <span class="n">final_df</span><span class="p">[</span><span class="n">output</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span>
+
+                <span class="c1"># Take 5% of the dataset</span>
+                <span class="n">sample_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">final_df</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.05</span><span class="p">)</span>
+
+                <span class="c1"># Get balanced samples of labels 0 and 1</span>
+                <span class="n">balanced_samples</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">():</span>
+                    <span class="n">label_samples</span> <span class="o">=</span> <span class="n">final_df</span><span class="p">[</span><span class="n">final_df</span><span class="p">[</span><span class="n">output</span><span class="p">]</span> <span class="o">==</span> <span class="n">label</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">sample_size</span><span class="o">//</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+                    <span class="n">balanced_samples</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">label_samples</span><span class="p">)</span>
+
+                <span class="n">balanced_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">balanced_samples</span><span class="p">)</span>
+
+                <span class="c1"># Save the balanced dataset to a CSV file</span>
+                <span class="n">balanced_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="s2">"banking_data_5percent.csv"</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
                 <span class="n">prepare_min_max</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 
 
@@ -8426,42 +8444,72 @@ a.anchor-link {
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Starting installing aishield library
-Requirement already satisfied: aishield in /usr/local/lib/python3.10/dist-packages (0.1.5)
+Collecting aishield
+  Downloading aishield-0.1.5-py3-none-any.whl (25 kB)
 Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from aishield) (2.31.0)
 Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (3.3.2)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (3.6)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2.0.7)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2024.2.2)
+Installing collected packages: aishield
+Successfully installed aishield-0.1.5
 Started of installing all the prerequisites packages
 Requirement already satisfied: xgboost==2.0.3 in /usr/local/lib/python3.10/dist-packages (2.0.3)
 Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from xgboost==2.0.3) (1.25.2)
 Requirement already satisfied: scipy in /usr/local/lib/python3.10/dist-packages (from xgboost==2.0.3) (1.11.4)
-Requirement already satisfied: pandas==2.2.0 in /usr/local/lib/python3.10/dist-packages (2.2.0)
+Collecting pandas==2.2.0
+  Downloading pandas-2.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.0 MB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">13.0/13.0 MB</span> <span class="ansi-red-fg">28.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
 Requirement already satisfied: numpy&lt;2,&gt;=1.22.4 in /usr/local/lib/python3.10/dist-packages (from pandas==2.2.0) (1.25.2)
 Requirement already satisfied: python-dateutil&gt;=2.8.2 in /usr/local/lib/python3.10/dist-packages (from pandas==2.2.0) (2.8.2)
 Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas==2.2.0) (2023.4)
-Requirement already satisfied: tzdata&gt;=2022.7 in /usr/local/lib/python3.10/dist-packages (from pandas==2.2.0) (2024.1)
+Collecting tzdata&gt;=2022.7 (from pandas==2.2.0)
+  Downloading tzdata-2024.1-py2.py3-none-any.whl (345 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">345.4/345.4 kB</span> <span class="ansi-red-fg">27.9 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.8.2-&gt;pandas==2.2.0) (1.16.0)
+Installing collected packages: tzdata, pandas
+  Attempting uninstall: pandas
+    Found existing installation: pandas 1.5.3
+    Uninstalling pandas-1.5.3:
+      Successfully uninstalled pandas-1.5.3
+<span class="ansi-red-fg">ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+bigframes 0.22.0 requires pandas&lt;2.1.4,&gt;=1.5.0, but you have pandas 2.2.0 which is incompatible.
+google-colab 1.0.0 requires pandas==1.5.3, but you have pandas 2.2.0 which is incompatible.</span><span class="ansi-red-fg">
+</span>Successfully installed pandas-2.2.0 tzdata-2024.1
 Requirement already satisfied: scikit-learn in /usr/local/lib/python3.10/dist-packages (1.2.2)
 Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.10/dist-packages (from scikit-learn) (1.25.2)
 Requirement already satisfied: scipy&gt;=1.3.2 in /usr/local/lib/python3.10/dist-packages (from scikit-learn) (1.11.4)
 Requirement already satisfied: joblib&gt;=1.1.1 in /usr/local/lib/python3.10/dist-packages (from scikit-learn) (1.3.2)
 Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from scikit-learn) (3.3.0)
 Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (1.25.2)
-Requirement already satisfied: pyminizip in /usr/local/lib/python3.10/dist-packages (0.2.6)
+Collecting pyminizip
+  Downloading pyminizip-0.2.6.tar.gz (261 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">261.2/261.2 kB</span> <span class="ansi-red-fg">4.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+  Preparing metadata (setup.py) ... done
+Building wheels for collected packages: pyminizip
+  Building wheel for pyminizip (setup.py) ... done
+  Created wheel for pyminizip: filename=pyminizip-0.2.6-cp310-cp310-linux_x86_64.whl size=207078 sha256=c6e5a06f8e449cc29df5a418c659774acc30c83cea9cd679f5e8974a63751f49
+  Stored in directory: /root/.cache/pip/wheels/ed/6c/ae/0ee601d1139f7ba48c1b572b04707f27427af5290e6fb7afb9
+Successfully built pyminizip
+Installing collected packages: pyminizip
+Successfully installed pyminizip-0.2.6
 Requirement already satisfied: requests==2.31.0 in /usr/local/lib/python3.10/dist-packages (2.31.0)
 Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (3.3.2)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (3.6)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (2.0.7)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (2024.2.2)
-Requirement already satisfied: humanfriendly==10.0 in /usr/local/lib/python3.10/dist-packages (10.0)
+Collecting humanfriendly==10.0
+  Downloading humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">86.8/86.8 kB</span> <span class="ansi-red-fg">2.4 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Installing collected packages: humanfriendly
+Successfully installed humanfriendly-10.0
 Installed all the prerequisites packages
-Removed: /content/data
-Removed: /content/model
-Removed: /content/minmax
-Removed: /content/encrypt_model
-Removed: /content/reports
-Removed: /content/zip
+Failed to removed: /content/data
+Failed to removed: /content/model
+Failed to removed: /content/minmax
+Failed to removed: /content/encrypt_model
+Failed to removed: /content/reports
+Failed to removed: /content/zip
 Failed to removed: /content/reports/sample_data
 directory /content/data created successfully
 directory /content/model created successfully
@@ -8491,7 +8539,7 @@ Dataset Loaded
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Model Development and Training:  25%|██▌       | 1/4 [00:11&lt;00:34, 11.39s/it]</pre>
+<pre>Model Development and Training:  25%|██▌       | 1/4 [00:01&lt;00:05,  1.89s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -8518,7 +8566,7 @@ weighted avg       0.90      0.91      0.90     10297
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>AIShield API Call:  75%|███████▌  | 3/4 [03:41&lt;01:13, 73.96s/it]</pre>
+<pre>AIShield API Call:  75%|███████▌  | 3/4 [04:34&lt;01:31, 91.39s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -8738,7 +8786,7 @@ weighted avg       0.90      0.91      0.90     10297
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -8823,7 +8871,7 @@ weighted avg       0.90      0.91      0.90     10297
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -8901,7 +8949,7 @@ weighted avg       0.90      0.91      0.90     10297
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -8993,7 +9041,7 @@ weighted avg       0.90      0.91      0.90     10297
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -9090,7 +9138,7 @@ weighted avg       0.90      0.91      0.90     10297
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
