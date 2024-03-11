@@ -7784,16 +7784,16 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
-<span class="sd">Description: </span>
-<span class="sd">    run_code : True / False </span>
+<span class="sd">Description:</span>
+<span class="sd">    run_code : True / False</span>
 <span class="sd">              if run_code is True , Original Model Training will be taken place</span>
 <span class="sd">                run_code is False , Pretrained Model will be downloaded from the hugging face [ https://huggingface.co/Pankaj001 ]</span>
 
-<span class="sd">    install : True / False </span>
+<span class="sd">    install : True / False</span>
 <span class="sd">            if install True , all the libraries needed to run the notebook will download first and then will import</span>
 <span class="sd">               install False, only import of the library will takes place</span>
 <span class="sd">"""</span>
@@ -7830,7 +7830,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#@title Show/Hide Code</span>
@@ -8117,7 +8117,7 @@ a.anchor-link {
 
     <span class="c1">#splitting the dataset into train and validation set</span>
     <span class="n">X_train</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_val</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
-    <span class="n">X_val</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_val</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_val</span><span class="p">,</span><span class="n">y_val</span><span class="p">,</span><span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
+    <span class="n">X_val</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_val</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_val</span><span class="p">,</span><span class="n">y_val</span><span class="p">,</span><span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.75</span><span class="p">,</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
     <span class="c1">#Normalizing and Reshaping the Data</span>
     <span class="k">if</span> <span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'Normalized'</span><span class="p">]:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Normalization of the inputdata being started"</span><span class="p">)</span>
@@ -8421,6 +8421,7 @@ a.anchor-link {
         <span class="k">else</span><span class="p">:</span>
             <span class="n">dataset_path</span> <span class="o">=</span> <span class="n">download_data</span><span class="p">()</span>
             <span class="n">X</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="n">dataset_path</span><span class="p">)</span>
+            <span class="c1"># print(len(X), len(y))</span>
 
 
     <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
@@ -8488,120 +8489,74 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Started of installing all the prerequisites packages
-Requirement already satisfied: numpy==1.22 in /usr/local/lib/python3.10/dist-packages (1.22.0)
-Requirement already satisfied: matplotlib==3.3.4 in /usr/local/lib/python3.10/dist-packages (3.3.4)
-Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.3.4) (0.11.0)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.3.4) (1.4.4)
-Requirement already satisfied: numpy&gt;=1.15 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.3.4) (1.22.0)
-Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.3.4) (8.4.0)
-Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,&gt;=2.0.3 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.3.4) (3.1.0)
-Requirement already satisfied: python-dateutil&gt;=2.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib==3.3.4) (2.8.2)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.1-&gt;matplotlib==3.3.4) (1.16.0)
-Requirement already satisfied: tensorflow==2.9.1 in /usr/local/lib/python3.10/dist-packages (2.9.1)
-Requirement already satisfied: absl-py&gt;=1.0.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.4.0)
-Requirement already satisfied: astunparse&gt;=1.6.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.6.3)
-Requirement already satisfied: flatbuffers&lt;2,&gt;=1.12 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.12)
-Requirement already satisfied: gast&lt;=0.4.0,&gt;=0.2.1 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (0.4.0)
-Requirement already satisfied: google-pasta&gt;=0.1.1 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (0.2.0)
-Requirement already satisfied: grpcio&lt;2.0,&gt;=1.24.3 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.56.0)
-Requirement already satisfied: h5py&gt;=2.9.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (3.8.0)
-Requirement already satisfied: keras&lt;2.10.0,&gt;=2.9.0rc0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (2.9.0)
-Requirement already satisfied: keras-preprocessing&gt;=1.1.1 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.1.2)
-Requirement already satisfied: libclang&gt;=13.0.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (16.0.0)
-Requirement already satisfied: numpy&gt;=1.20 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.22.0)
-Requirement already satisfied: opt-einsum&gt;=2.3.2 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (3.3.0)
-Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (23.1)
-Requirement already satisfied: protobuf&lt;3.20,&gt;=3.9.2 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (3.19.6)
-Requirement already satisfied: setuptools in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (67.7.2)
-Requirement already satisfied: six&gt;=1.12.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.16.0)
-Requirement already satisfied: tensorboard&lt;2.10,&gt;=2.9 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (2.9.1)
-Requirement already satisfied: tensorflow-io-gcs-filesystem&gt;=0.23.1 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (0.32.0)
-Requirement already satisfied: tensorflow-estimator&lt;2.10.0,&gt;=2.9.0rc0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (2.9.0)
-Requirement already satisfied: termcolor&gt;=1.1.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (2.3.0)
-Requirement already satisfied: typing-extensions&gt;=3.6.6 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (4.7.1)
-Requirement already satisfied: wrapt&gt;=1.11.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow==2.9.1) (1.14.1)
-Requirement already satisfied: wheel&lt;1.0,&gt;=0.23.0 in /usr/local/lib/python3.10/dist-packages (from astunparse&gt;=1.6.0-&gt;tensorflow==2.9.1) (0.40.0)
-Requirement already satisfied: google-auth&lt;3,&gt;=1.6.3 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (2.17.3)
-Requirement already satisfied: google-auth-oauthlib&lt;0.5,&gt;=0.4.1 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (0.4.6)
-Requirement already satisfied: markdown&gt;=2.6.8 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (3.4.3)
-Requirement already satisfied: requests&lt;3,&gt;=2.21.0 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (2.28.0)
-Requirement already satisfied: tensorboard-data-server&lt;0.7.0,&gt;=0.6.0 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (0.6.1)
-Requirement already satisfied: tensorboard-plugin-wit&gt;=1.6.0 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (1.8.1)
-Requirement already satisfied: werkzeug&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (2.3.6)
-Requirement already satisfied: cachetools&lt;6.0,&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (5.3.1)
-Requirement already satisfied: pyasn1-modules&gt;=0.2.1 in /usr/local/lib/python3.10/dist-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (0.3.0)
-Requirement already satisfied: rsa&lt;5,&gt;=3.1.4 in /usr/local/lib/python3.10/dist-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (4.9)
-Requirement already satisfied: requests-oauthlib&gt;=0.7.0 in /usr/local/lib/python3.10/dist-packages (from google-auth-oauthlib&lt;0.5,&gt;=0.4.1-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (1.3.1)
-Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3,&gt;=2.21.0-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (2.0.12)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3,&gt;=2.21.0-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (3.4)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3,&gt;=2.21.0-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (1.26.16)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests&lt;3,&gt;=2.21.0-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (2023.5.7)
-Requirement already satisfied: MarkupSafe&gt;=2.1.1 in /usr/local/lib/python3.10/dist-packages (from werkzeug&gt;=1.0.1-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (2.1.3)
-Requirement already satisfied: pyasn1&lt;0.6.0,&gt;=0.4.6 in /usr/local/lib/python3.10/dist-packages (from pyasn1-modules&gt;=0.2.1-&gt;google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (0.5.0)
-Requirement already satisfied: oauthlib&gt;=3.0.0 in /usr/local/lib/python3.10/dist-packages (from requests-oauthlib&gt;=0.7.0-&gt;google-auth-oauthlib&lt;0.5,&gt;=0.4.1-&gt;tensorboard&lt;2.10,&gt;=2.9-&gt;tensorflow==2.9.1) (3.2.2)
-Requirement already satisfied: scikit-learn==1.0.2 in /usr/local/lib/python3.10/dist-packages (1.0.2)
-Requirement already satisfied: numpy&gt;=1.14.6 in /usr/local/lib/python3.10/dist-packages (from scikit-learn==1.0.2) (1.22.0)
-Requirement already satisfied: scipy&gt;=1.1.0 in /usr/local/lib/python3.10/dist-packages (from scikit-learn==1.0.2) (1.10.1)
-Requirement already satisfied: joblib&gt;=0.11 in /usr/local/lib/python3.10/dist-packages (from scikit-learn==1.0.2) (1.3.1)
-Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from scikit-learn==1.0.2) (3.1.0)
-Requirement already satisfied: humanfriendly==9.2 in /usr/local/lib/python3.10/dist-packages (9.2)
-Requirement already satisfied: tqdm==4.61.1 in /usr/local/lib/python3.10/dist-packages (4.61.1)
-Requirement already satisfied: requests==2.28.0 in /usr/local/lib/python3.10/dist-packages (2.28.0)
-Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (2.0.12)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (3.4)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (1.26.16)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (2023.5.7)
-Requirement already satisfied: opencv-python in /usr/local/lib/python3.10/dist-packages (4.7.0.72)
-Requirement already satisfied: numpy&gt;=1.21.2 in /usr/local/lib/python3.10/dist-packages (from opencv-python) (1.22.0)
-Starting installing aishield library
-Requirement already satisfied: aishield in /usr/local/lib/python3.10/dist-packages (0.1.5)
-Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from aishield) (2.28.0)
-Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2.0.12)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (3.4)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (1.26.16)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2023.5.7)
+<pre>Starting installing aishield library
+Collecting aishield
+  Downloading aishield-0.1.5-py3-none-any.whl (25 kB)
+Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from aishield) (2.31.0)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (3.3.2)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (3.6)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2.0.7)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2024.2.2)
+Installing collected packages: aishield
+Successfully installed aishield-0.1.5
+Started of installing all the prerequisites packages
+Collecting tqdm==4.61.1
+  Downloading tqdm-4.61.1-py2.py3-none-any.whl (75 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">75.8/75.8 kB</span> <span class="ansi-red-fg">3.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Installing collected packages: tqdm
+  Attempting uninstall: tqdm
+    Found existing installation: tqdm 4.66.2
+    Uninstalling tqdm-4.66.2:
+      Successfully uninstalled tqdm-4.66.2
+Successfully installed tqdm-4.61.1
+Collecting requests==2.28.0
+  Downloading requests-2.28.0-py3-none-any.whl (62 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">62.8/62.8 kB</span> <span class="ansi-red-fg">2.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Collecting charset-normalizer~=2.0.0 (from requests==2.28.0)
+  Downloading charset_normalizer-2.0.12-py3-none-any.whl (39 kB)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (3.6)
+Collecting urllib3&lt;1.27,&gt;=1.21.1 (from requests==2.28.0)
+  Downloading urllib3-1.26.18-py2.py3-none-any.whl (143 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">143.8/143.8 kB</span> <span class="ansi-red-fg">8.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests==2.28.0) (2024.2.2)
+Installing collected packages: urllib3, charset-normalizer, requests
+  Attempting uninstall: urllib3
+    Found existing installation: urllib3 2.0.7
+    Uninstalling urllib3-2.0.7:
+      Successfully uninstalled urllib3-2.0.7
+  Attempting uninstall: charset-normalizer
+    Found existing installation: charset-normalizer 3.3.2
+    Uninstalling charset-normalizer-3.3.2:
+      Successfully uninstalled charset-normalizer-3.3.2
+  Attempting uninstall: requests
+    Found existing installation: requests 2.31.0
+    Uninstalling requests-2.31.0:
+      Successfully uninstalled requests-2.31.0
+<span class="ansi-red-fg">ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+google-colab 1.0.0 requires requests==2.31.0, but you have requests 2.28.0 which is incompatible.
+yfinance 0.2.37 requires requests&gt;=2.31, but you have requests 2.28.0 which is incompatible.</span><span class="ansi-red-fg">
+</span>Successfully installed charset-normalizer-2.0.12 requests-2.28.0 urllib3-1.26.18
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Loading the Dataset:   0%|          | 0/4 [00:00&lt;?, ?it/s]</pre>
+<pre>/usr/local/lib/python3.10/dist-packages/requests/__init__.py:109: RequestsDependencyWarning: urllib3 (1.26.18) or chardet (5.2.0)/charset_normalizer (2.0.12) doesn't match a supported version!
+  warnings.warn(
+Loading the Dataset and Label:   0%|          | 0/4 [00:00&lt;?, ?it/s]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Installed all the prerequisites packages
-Removed: /content/dataset_folder
-directory /content/dataset_folder created successfully
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>
-0it [00:00, ?it/s]
-123it [00:00, 1229.10it/s]
-246it [00:00, 1177.69it/s]
-381it [00:00, 1254.06it/s]
-507it [00:00, 1226.36it/s]
-630it [00:00, 976.57it/s] 
-785it [00:00, 1070.55it/s]
-Model Development and Training:  25%|██▌       | 1/4 [00:09&lt;00:29,  9.71s/it]</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Removed: /content/data
-Removed: /content/model
-Removed: /content/label
-Removed: /content/encrypt_model
-Removed: /content/reports
-Removed: /content/zip
+Failed to removed: /content/data
+Failed to removed: /content/model
+Failed to removed: /content/label
+Failed to removed: /content/encrypt_model
+Failed to removed: /content/reports
+Failed to removed: /content/zip
 Failed to removed: /content/reports/sample_data
 directory /content/data created successfully
 directory /content/model created successfully
@@ -8610,203 +8565,30 @@ directory /content/reports created successfully
 directory /content/encrypt_model created successfully
 directory /content/zip created successfully
 directory /content/reports/sample_data created successfully
-Normalization of the inputdata being started
-Normalization Done
-Epoch 1/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.6299 - IoU: 0.0506    
-Epoch 1: val_loss improved from inf to 0.56430, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 2s 85ms/step - loss: 0.6236 - IoU: 0.1000 - val_loss: 0.5643 - val_IoU: 0.5457 - lr: 0.0010
-Epoch 2/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.4793 - IoU: 0.4633
-Epoch 2: val_loss improved from 0.56430 to 0.43027, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 0s 48ms/step - loss: 0.4771 - IoU: 0.4768 - val_loss: 0.4303 - val_IoU: 0.4327 - lr: 0.0010
-Epoch 3/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.3879 - IoU: 0.5909
-Epoch 3: val_loss improved from 0.43027 to 0.35739, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 0s 49ms/step - loss: 0.3857 - IoU: 0.5961 - val_loss: 0.3574 - val_IoU: 0.6405 - lr: 0.0010
-Epoch 4/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.3496 - IoU: 0.6360
-Epoch 4: val_loss improved from 0.35739 to 0.34263, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 0s 48ms/step - loss: 0.3508 - IoU: 0.6309 - val_loss: 0.3426 - val_IoU: 0.6387 - lr: 0.0010
-Epoch 5/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.3402 - IoU: 0.6397
-Epoch 5: val_loss improved from 0.34263 to 0.33610, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 0s 48ms/step - loss: 0.3397 - IoU: 0.6399 - val_loss: 0.3361 - val_IoU: 0.6267 - lr: 0.0010
-Epoch 6/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.3283 - IoU: 0.6466
-Epoch 6: val_loss improved from 0.33610 to 0.32838, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 0s 49ms/step - loss: 0.3285 - IoU: 0.6483 - val_loss: 0.3284 - val_IoU: 0.6674 - lr: 0.0010
-Epoch 7/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.3178 - IoU: 0.6592
-Epoch 7: val_loss improved from 0.32838 to 0.32500, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 0s 47ms/step - loss: 0.3174 - IoU: 0.6614 - val_loss: 0.3250 - val_IoU: 0.6240 - lr: 0.0010
-Epoch 8/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.3271 - IoU: 0.6526
-Epoch 8: val_loss improved from 0.32500 to 0.32496, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 0s 49ms/step - loss: 0.3253 - IoU: 0.6522 - val_loss: 0.3250 - val_IoU: 0.6293 - lr: 0.0010
-Epoch 9/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.3091 - IoU: 0.6765
-Epoch 9: val_loss improved from 0.32496 to 0.29925, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 0s 48ms/step - loss: 0.3094 - IoU: 0.6767 - val_loss: 0.2993 - val_IoU: 0.6611 - lr: 0.0010
-Epoch 10/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.2887 - IoU: 0.6931
-Epoch 10: val_loss improved from 0.29925 to 0.28197, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 0s 50ms/step - loss: 0.2885 - IoU: 0.6949 - val_loss: 0.2820 - val_IoU: 0.7062 - lr: 0.0010
-Epoch 11/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.2725 - IoU: 0.7131
-Epoch 11: val_loss improved from 0.28197 to 0.26934, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 0s 49ms/step - loss: 0.2729 - IoU: 0.7129 - val_loss: 0.2693 - val_IoU: 0.7046 - lr: 0.0010
-Epoch 12/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.2619 - IoU: 0.7229
-Epoch 12: val_loss did not improve from 0.26934
-10/10 [==============================] - 0s 40ms/step - loss: 0.2643 - IoU: 0.7213 - val_loss: 0.2755 - val_IoU: 0.6886 - lr: 0.0010
-Epoch 13/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.2650 - IoU: 0.7201
-Epoch 13: val_loss improved from 0.26934 to 0.26363, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 1s 54ms/step - loss: 0.2671 - IoU: 0.7158 - val_loss: 0.2636 - val_IoU: 0.7391 - lr: 0.0010
-Epoch 14/50
-10/10 [==============================] - ETA: 0s - loss: 0.2595 - IoU: 0.7289
-Epoch 14: val_loss improved from 0.26363 to 0.25938, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 1s 58ms/step - loss: 0.2595 - IoU: 0.7289 - val_loss: 0.2594 - val_IoU: 0.7416 - lr: 0.0010
-Epoch 15/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.2442 - IoU: 0.7457
-Epoch 15: val_loss did not improve from 0.25938
-10/10 [==============================] - 0s 43ms/step - loss: 0.2445 - IoU: 0.7435 - val_loss: 0.2674 - val_IoU: 0.6855 - lr: 0.0010
-Epoch 16/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.2427 - IoU: 0.7430
-Epoch 16: val_loss improved from 0.25938 to 0.23989, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 1s 57ms/step - loss: 0.2425 - IoU: 0.7426 - val_loss: 0.2399 - val_IoU: 0.7393 - lr: 0.0010
-Epoch 17/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.2350 - IoU: 0.7515
-Epoch 17: val_loss improved from 0.23989 to 0.23682, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 1s 62ms/step - loss: 0.2351 - IoU: 0.7518 - val_loss: 0.2368 - val_IoU: 0.7643 - lr: 0.0010
-Epoch 18/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.2300 - IoU: 0.7591
-Epoch 18: val_loss improved from 0.23682 to 0.22624, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 1s 55ms/step - loss: 0.2291 - IoU: 0.7603 - val_loss: 0.2262 - val_IoU: 0.7634 - lr: 0.0010
-Epoch 19/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.2249 - IoU: 0.7618
-Epoch 19: val_loss did not improve from 0.22624
-10/10 [==============================] - 0s 44ms/step - loss: 0.2251 - IoU: 0.7603 - val_loss: 0.2311 - val_IoU: 0.7684 - lr: 0.0010
-Epoch 20/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.2252 - IoU: 0.7622
-Epoch 20: val_loss did not improve from 0.22624
-10/10 [==============================] - 0s 45ms/step - loss: 0.2247 - IoU: 0.7630 - val_loss: 0.2285 - val_IoU: 0.7543 - lr: 0.0010
-Epoch 21/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.2229 - IoU: 0.7625
-Epoch 21: val_loss improved from 0.22624 to 0.22472, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 1s 61ms/step - loss: 0.2225 - IoU: 0.7623 - val_loss: 0.2247 - val_IoU: 0.7617 - lr: 0.0010
-Epoch 22/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.2103 - IoU: 0.7780
-Epoch 22: val_loss improved from 0.22472 to 0.22056, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 1s 58ms/step - loss: 0.2106 - IoU: 0.7776 - val_loss: 0.2206 - val_IoU: 0.7641 - lr: 0.0010
-Epoch 23/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.2080 - IoU: 0.7785
-Epoch 23: val_loss did not improve from 0.22056
-10/10 [==============================] - 0s 44ms/step - loss: 0.2082 - IoU: 0.7789 - val_loss: 0.2227 - val_IoU: 0.7629 - lr: 0.0010
-Epoch 24/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.2045 - IoU: 0.7822
-Epoch 24: val_loss improved from 0.22056 to 0.21729, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 1s 57ms/step - loss: 0.2061 - IoU: 0.7794 - val_loss: 0.2173 - val_IoU: 0.7797 - lr: 0.0010
-Epoch 25/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.2038 - IoU: 0.7830
-Epoch 25: val_loss improved from 0.21729 to 0.21581, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 1s 56ms/step - loss: 0.2014 - IoU: 0.7867 - val_loss: 0.2158 - val_IoU: 0.7774 - lr: 0.0010
-Epoch 26/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.1969 - IoU: 0.7905
-Epoch 26: val_loss did not improve from 0.21581
-10/10 [==============================] - 0s 39ms/step - loss: 0.1971 - IoU: 0.7897 - val_loss: 0.2191 - val_IoU: 0.7748 - lr: 0.0010
-Epoch 27/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.1969 - IoU: 0.7897
-Epoch 27: val_loss improved from 0.21581 to 0.20954, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 0s 48ms/step - loss: 0.1971 - IoU: 0.7892 - val_loss: 0.2095 - val_IoU: 0.7809 - lr: 0.0010
-Epoch 28/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.1914 - IoU: 0.7964
-Epoch 28: val_loss did not improve from 0.20954
-10/10 [==============================] - 0s 39ms/step - loss: 0.1908 - IoU: 0.7968 - val_loss: 0.2127 - val_IoU: 0.7804 - lr: 0.0010
-Epoch 29/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.1859 - IoU: 0.8014
-Epoch 29: val_loss did not improve from 0.20954
-10/10 [==============================] - 0s 40ms/step - loss: 0.1854 - IoU: 0.8015 - val_loss: 0.2185 - val_IoU: 0.7629 - lr: 0.0010
-Epoch 30/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.1808 - IoU: 0.8063
-Epoch 30: val_loss did not improve from 0.20954
-
-Epoch 30: ReduceLROnPlateau reducing learning rate to 0.00010000000474974513.
-10/10 [==============================] - 0s 40ms/step - loss: 0.1807 - IoU: 0.8069 - val_loss: 0.2100 - val_IoU: 0.7835 - lr: 0.0010
-Epoch 31/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.1728 - IoU: 0.8145
-Epoch 31: val_loss improved from 0.20954 to 0.20896, saving model to /content/model/unet_model.h5
-10/10 [==============================] - 0s 47ms/step - loss: 0.1721 - IoU: 0.8159 - val_loss: 0.2090 - val_IoU: 0.7854 - lr: 1.0000e-04
-Epoch 32/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.1697 - IoU: 0.8180
-Epoch 32: val_loss did not improve from 0.20896
-10/10 [==============================] - 0s 39ms/step - loss: 0.1700 - IoU: 0.8174 - val_loss: 0.2105 - val_IoU: 0.7866 - lr: 1.0000e-04
-Epoch 33/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.1684 - IoU: 0.8210
-Epoch 33: val_loss did not improve from 0.20896
-10/10 [==============================] - 0s 39ms/step - loss: 0.1683 - IoU: 0.8198 - val_loss: 0.2117 - val_IoU: 0.7812 - lr: 1.0000e-04
-Epoch 34/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.1677 - IoU: 0.8201
-Epoch 34: val_loss did not improve from 0.20896
-
-Epoch 34: ReduceLROnPlateau reducing learning rate to 1.0000000474974514e-05.
-10/10 [==============================] - 0s 41ms/step - loss: 0.1672 - IoU: 0.8211 - val_loss: 0.2106 - val_IoU: 0.7838 - lr: 1.0000e-04
-Epoch 35/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.1666 - IoU: 0.8206
-Epoch 35: val_loss did not improve from 0.20896
-10/10 [==============================] - 0s 39ms/step - loss: 0.1661 - IoU: 0.8215 - val_loss: 0.2107 - val_IoU: 0.7845 - lr: 1.0000e-05
-Epoch 36/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.1656 - IoU: 0.8229
-Epoch 36: val_loss did not improve from 0.20896
-10/10 [==============================] - 0s 41ms/step - loss: 0.1661 - IoU: 0.8219 - val_loss: 0.2108 - val_IoU: 0.7862 - lr: 1.0000e-05
-Epoch 37/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.1664 - IoU: 0.8222
-Epoch 37: val_loss did not improve from 0.20896
-
-Epoch 37: ReduceLROnPlateau reducing learning rate to 1.0000000656873453e-06.
-10/10 [==============================] - 0s 40ms/step - loss: 0.1658 - IoU: 0.8221 - val_loss: 0.2111 - val_IoU: 0.7842 - lr: 1.0000e-05
-Epoch 38/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.1661 - IoU: 0.8216
-Epoch 38: val_loss did not improve from 0.20896
-10/10 [==============================] - 0s 39ms/step - loss: 0.1657 - IoU: 0.8221 - val_loss: 0.2111 - val_IoU: 0.7843 - lr: 1.0000e-06
-Epoch 39/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.1657 - IoU: 0.8226
-Epoch 39: val_loss did not improve from 0.20896
-10/10 [==============================] - 0s 40ms/step - loss: 0.1657 - IoU: 0.8221 - val_loss: 0.2110 - val_IoU: 0.7845 - lr: 1.0000e-06
-Epoch 40/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.1653 - IoU: 0.8232
-Epoch 40: val_loss did not improve from 0.20896
-
-Epoch 40: ReduceLROnPlateau reducing learning rate to 1.0000001111620805e-07.
-10/10 [==============================] - 0s 40ms/step - loss: 0.1657 - IoU: 0.8219 - val_loss: 0.2110 - val_IoU: 0.7847 - lr: 1.0000e-06
-Epoch 41/50
- 9/10 [==========================&gt;...] - ETA: 0s - loss: 0.1653 - IoU: 0.8227
-Epoch 41: val_loss did not improve from 0.20896
-10/10 [==============================] - 0s 39ms/step - loss: 0.1657 - IoU: 0.8221 - val_loss: 0.2110 - val_IoU: 0.7847 - lr: 1.0000e-07
-Epoch 41: early stopping
-3/3 [==============================] - 0s 6ms/step
-* IOU : 0.7785945402569661
+Downloading of the Data Started
+Data downloaded succesfully
+Downloading of the Minmax Started
+label downloaded succesfully
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Preparing Data, Model and Label:  50%|█████     | 2/4 [00:31&lt;00:33, 16.76s/it]</pre>
+<pre>Model Development and Training:  25%|██▌       | 1/4 [00:03&lt;00:11,  3.69s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Preparing and Saving Data and Label file Needed.
+<pre>Downloading of the Model file Started
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>AIShield API Call:  75%|███████▌  | 3/4 [00:32&lt;00:10, 10.92s/it]</pre>
+<pre>AIShield API Call:  75%|███████▌  | 3/4 [00:09&lt;00:03,  3.17s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -8915,7 +8697,7 @@ Epoch 41: early stopping
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">hosted_pdf_url</span> <span class="o">=</span> <span class="s1">'https://aisdocs.blob.core.windows.net/reference/Reports/Image/ImageSegmentation/MEA/VulnerabilityReport.pdf'</span>
@@ -8942,7 +8724,7 @@ Epoch 41: early stopping
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">hosted_defense_pdf_url</span> <span class="o">=</span> <span class="s1">'https://aisdocs.blob.core.windows.net/reference/Reports/Image/ImageSegmentation/MEA/DefenseReport.pdf'</span>
@@ -9192,7 +8974,7 @@ Epoch 41: early stopping
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bcb368b4">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=bcb368b4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9248,19 +9030,6 @@ Epoch 41: early stopping
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Upload status: data file upload successful, label file upload successful, model file upload successful
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f705377c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -9283,7 +9052,7 @@ Epoch 41: early stopping
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=251ad457">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=251ad457">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9356,18 +9125,6 @@ Epoch 41: early stopping
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'\nDescription: Specify the appropriate configs required for vulnerability analysis and trigger model analysis\n'</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=78c6e269">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -9390,7 +9147,7 @@ Epoch 41: early stopping
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=55003c2e">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=55003c2e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9476,18 +9233,6 @@ Epoch 41: early stopping
 
     <span class="n">status_dictionary</span> <span class="o">=</span> <span class="n">monitor_api_progress</span><span class="p">(</span><span class="n">new_job_id</span><span class="o">=</span><span class="n">job_id</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'\nDescription: Fetch Job status using Job ID\n'</pre>
 </div>
 </div>
 </div>
