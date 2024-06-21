@@ -7568,7 +7568,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -7587,7 +7587,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_code_input_scrollable</span><span class="p">():</span>
@@ -7844,8 +7844,7 @@ a.anchor-link {
 <span class="n">model_encryption</span><span class="o">=</span><span class="mi">0</span> <span class="c1">#0 if model is uploaded directly as a zip, 1 if model is encryted as .pyc and uploaded as a zip</span>
 <span class="n">Normalized</span> <span class="o">=</span>  <span class="s1">'yes'</span>
 
-
-<span class="c1">## installing libraries if not and then importing</span>
+<span class="c1"># installing libraries if not and then importing</span>
 <span class="k">if</span> <span class="n">install</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Starting installing aishield library"</span><span class="p">)</span>
     <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>aishield
@@ -7866,6 +7865,7 @@ a.anchor-link {
         <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">requests</span><span class="o">==</span><span class="m">2</span>.31.0
         <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>opencv-python
         <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">pandas</span><span class="o">==</span><span class="m">2</span>.2.0
+
 
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Skipped the installation of all the prerequisites packages"</span><span class="p">)</span>
@@ -8105,7 +8105,7 @@ a.anchor-link {
     <span class="n">model_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"model"</span><span class="p">)</span>
     <span class="n">label_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"label"</span><span class="p">)</span>
     <span class="n">encrypt_model_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"encrypt_model"</span><span class="p">)</span>
-
+    
     <span class="n">report_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"reports"</span><span class="p">)</span>
     <span class="n">sample_data</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">report_path</span><span class="p">,</span> <span class="s2">"sample_data"</span><span class="p">)</span>
     <span class="c1">#Create Zip Path which contains data , model and label zip files</span>
@@ -8330,7 +8330,6 @@ a.anchor-link {
 
                 <span class="n">model</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_val</span> <span class="o">=</span> <span class="n">training</span><span class="p">(</span><span class="n">parameter_payload</span><span class="o">=</span><span class="n">training_parameters</span><span class="p">)</span>
 
-
         <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
             <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
             <span class="k">if</span> <span class="n">run_code</span><span class="p">:</span>
@@ -8349,6 +8348,7 @@ a.anchor-link {
                     <span class="n">encrypt_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">encrypt_model_path</span><span class="p">)</span>
                     <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"encrypt_model"</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">'zip'</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
+                
                 <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"model"</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">'zip'</span><span class="p">)</span>
 
         <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
@@ -8383,7 +8383,7 @@ Installed all the prerequisites packages
 Started of installing all the prerequisites packages
 Collecting tqdm==4.66.1
   Downloading tqdm-4.66.1-py3-none-any.whl (78 kB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">78.3/78.3 kB</span> <span class="ansi-red-fg">3.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">78.3/78.3 kB</span> <span class="ansi-red-fg">2.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
 Installing collected packages: tqdm
   Attempting uninstall: tqdm
     Found existing installation: tqdm 4.66.2
@@ -8399,6 +8399,7 @@ Failed to removed: /content/data
 Failed to removed: /content/model
 Failed to removed: /content/label
 Failed to removed: /content/encrypt_model
+Failed to removed: /content/onnx_model
 Failed to removed: /content/reports
 Failed to removed: /content/zip
 Failed to removed: /content/reports/sample_data
@@ -8407,6 +8408,7 @@ directory /content/model created successfully
 directory /content/label created successfully
 directory /content/reports created successfully
 directory /content/encrypt_model created successfully
+directory /content/onnx_model created successfully
 directory /content/zip created successfully
 directory /content/reports/sample_data created successfully
 </pre>
@@ -8431,7 +8433,7 @@ Label loaded succesfully
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Model Development:  25%|██▌       | 1/4 [00:02&lt;00:07,  2.61s/it]            </pre>
+<pre>Model Development:  25%|██▌       | 1/4 [00:02&lt;00:07,  2.51s/it]            </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -8445,7 +8447,7 @@ Model file loaded succesfully
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>AIShield API Call:  75%|███████▌  | 3/4 [00:06&lt;00:02,  2.07s/it]</pre>
+<pre>AIShield API Call:  75%|███████▌  | 3/4 [00:05&lt;00:01,  1.88s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -8554,7 +8556,7 @@ Model file loaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">hosted_pdf_url</span> <span class="o">=</span> <span class="s1">'https://aisdocs.blob.core.windows.net/reference/Reports/Image/ImageClassification/MEA/VulnerabilityReport.pdf'</span>
@@ -8581,7 +8583,7 @@ Model file loaded succesfully
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">hosted_defense_pdf_url</span> <span class="o">=</span> <span class="s1">'https://aisdocs.blob.core.windows.net/reference/Reports/Image/ImageClassification/MEA/DefenseReport.pdf'</span>
@@ -8670,12 +8672,12 @@ Model file loaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=91fcac5f">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=91fcac5f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -8686,11 +8688,9 @@ Model file loaded succesfully
 <span class="n">url</span><span class="o">=</span><span class="n">base_url</span><span class="o">+</span><span class="s2">"/api/ais/v1.5"</span>
 <span class="n">org_id</span> <span class="o">=</span> <span class="s1">'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'</span> <span class="c1">#&lt;&lt;Copy Org_id mentioned in welcome mail after AIShield Subscription&gt;&gt;</span>
 
-
 <span class="sd">"""</span>
 <span class="sd">Description: Initialize the AIShield API</span>
 <span class="sd">"""</span>
-
 <span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>
     <span class="c1">#if pypi then , x-api-key generation is taken care from pypi side using given org_id</span>
     <span class="n">aishield_client</span> <span class="o">=</span> <span class="n">ais</span><span class="o">.</span><span class="n">AIShieldApi</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span><span class="n">org_id</span><span class="o">=</span><span class="n">org_id</span><span class="p">)</span>
@@ -8705,13 +8705,12 @@ Model file loaded succesfully
 <span class="sd">        Description: to get the x_api_key</span>
 <span class="sd">        """</span>
         <span class="n">url</span> <span class="o">=</span> <span class="n">url</span><span class="o">+</span><span class="s2">"/get_aws_api_key"</span>
-        <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'org_id'</span><span class="p">:</span> <span class="n">org_id</span><span class="p">}</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Org-Id'</span><span class="p">:</span> <span class="n">org_id</span><span class="p">}</span>
         <span class="n">payload</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="n">x_api_key_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
         <span class="n">status_code</span> <span class="o">=</span> <span class="n">x_api_key_request</span><span class="o">.</span><span class="n">status_code</span>
         <span class="n">x_api_key_request</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">x_api_key_request</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-
         <span class="k">if</span> <span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
             <span class="n">x_api_key</span> <span class="o">=</span> <span class="n">x_api_key_request</span><span class="p">[</span><span class="s1">'x_api_key'</span><span class="p">]</span>
             <span class="k">return</span> <span class="n">x_api_key</span>
@@ -8729,6 +8728,18 @@ Model file loaded succesfully
     <span class="s1">'Org-Id'</span> <span class="p">:</span> <span class="n">org_id</span>
     <span class="p">}</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>'\nDescription: Initialize the AIShield API\n'</pre>
 </div>
 </div>
 </div>
@@ -8755,12 +8766,12 @@ Model file loaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e5db4de5">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e5db4de5">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -8809,6 +8820,18 @@ Model file loaded succesfully
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>'\nDescription: Define the task and analysis type for model registration\n              "task_type" : refers to the specific type of task being performed, for eg : "image_classification."\n              "analysis_type" : refers to the specific type of analysis being performed,for eg : "extraction.\n              For more information, check out [https://docs.boschaishield.com/api-docs/lesspostgreater-model-registration#-a-xGGsdVJB3d09cBAck-]\n'</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8475dc38">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -8831,12 +8854,12 @@ Model file loaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=bcb368b4">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bcb368b4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -8847,7 +8870,6 @@ Model file loaded succesfully
 <span class="n">label_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s1">'label.zip'</span><span class="p">)</span> <span class="c1">#full path of label zip</span>
 <span class="n">model_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s1">'model.zip'</span><span class="p">)</span> <span class="c1">#full path of model zip</span>
 <span class="c1">#model_path=os.path.join(zip_path,'encrypt_model.zip') #full path of model zip. uncomment if model_encryption is 1</span>
-
 
 <span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>
     <span class="c1">#upload input artifacts</span>
@@ -8889,6 +8911,21 @@ Model file loaded succesfully
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>data_upload_status:  upload sucessful
+label_upload_status:  upload sucessful
+model_upload_status:  upload sucessful
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f705377c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -8911,12 +8948,12 @@ Model file loaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=251ad457">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=251ad457">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -8984,6 +9021,18 @@ Model file loaded succesfully
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>'\nDescription: Specify the appropriate configs required for vulnerability analysis and trigger model analysis\n'</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=78c6e269">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -9006,12 +9055,12 @@ Model file loaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=55003c2e">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=55003c2e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -9037,7 +9086,6 @@ Model file loaded succesfully
         <span class="n">counts</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">status_dictionary</span><span class="p">)</span>
         <span class="n">failed_api_hit_count</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
             <span class="k">try</span><span class="p">:</span>
                 <span class="n">job_status_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">job_status_url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{},</span>
                                                        <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
@@ -9088,10 +9136,23 @@ Model file loaded succesfully
                 <span class="nb">print</span><span class="p">(</span><span class="s2">"Error </span><span class="si">{}</span><span class="s2">. trying </span><span class="si">{}</span><span class="s2"> ..."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">),</span> <span class="n">failed_api_hit_count</span><span class="p">))</span>
                 <span class="k">if</span> <span class="n">failed_api_hit_count</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
                     <span class="k">break</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">status_dictionary</span>
 
     <span class="n">status_dictionary</span> <span class="o">=</span> <span class="n">monitor_api_progress</span><span class="p">(</span><span class="n">new_job_id</span><span class="o">=</span><span class="n">job_id</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>'\nDescription: Fetch Job status using Job ID\n'</pre>
 </div>
 </div>
 </div>

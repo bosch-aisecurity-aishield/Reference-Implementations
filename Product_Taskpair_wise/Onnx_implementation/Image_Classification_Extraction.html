@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Timeseries_Forecasting_Extraction_ML</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Image_Classification_Extraction</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7510,7 +7510,7 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=189ff123">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=64ce47d1">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7540,20 +7540,20 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ef70f781">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cc04dd47">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<a href="https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/TimeSeries_Forecasting/Timeseries_Forecasting_Extraction_ML.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Onnx_implementation/Image_Classification_Extraction.ipynb" target="_blank">
 <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/>
 </a>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bf05c7c5">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5e5cabeb">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7563,12 +7563,12 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d309907f">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8b91984f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -7582,12 +7582,12 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a8b4c1d3">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=95fb5754">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_code_input_scrollable</span><span class="p">():</span>
@@ -7689,7 +7689,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=63f0cbcc">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=452a83b9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7699,7 +7699,17 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=23ecbce3">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bfb01f37">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e137bb2f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7710,7 +7720,27 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d21a18c1">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1bcb6716">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=09aafb23">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=eb1f2642">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7724,7 +7754,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ab258779-1dc2-4e3b-8060-8cf675801ef3">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a7f9a0c6-9291-4b27-a85d-d2d855949a45">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7747,12 +7777,12 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4b79dfb0-6722-46df-85b1-9f82640d1bc9">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a12d57bf-2cda-459f-a1e7-b9cb137e5540">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -7774,37 +7804,47 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8c1b41fe-9537-4c43-9cbb-953fe98f72be">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=85a8928a-18f0-4306-9994-9ec22d1ae07b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ul>
-<li><strong><code>input_shape</code></strong>: Shape of the input data, defined as <strong>(number_of_timestamp, number of features)</strong>.</li>
-<li><strong><code>model_encryption</code></strong>: Indicates whether the model is uploaded directly as a zip file (<strong>0</strong>) or encrypted as <code>.pyc</code> and then uploaded as a zip file (<strong>1</strong>).</li>
+<li><strong><code>img_row</code></strong>, <strong><code>img_col</code></strong>, <strong><code>channel</code></strong>: Dimensions of the input images.</li>
+<li><strong><code>num_classes</code></strong>: Number of classes for classification tasks.</li>
+<li><strong><code>epochs</code></strong>: Number of training epochs.</li>
+<li><strong><code>batch_size</code></strong>: Batch size for training.</li>
+<li><strong><code>input_shape</code></strong>: Shape of the input data.</li>
+<li><strong><code>model_encryption</code></strong>: Indicator for the model encryption status.</li>
+<li><strong><code>Normalized</code></strong>: Status of data normalization.</li>
 </ul>
 <h4 id="These-values-are-pre-configured-for-seamless-execution-in-the-notebook.-Adjustments-can-be-made-as-per-your-specific-dataset-and-requirements.">These values are pre-configured for seamless execution in the notebook. Adjustments can be made as per your specific dataset and requirements.<a class="anchor-link" href="#These-values-are-pre-configured-for-seamless-execution-in-the-notebook.-Adjustments-can-be-made-as-per-your-specific-dataset-and-requirements.">¶</a></h4>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4f8cb535">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=75b1807a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#@title Show/Hide Code</span>
 <span class="sd">'''</span>
-<span class="sd">Description:</span>
-<span class="sd">    user input about dataset information, for eg: number of classes, input_shape</span>
+<span class="sd">Description: user input about dataset information, for eg: number of classes, input_shape</span>
 <span class="sd">'''</span>
-<span class="n">input_shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">model_encryption</span><span class="o">=</span><span class="mi">0</span> <span class="c1">#0 if model is uploaded directly as a zip, 1 if model is encryted as .pyc and uploaded as a zip</span>
-<span class="c1">## installing libraries if not and then importing</span>
 
+<span class="n">img_row</span><span class="p">,</span><span class="n">img_col</span><span class="p">,</span><span class="n">channel</span><span class="o">=</span><span class="mi">28</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">1</span>
+<span class="n">num_classes</span><span class="o">=</span><span class="mi">10</span>
+<span class="n">epochs</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">batch_size</span><span class="o">=</span> <span class="mi">64</span>
+<span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">img_row</span><span class="p">,</span><span class="n">img_col</span><span class="p">,</span><span class="n">channel</span><span class="p">)</span>
+<span class="n">model_encryption</span><span class="o">=</span><span class="mi">0</span> <span class="c1">#0 if model is uploaded directly as a zip, 1 if model is encryted as .pyc and uploaded as a zip</span>
+<span class="n">Normalized</span> <span class="o">=</span>  <span class="s1">'yes'</span>
+
+<span class="c1"># installing libraries if not and then importing</span>
 <span class="k">if</span> <span class="n">install</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Starting installing aishield library"</span><span class="p">)</span>
     <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>aishield
@@ -7813,89 +7853,75 @@ a.anchor-link {
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Started of installing all the prerequisites packages"</span><span class="p">)</span>
         <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">tqdm</span><span class="o">==</span><span class="m">4</span>.66.1
         <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">requests</span><span class="o">==</span><span class="m">2</span>.31.0
-        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pyminizip
+
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Started of installing all the prerequisites packages"</span><span class="p">)</span>
-        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">xgboost</span><span class="o">==</span><span class="m">2</span>.0.3
-        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">pandas</span><span class="o">==</span><span class="m">2</span>.2.0
-        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>scikit-learn
         <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>numpy
-        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pyminizip
-        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">requests</span><span class="o">==</span><span class="m">2</span>.31.0
+        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">matplotlib</span><span class="o">==</span><span class="m">3</span>.8.2
+        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">tensorflow</span><span class="o">==</span><span class="m">2</span>.15.0
+        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>scikit-learn
         <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">humanfriendly</span><span class="o">==</span><span class="m">10</span>.0
         <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">tqdm</span><span class="o">==</span><span class="m">4</span>.66.1
         <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">requests</span><span class="o">==</span><span class="m">2</span>.31.0
-    
+        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>opencv-python
+        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">pandas</span><span class="o">==</span><span class="m">2</span>.2.0
+        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>tf2onnx
+
 
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Skipped the installation of all the prerequisites packages"</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">run_code</span><span class="p">:</span>
-    <span class="kn">import</span> <span class="nn">io</span>
     <span class="kn">import</span> <span class="nn">os</span>
-    <span class="kn">import</span> <span class="nn">copy</span>
-    <span class="kn">import</span> <span class="nn">json</span>
-    <span class="kn">import</span> <span class="nn">time</span>
-    <span class="kn">import</span> <span class="nn">pickle</span>
-    <span class="kn">import</span> <span class="nn">shutil</span>
+    <span class="kn">import</span> <span class="nn">cv2</span>
     <span class="kn">import</span> <span class="nn">requests</span>
-    <span class="kn">import</span> <span class="nn">requests</span>
-    <span class="kn">import</span> <span class="nn">py_compile</span>
-    <span class="kn">import</span> <span class="nn">pyminizip</span>
     <span class="kn">import</span> <span class="nn">zipfile</span>
+    <span class="kn">import</span> <span class="nn">tqdm</span>
+    <span class="kn">import</span> <span class="nn">shutil</span>
+    <span class="kn">import</span> <span class="nn">time</span>
+    <span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+    <span class="kn">import</span> <span class="nn">json</span>
+    <span class="kn">import</span> <span class="nn">random</span>
     <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
     <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-    <span class="kn">import</span> <span class="nn">tqdm</span>
     <span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
-    <span class="kn">from</span> <span class="nn">zipfile</span> <span class="kn">import</span> <span class="n">ZipFile</span>
-    <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
-    <span class="kn">from</span> <span class="nn">xgboost</span> <span class="kn">import</span> <span class="n">XGBRegressor</span>
+    <span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+    <span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
+    <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
     <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-    <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span><span class="p">,</span> <span class="n">LabelEncoder</span>
-    <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+    <span class="kn">from</span> <span class="nn">tensorflow.keras</span> <span class="kn">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">optimizers</span><span class="p">,</span> <span class="n">Sequential</span>
+    <span class="kn">import</span> <span class="nn">tf2onnx</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="kn">import</span> <span class="nn">io</span>
     <span class="kn">import</span> <span class="nn">os</span>
-    <span class="kn">import</span> <span class="nn">copy</span>
     <span class="kn">import</span> <span class="nn">json</span>
     <span class="kn">import</span> <span class="nn">time</span>
-    <span class="kn">import</span> <span class="nn">shutil</span>
-    <span class="kn">import</span> <span class="nn">requests</span>
-    <span class="kn">import</span> <span class="nn">py_compile</span>
-    <span class="kn">import</span> <span class="nn">pyminizip</span>
-    <span class="kn">import</span> <span class="nn">zipfile</span>
-    <span class="kn">from</span> <span class="nn">zipfile</span> <span class="kn">import</span> <span class="n">ZipFile</span>
     <span class="kn">import</span> <span class="nn">tqdm</span>
+    <span class="kn">import</span> <span class="nn">shutil</span>
+    <span class="kn">import</span> <span class="nn">zipfile</span>
+    <span class="kn">import</span> <span class="nn">requests</span>
     <span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
 
 <span class="kn">import</span> <span class="nn">aishield</span> <span class="k">as</span> <span class="nn">ais</span>
 
 
+<span class="k">def</span> <span class="nf">load_data</span><span class="p">():</span>
 
-<span class="c1">#extract content from the nested zip file</span>
-<span class="k">def</span> <span class="nf">extract_nested_zip</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="s2">"PJME_hourly.csv"</span><span class="p">):</span>
-    <span class="c1"># Look for nested zip files</span>
-    <span class="n">zip_file</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
-    <span class="n">current_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
-    <span class="c1"># loading the temp.zip and creating a zip object</span>
-    <span class="k">with</span> <span class="n">ZipFile</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">zObject</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">'''</span>
+<span class="sd">        Description :</span>
+<span class="sd">            Load the dataset.</span>
 
-    <span class="c1"># Extracting specific file in the zip</span>
-    <span class="c1"># into a specific location.</span>
-        <span class="n">zObject</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">current_path</span><span class="p">)</span>
-    <span class="n">zObject</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Extraction completed."</span><span class="p">)</span>
+<span class="sd">        input_parameter: None</span>
+<span class="sd">        return_parameter: return the training and testing the dataset</span>
+<span class="sd">            X_train, y_train , X_test, y_test</span>
 
-<span class="k">def</span> <span class="nf">download_data</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">save_file_name</span><span class="o">=</span><span class="s2">"dataset.zip"</span><span class="p">):</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Starting downlaoding the dataset"</span><span class="p">)</span>
-    <span class="c1"># Download the file</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">save_file_name</span><span class="p">,</span> <span class="s1">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="sd">    '''</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"downlaoding dataset completed"</span><span class="p">)</span>
+
+    <span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">),(</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">mnist</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Dataset Loaded"</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span>
 
 <span class="k">def</span> <span class="nf">download_artifacts</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
@@ -7958,111 +7984,6 @@ a.anchor-link {
     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Download / Extraction of artifacts failed </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)))</span>
 
-
-
-<span class="k">def</span> <span class="nf">series_to_supervised</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">n_vars_out</span><span class="p">,</span> <span class="n">n_in</span><span class="p">,</span> <span class="n">n_out</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fillnan</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">'''</span>
-<span class="sd">    convert series to supervised learning</span>
-<span class="sd">    '''</span>
-    <span class="n">n_vars</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span> <span class="k">else</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-    <span class="n">cols</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(),</span> <span class="nb">list</span><span class="p">()</span>
-
-    <span class="c1"># input sequence (t-n, ... t-1)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_in</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">cols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-        <span class="n">names</span> <span class="o">+=</span> <span class="p">[(</span><span class="s1">'var</span><span class="si">%d</span><span class="s1">(t-</span><span class="si">%d</span><span class="s1">)'</span> <span class="o">%</span> <span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_vars</span><span class="p">)]</span>
-
-    <span class="c1"># forecast sequence (t, t+1, ... t+n)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_out</span><span class="p">):</span>
-        <span class="n">cols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="n">n_vars_out</span><span class="p">])</span>
-        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">names</span> <span class="o">+=</span> <span class="p">[(</span><span class="s1">'var</span><span class="si">%d</span><span class="s1">(t)'</span> <span class="o">%</span> <span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="p">(</span><span class="n">n_vars_out</span><span class="p">)]</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">names</span> <span class="o">+=</span> <span class="p">[(</span><span class="s1">'var</span><span class="si">%d</span><span class="s1">(t+</span><span class="si">%d</span><span class="s1">)'</span> <span class="o">%</span> <span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="p">(</span><span class="n">n_vars_out</span><span class="p">)]</span>
-
-    <span class="c1"># put it all together</span>
-    <span class="n">agg</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">cols</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">agg</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">names</span>
-
-    <span class="c1"># Replace nan values with 0</span>
-    <span class="k">if</span> <span class="n">fillnan</span><span class="p">:</span>
-        <span class="n">agg</span> <span class="o">=</span> <span class="n">agg</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">agg</span>
-
-<span class="k">def</span> <span class="nf">data_prep</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">input_dims</span><span class="p">,</span> <span class="n">pred_out</span><span class="p">):</span>
-    <span class="c1"># convert input dims to number of timesteps and number of features</span>
-    <span class="n">num_timesteps</span><span class="p">,</span> <span class="n">num_features</span> <span class="o">=</span> <span class="n">input_shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">input_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="c1">#input_dims</span>
-
-    <span class="c1"># generate data samples by window sliding through time series data</span>
-    <span class="n">reframed</span> <span class="o">=</span> <span class="n">series_to_supervised</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">pred_out</span><span class="p">,</span> <span class="n">num_timesteps</span><span class="p">)</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">reframed</span><span class="o">.</span><span class="n">values</span>
-
-    <span class="c1"># split into input and outputs</span>
-    <span class="n">n_obs</span> <span class="o">=</span> <span class="n">num_timesteps</span><span class="o">*</span><span class="n">num_features</span>  <span class="c1"># no. of timesteps * features</span>
-    <span class="n">data_x</span><span class="p">,</span> <span class="n">data_y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span> <span class="p">:</span><span class="n">n_obs</span><span class="p">],</span> <span class="n">data</span><span class="p">[:,</span> <span class="n">n_obs</span><span class="p">:]</span>
-
-    <span class="c1"># reshape input to be 3D [samples, timesteps, features]</span>
-    <span class="n">data_x</span> <span class="o">=</span> <span class="n">data_x</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">data_x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">num_timesteps</span><span class="p">,</span> <span class="n">num_features</span><span class="p">))</span>
-
-    <span class="k">return</span> <span class="n">data_x</span><span class="p">,</span> <span class="n">data_y</span>
-
-<span class="k">def</span> <span class="nf">load_data</span><span class="p">(</span><span class="n">zipped_file_path</span><span class="p">,</span> <span class="n">file_name</span><span class="p">):</span>
-
-<span class="w">        </span><span class="sd">'''</span>
-<span class="sd">        Description :</span>
-<span class="sd">            Load the dataset.</span>
-
-<span class="sd">        input_parameter: None</span>
-<span class="sd">        return_parameter: return the training and testing the dataset</span>
-<span class="sd">            X_train, y_train , X_test, y_test</span>
-
-<span class="sd">        '''</span>
-<span class="w">        </span><span class="sd">'''</span>
-<span class="sd">        Description : Loading Hourly Energy Consumption dataset</span>
-<span class="sd">        '''</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">extract_nested_zip</span><span class="p">(</span><span class="n">zipped_file_path</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"Dataset Downloaded Successfully"</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
-
-
-        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Dataset Loaded"</span><span class="p">)</span>
-
-        <span class="k">return</span> <span class="n">df</span>
-
-<span class="k">def</span> <span class="nf">preprocess_data</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
-
-    <span class="c1">#scaling the dataset</span>
-    <span class="n">values</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">values</span>
-    <span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">(</span><span class="n">feature_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-    <span class="n">scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
-
-<span class="w">    </span><span class="sd">'''</span>
-<span class="sd">    Description : convert normalized dataset to a dataframe</span>
-<span class="sd">    '''</span>
-
-    <span class="n">df_scaled</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scaled</span><span class="p">,</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="p">)</span>
-
-<span class="w">    </span><span class="sd">'''</span>
-<span class="sd">    Description : choosing train and testing dataset</span>
-<span class="sd">    '''</span>
-
-    <span class="n">df_train</span> <span class="o">=</span> <span class="n">df_scaled</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">113927</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-    <span class="n">df_test</span> <span class="o">=</span> <span class="n">df_scaled</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">113927</span><span class="p">:</span><span class="mi">145366</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-
-<span class="w">    </span><span class="sd">'''</span>
-<span class="sd">    Description : Splitting data for training and testing</span>
-<span class="sd">    '''</span>
-    <span class="n">pred_col_index</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">df_train</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
-    <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">data_prep</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">input_shape</span><span class="p">,</span> <span class="n">pred_col_index</span><span class="p">)</span>
-    <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">data_prep</span><span class="p">(</span><span class="n">df_test</span><span class="p">,</span> <span class="n">input_shape</span><span class="p">,</span> <span class="n">pred_col_index</span><span class="p">)</span>
-
-
-    <span class="k">return</span>  <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">df_test</span>
 
 <span class="k">def</span> <span class="nf">make_directory</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
@@ -8129,6 +8050,50 @@ a.anchor-link {
 <span class="sd">    """</span>
     <span class="n">shutil</span><span class="o">.</span><span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">base_name</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">zip_format</span><span class="p">,</span> <span class="n">root_dir</span><span class="o">=</span><span class="n">root_dir</span><span class="p">)</span>
 
+<span class="k">def</span> <span class="nf">training</span><span class="p">(</span><span class="n">parameter_payload</span><span class="p">:</span><span class="nb">dict</span><span class="p">):</span>
+
+    <span class="n">X_train</span> <span class="o">=</span> <span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'X_train'</span><span class="p">]</span>
+    <span class="n">y_train</span> <span class="o">=</span> <span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'y_train'</span><span class="p">]</span>
+    <span class="n">X_test</span> <span class="o">=</span> <span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'X_test'</span><span class="p">]</span>
+    <span class="n">y_test</span> <span class="o">=</span> <span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'y_test'</span><span class="p">]</span>
+
+    <span class="c1">#splitting the dataset into train and validation set</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_val</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">stratify</span> <span class="o">=</span> <span class="n">y_train</span><span class="p">,</span><span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span><span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
+
+    <span class="c1">#Normalizing and Reshaping the Data</span>
+    <span class="k">if</span> <span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'Normalized'</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Normalization of the inputdata being started"</span><span class="p">)</span>
+        <span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">*</span><span class="n">input_shape</span><span class="p">)</span><span class="o">/</span><span class="mf">255.0</span>
+        <span class="n">X_val</span> <span class="o">=</span>  <span class="n">X_val</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">*</span><span class="n">input_shape</span><span class="p">)</span><span class="o">/</span><span class="mf">255.0</span>
+        <span class="n">X_test</span> <span class="o">=</span>  <span class="n">X_test</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">*</span><span class="n">input_shape</span><span class="p">)</span><span class="o">/</span><span class="mf">255.0</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Normalization Done"</span><span class="p">)</span>
+
+
+    <span class="c1">#Convert the Labels to one hot encoder</span>
+    <span class="n">y_train</span><span class="o">=</span><span class="n">keras</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">to_categorical</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span><span class="n">num_classes</span><span class="p">)</span>
+    <span class="n">y_test</span><span class="o">=</span><span class="n">keras</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">to_categorical</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">num_classes</span><span class="p">)</span>
+
+
+    <span class="n">model</span> <span class="o">=</span> <span class="n">create_model</span><span class="p">(</span><span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'num_classes'</span><span class="p">])</span>
+
+    <span class="c1"># Checkpoint</span>
+    <span class="n">checkpoint</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">ModelCheckpoint</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'model_path'</span><span class="p">],</span><span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'model_name'</span><span class="p">]),</span><span class="n">monitor</span><span class="o">=</span><span class="s1">'val_loss'</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">save_best_only</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">'auto'</span><span class="p">)</span>
+    <span class="c1"># Early stopper</span>
+    <span class="n">early_stop</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">EarlyStopping</span><span class="p">(</span><span class="n">monitor</span><span class="o">=</span><span class="s1">'val_loss'</span><span class="p">,</span><span class="n">min_delta</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">patience</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">'min'</span><span class="p">)</span>
+
+    <span class="n">callbacks</span> <span class="o">=</span> <span class="p">[</span><span class="n">early_stop</span><span class="p">,</span> <span class="n">checkpoint</span><span class="p">]</span>
+
+    <span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">validation_data</span> <span class="o">=</span> <span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">),</span><span class="n">epochs</span> <span class="o">=</span> <span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'epochs'</span><span class="p">],</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'batch_size'</span><span class="p">],</span> <span class="n">verbose</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">callbacks</span> <span class="o">=</span> <span class="n">callbacks</span><span class="p">)</span>
+
+
+    <span class="c1">#Evaluate trained model</span>
+
+    <span class="n">loss</span><span class="p">,</span><span class="n">accuracy</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"* Loss: </span><span class="si">{}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">* Accuracy: </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">loss</span><span class="p">,</span><span class="n">accuracy</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">model</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_val</span>
+
+
 <span class="k">def</span> <span class="nf">create_folders</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">'''</span>
 <span class="sd">        Descrption: this will remove(if present previously) and create folders needed</span>
@@ -8140,136 +8105,118 @@ a.anchor-link {
 
     <span class="n">data_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"data"</span><span class="p">)</span>
     <span class="n">model_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"model"</span><span class="p">)</span>
-    <span class="n">label_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"minmax"</span><span class="p">)</span>
+    <span class="n">label_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"label"</span><span class="p">)</span>
     <span class="n">encrypt_model_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"encrypt_model"</span><span class="p">)</span>
+    <span class="n">onnx_model_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"onnx_model"</span><span class="p">)</span>
+
     <span class="n">report_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"reports"</span><span class="p">)</span>
     <span class="n">sample_data</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">report_path</span><span class="p">,</span> <span class="s2">"sample_data"</span><span class="p">)</span>
     <span class="c1">#Create Zip Path which contains data , model and label zip files</span>
     <span class="n">zip_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"zip"</span><span class="p">)</span>
 
     <span class="c1">#deleting previously generated folders</span>
-    <span class="n">delete_directory</span><span class="p">(</span><span class="n">directorys</span><span class="o">=</span><span class="p">[</span><span class="n">data_path</span><span class="p">,</span><span class="n">model_path</span><span class="p">,</span><span class="n">label_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span><span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span><span class="p">])</span>
+    <span class="n">delete_directory</span><span class="p">(</span><span class="n">directorys</span><span class="o">=</span><span class="p">[</span><span class="n">data_path</span><span class="p">,</span><span class="n">model_path</span><span class="p">,</span><span class="n">label_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">onnx_model_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span><span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span><span class="p">])</span>
 
     <span class="c1">#creating folders</span>
-    <span class="n">make_directory</span><span class="p">([</span><span class="n">data_path</span><span class="p">,</span><span class="n">model_path</span><span class="p">,</span><span class="n">label_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span><span class="p">])</span>
+    <span class="n">make_directory</span><span class="p">([</span><span class="n">data_path</span><span class="p">,</span><span class="n">model_path</span><span class="p">,</span><span class="n">label_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">onnx_model_path</span><span class="p">,</span><span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span><span class="p">])</span>
 
-    <span class="k">return</span> <span class="n">data_path</span><span class="p">,</span> <span class="n">model_path</span><span class="p">,</span> <span class="n">label_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span> <span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span>
+    <span class="k">return</span> <span class="n">data_path</span><span class="p">,</span> <span class="n">model_path</span><span class="p">,</span> <span class="n">label_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">onnx_model_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span> <span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span>
 
-<span class="k">def</span> <span class="nf">create_model</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">create_model</span><span class="p">(</span><span class="n">num_classes</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Description: Create model architecture</span>
 <span class="sd">    input_parameters: num_classes : number of classes</span>
 <span class="sd">    return_parameters: model</span>
 <span class="sd">    """</span>
-    <span class="n">XG</span> <span class="o">=</span> <span class="n">XGBRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">XG</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">([</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="s1">'same'</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">'relu'</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="n">input_shape</span><span class="p">),</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="s1">'same'</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">'relu'</span><span class="p">),</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">MaxPool2D</span><span class="p">(),</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.25</span><span class="p">),</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="s1">'same'</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">'relu'</span><span class="p">),</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="s1">'same'</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">'relu'</span><span class="p">),</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">MaxPool2D</span><span class="p">(</span><span class="n">strides</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)),</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.25</span><span class="p">),</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">Flatten</span><span class="p">(),</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">'relu'</span><span class="p">),</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">num_classes</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">'softmax'</span><span class="p">)</span>
+    <span class="p">])</span>
 
-<span class="k">def</span> <span class="nf">prepare_min_max</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="c1">#Compile model</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">optimizers</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">),</span> <span class="n">loss</span> <span class="o">=</span> <span class="s1">'categorical_crossentropy'</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">'accuracy'</span><span class="p">])</span>
 
-<span class="w">    </span><span class="sd">"""Prepare MinMax"""</span>
+    <span class="k">return</span> <span class="n">model</span>
 
-    <span class="n">min_values</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-    <span class="n">max_values</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-    <span class="n">x</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">min_values</span><span class="p">,</span><span class="n">max_values</span><span class="p">])</span>
-    <span class="n">df_m</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
-    <span class="n">df_m</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">minmax_path</span><span class="o">+</span><span class="s2">"/minmax.csv"</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">prepare_data_label</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">label_path</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">,</span> <span class="n">Normalized</span><span class="p">):</span>
 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Preparing and Saving Data and Label file Needed."</span><span class="p">)</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+    <span class="n">img_name</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">img_label</span> <span class="o">=</span> <span class="p">[]</span>
 
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">X_val</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="n">Normalized</span><span class="p">:</span>
+            <span class="c1"># don't use plt.imread otheriwse while loading the saved images ,</span>
+            <span class="c1">#and passing to model there is accuarcy drop</span>
+            <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s2">".jpg"</span><span class="p">)</span> <span class="p">,</span><span class="n">X_val</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="mf">255.0</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s2">".jpg"</span><span class="p">)</span> <span class="p">,</span><span class="n">X_val</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 
-<span class="k">def</span> <span class="nf">RMSE_score</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">test_x</span><span class="p">,</span> <span class="n">test_y</span><span class="p">):</span>
+        <span class="n">img_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s2">".jpg"</span><span class="p">)</span>
+        <span class="n">img_label</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y_val</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
 
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Description: to get root mean squared error of the model</span>
-<span class="sd">    """</span>
+    <span class="n">label</span><span class="p">[</span><span class="s1">'image'</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_name</span>
+    <span class="n">label</span><span class="p">[</span><span class="s2">"label"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">img_label</span><span class="p">)</span>
 
-    <span class="n">pred_y</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_x</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">pred_y</span><span class="p">,</span> <span class="n">test_y</span><span class="p">))</span>
+    <span class="c1">#write orig_label dataframe</span>
+    <span class="n">label</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">label_path</span><span class="p">,</span><span class="s2">"label.csv"</span><span class="p">),</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
+<span class="k">def</span> <span class="nf">encrypt_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">encrypt_model_path</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"As model_encryption has set as 1 , Creating an encripted Model"</span><span class="p">)</span>
+    <span class="n">python_code</span><span class="o">=</span><span class="s1">'''</span>
+<span class="s1">#import library</span>
+<span class="s1">import numpy as np</span>
+<span class="s1">import tensorflow as tf</span>
 
-
-<span class="k">def</span> <span class="nf">training</span><span class="p">(</span><span class="n">parameter_payload</span><span class="p">:</span><span class="nb">dict</span><span class="p">):</span>
-
-    <span class="n">X_train</span> <span class="o">=</span> <span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'X_train'</span><span class="p">]</span>
-    <span class="n">y_train</span> <span class="o">=</span> <span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'y_train'</span><span class="p">]</span>
-    <span class="n">X_test</span> <span class="o">=</span> <span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'X_test'</span><span class="p">]</span>
-    <span class="n">y_test</span> <span class="o">=</span> <span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'y_test'</span><span class="p">]</span>
-
-
-    <span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">X_test</span> <span class="o">=</span> <span class="n">X_test</span><span class="p">[:,:,</span><span class="mi">0</span><span class="p">]</span>
-
-    <span class="c1">#Creating the model</span>
-    <span class="n">model</span> <span class="o">=</span> <span class="n">create_model</span><span class="p">()</span>
-
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Description: Trainig the model</span>
-<span class="sd">    """</span>
-
-    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span>
-        <span class="n">eval_set</span><span class="o">=</span><span class="p">[(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span> <span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)],</span>
-        <span class="n">early_stopping_rounds</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
-       <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Saving the model under model directory</span>
-<span class="sd">    """</span>
-    <span class="n">modelname</span> <span class="o">=</span> <span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'model_name'</span><span class="p">]</span>
-    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">parameter_payload</span><span class="p">[</span><span class="s1">'model_path'</span><span class="p">],</span> <span class="n">modelname</span><span class="p">),</span> <span class="s1">'wb'</span><span class="p">))</span>
-
-    <span class="k">return</span> <span class="n">model</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span>
-
-
-<span class="k">def</span> <span class="nf">encrypt_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">modelname</span><span class="p">,</span> <span class="n">model_framework</span><span class="p">,</span><span class="n">pyc_model_path</span><span class="p">):</span>
-
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Description: Create encrypted Model</span>
-<span class="sd">    """</span>
-
-    <span class="k">if</span> <span class="n">model_framework</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"scikit-learn"</span><span class="p">:</span>
-
-        <span class="n">python_code</span> <span class="o">=</span><span class="s1">'''</span>
-<span class="s1">#importing libraries</span>
-<span class="s1">import pickle</span>
-<span class="s1">import zipfile</span>
-<span class="s1">import os</span>
-
-<span class="s1">"""</span>
-<span class="s1">    class for base model</span>
-<span class="s1">"""</span>
 <span class="s1">#define class</span>
 <span class="s1">class BaseModel():</span>
-<span class="s1">    def __init__(self,model_path=""):</span>
-
+<span class="s1">    """</span>
+<span class="s1">    class for base model</span>
+<span class="s1">    """</span>
+<span class="s1">    def __init__(self,input_shape=(28,28,1),num_classes=10,model_weight_path="model_weight.h5"):</span>
 <span class="s1">        """</span>
 <span class="s1">        constructor for class</span>
 
 <span class="s1">        Parameters</span>
 <span class="s1">        ----------</span>
 <span class="s1">        input_shape : TYPE, optional</span>
-<span class="s1">            DESCRIPTION. The default is (100,1).</span>
+<span class="s1">            DESCRIPTION. The default is (28,28,1).</span>
+<span class="s1">        num_classes : TYPE, optional</span>
+<span class="s1">            DESCRIPTION. The default is 10.</span>
+<span class="s1">        model_weight_path : string, optional</span>
+<span class="s1">            DESCRIPTION. the relative path to model weight</span>
+
 <span class="s1">        Returns</span>
 <span class="s1">        -------</span>
 <span class="s1">        None.</span>
 
 <span class="s1">        """</span>
-<span class="s1">        self.model_path = model_path</span>
+<span class="s1">        self.input_shape=input_shape</span>
+<span class="s1">        self.num_classes=num_classes</span>
+<span class="s1">        self.model_weight_path=model_weight_path</span>
 
-<span class="s1">    def load_protected_pickleModel(self,filename,password,picklemodelname):</span>
 
-
+<span class="s1">    def cnn_model(self,input_shape,num_classes):</span>
 <span class="s1">        """</span>
 <span class="s1">        model architecture</span>
 
 <span class="s1">        Parameters</span>
 <span class="s1">        ----------</span>
-<span class="s1">        filename : string</span>
-<span class="s1">            DESCRIPTION.zipped protected filename</span>
-
-<span class="s1">        password : String</span>
-<span class="s1">            DESCRIPTION.zipped file password</span>
-
-<span class="s1">        picklemodelname  :String</span>
-<span class="s1">            DESCRIPTION.pickle file name present in a ziiped protected</span>
+<span class="s1">        input_shape : string</span>
+<span class="s1">            DESCRIPTION.input_shape for model e.g (28,28,1)</span>
+<span class="s1">        num_classes : string</span>
+<span class="s1">            DESCRIPTION.number of class e.g 10</span>
 
 <span class="s1">        Returns</span>
 <span class="s1">        -------</span>
@@ -8277,16 +8224,27 @@ a.anchor-link {
 <span class="s1">            DESCRIPTION.</span>
 
 <span class="s1">        """</span>
-<span class="s1">        filepath = os.path.join(self.model_path,filename)</span>
-<span class="s1">        #print(filepath)</span>
-<span class="s1">        #print(filename)</span>
-<span class="s1">        with zipfile.ZipFile(filepath, 'r') as file:</span>
-<span class="s1">            with file.open(picklemodelname,'r',pwd = bytes(password, 'utf-8')) as f:</span>
-<span class="s1">                pck = pickle.load(f)</span>
-<span class="s1">        return pck</span>
+<span class="s1">        #create sequential model</span>
+
+<span class="s1">        model = tf.keras.Sequential([</span>
+<span class="s1">            tf.keras.layers.Conv2D(32, (5,5), padding='same', activation='relu', input_shape=input_shape),</span>
+<span class="s1">            tf.keras.layers.Conv2D(32, (5,5), padding='same', activation='relu'),</span>
+<span class="s1">            tf.keras.layers.MaxPool2D(),</span>
+<span class="s1">            tf.keras.layers.Dropout(0.25),</span>
+<span class="s1">            tf.keras.layers.Conv2D(64, (3,3), padding='same', activation='relu'),</span>
+<span class="s1">            tf.keras.layers.Conv2D(64, (3,3), padding='same', activation='relu'),</span>
+<span class="s1">            tf.keras.layers.MaxPool2D(strides=(2,2)),</span>
+<span class="s1">            tf.keras.layers.Dropout(0.25),</span>
+<span class="s1">            tf.keras.layers.Flatten(),</span>
+<span class="s1">            tf.keras.layers.Dense(128, activation='relu'),</span>
+<span class="s1">            tf.keras.layers.Dropout(0.5),</span>
+<span class="s1">            tf.keras.layers.Dense(num_classes, activation='softmax')   # used softmax , so set from_logits = False in cross entropy loss</span>
+<span class="s1">        ])</span>
+
+
+<span class="s1">        return model</span>
 
 <span class="s1">    def predict(self,X):</span>
-
 <span class="s1">        """</span>
 <span class="s1">        predict for given data</span>
 
@@ -8301,128 +8259,113 @@ a.anchor-link {
 <span class="s1">            DESCRIPTION.</span>
 
 <span class="s1">        """</span>
-<span class="s1">        filename = "modelencrypt.zip"</span>
-<span class="s1">        password = "987654321"</span>
-<span class="s1">        picklemodelname = "xgboost_tsf_mdl.pkl"</span>
-<span class="s1">        model = self.load_protected_pickleModel(filename=filename,password=password,picklemodelname=picklemodelname)</span>
-<span class="s1">        pred = model.predict(X)</span>
-<span class="s1">        return pred'''</span>
-        <span class="c1"># Writing to file</span>
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"base_model.py"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-            <span class="c1"># Writing data to a file</span>
-            <span class="n">file</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">python_code</span><span class="p">)</span>
+<span class="s1">        model=self.cnn_model(input_shape=self.input_shape,num_classes=self.num_classes)</span>
+<span class="s1">        model.load_weights(self.model_weight_path)</span>
 
-<span class="w">        </span><span class="sd">"""</span>
-<span class="sd">        Description: function to create .pyc file</span>
-<span class="sd">        """</span>
-        <span class="n">py_compile</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">"base_model.py"</span><span class="p">,</span><span class="n">cfile</span><span class="o">=</span><span class="n">pyc_model_path</span><span class="o">+</span><span class="s1">'/base_model.pyc'</span><span class="p">)</span>
+<span class="s1">        pred=np.argmax(model.predict(X),axis=-1)</span>
+<span class="s1">        return pred '''</span>
 
-<span class="w">        </span><span class="sd">"""</span>
-<span class="sd">        Description: function to create zipped password protected pickle model file</span>
-<span class="sd">        """</span>
+    <span class="c1"># Writing to file</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"base_model.py"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="c1"># Writing data to a file</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">python_code</span><span class="p">)</span>
 
-        <span class="k">def</span> <span class="nf">zip_model</span><span class="p">(</span><span class="n">input_path</span><span class="p">,</span><span class="n">output_path</span><span class="p">,</span><span class="n">password</span><span class="p">,</span><span class="n">com_lvl</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
-            <span class="n">pyminizip</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="n">input_path</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">output_path</span><span class="p">,</span>
-                               <span class="n">password</span><span class="p">,</span> <span class="n">com_lvl</span><span class="p">)</span>
+    <span class="c1">#Description: function to create .pyc file</span>
+    <span class="kn">import</span> <span class="nn">py_compile</span>
+    <span class="n">py_compile</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s1">'base_model.py'</span><span class="p">,</span><span class="n">cfile</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="s1">'base_model.pyc'</span><span class="p">))</span>
 
-        <span class="n">zip_model</span><span class="p">(</span><span class="n">input_path</span> <span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">model_path</span><span class="p">,</span><span class="n">modelname</span><span class="p">),</span><span class="n">output_path</span> <span class="o">=</span> <span class="n">pyc_model_path</span><span class="o">+</span><span class="s2">"/modelencrypt.zip"</span> <span class="p">,</span><span class="n">password</span> <span class="o">=</span> <span class="s2">"987654321"</span><span class="p">,</span><span class="n">com_lvl</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="c1">#Description: save weight of model</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">save_weights</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="s2">"model_weight.h5"</span><span class="p">))</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
 
-      <span class="n">user_workflow</span> <span class="o">=</span> <span class="p">{</span>
-                <span class="s1">'1'</span> <span class="p">:</span> <span class="s1">'load the Dataset and MinMax'</span><span class="p">,</span>
-                <span class="s1">'2'</span> <span class="p">:</span> <span class="s1">'Model Development'</span><span class="p">,</span>
-                <span class="s1">'3'</span> <span class="p">:</span> <span class="s1">'Preparing Data, Model and MinMax'</span><span class="p">,</span>
-                <span class="s1">'4'</span> <span class="p">:</span> <span class="s1">'AIShield API Call'</span>
-          <span class="p">}</span>
-      <span class="n">steps_tqdm</span> <span class="o">=</span> <span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-      <span class="n">data_path</span><span class="p">,</span> <span class="n">model_path</span><span class="p">,</span> <span class="n">minmax_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span> <span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span> <span class="o">=</span> <span class="n">create_folders</span><span class="p">()</span>
+    <span class="n">data_path</span><span class="p">,</span> <span class="n">model_path</span><span class="p">,</span> <span class="n">label_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">onnx_model_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span> <span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span> <span class="o">=</span> <span class="n">create_folders</span><span class="p">()</span>
+    <span class="n">user_workflow</span> <span class="o">=</span> <span class="p">{</span>
+                 <span class="s1">'1'</span> <span class="p">:</span> <span class="s1">'loading the Dataset and Label'</span><span class="p">,</span>
+                 <span class="s1">'2'</span> <span class="p">:</span> <span class="s1">'Model Development'</span><span class="p">,</span>
+                 <span class="s1">'3'</span> <span class="p">:</span> <span class="s1">'Preparing Data, Model and Label'</span><span class="p">,</span>
+                 <span class="s1">'4'</span> <span class="p">:</span> <span class="s1">'AIShield API Call'</span>
+           <span class="p">}</span>
 
-      <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="n">steps_tqdm</span><span class="p">:</span>
+    <span class="n">steps_tqdm</span> <span class="o">=</span> <span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="n">steps_tqdm</span><span class="p">:</span>
 
-          <span class="k">if</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
-              <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
-              <span class="k">if</span> <span class="ow">not</span> <span class="n">run_code</span><span class="p">:</span>
-                  <span class="nb">print</span><span class="p">(</span><span class="s2">"Downloading of the Data Started"</span><span class="p">)</span>
-                  <span class="n">data_url</span> <span class="o">=</span> <span class="s2">"https://huggingface.co/Pankaj001/TimeSeries-Forecasting-ML-Model/resolve/main/data.zip"</span>
-                  <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">data_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">data_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">data_path</span><span class="p">))</span>
-                  <span class="nb">print</span><span class="p">(</span><span class="s2">"Data downloaded succesfully"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
 
-                  <span class="nb">print</span><span class="p">(</span><span class="s2">"Downloading of the Min-Max Started"</span><span class="p">)</span>
-                  <span class="n">label_url</span> <span class="o">=</span> <span class="s2">"https://huggingface.co/Pankaj001/TimeSeries-Forecasting-ML-Model/resolve/main/minmax.zip"</span>
-                  <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">label_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">label_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">minmax_path</span><span class="p">))</span>
-                  <span class="nb">print</span><span class="p">(</span><span class="s2">"minmax file downloaded succesfully"</span><span class="p">)</span>
-              <span class="k">else</span><span class="p">:</span>
-                  <span class="n">file_path</span> <span class="o">=</span> <span class="s2">"https://aisdocs.blob.core.windows.net/reference/tsf_ref_dataset/PJME_hourly.csv.zip"</span>
-                  <span class="n">zipped_file_path</span> <span class="o">=</span> <span class="s2">"PJME_hourly.csv.zip"</span>
-                  <span class="n">file_name</span> <span class="o">=</span> <span class="s1">'PJME_hourly.csv'</span>
-                  <span class="n">download_data</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span><span class="n">zipped_file_path</span><span class="p">)</span>
-                  <span class="n">df</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="n">zipped_file_path</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span>
+            <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">run_code</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"loading of the Data Started"</span><span class="p">)</span>
+                <span class="n">data_url</span> <span class="o">=</span> <span class="s2">"https://huggingface.co/Pankaj001/ImageClassification-MNIST/resolve/main/mnist_data.zip"</span>
+                <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">data_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">data_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">data_path</span><span class="p">))</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Data loaded succesfully"</span><span class="p">)</span>
+
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"loading of the Label Started"</span><span class="p">)</span>
+                <span class="n">label_url</span> <span class="o">=</span> <span class="s2">"https://huggingface.co/Pankaj001/ImageClassification-MNIST/resolve/main/mnist_label.zip"</span>
+                <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">label_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">label_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">label_path</span><span class="p">))</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Label loaded succesfully"</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">X_train</span> <span class="p">,</span> <span class="n">y_train</span> <span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">()</span>
 
 
-          <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-              <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
-              <span class="k">if</span> <span class="ow">not</span> <span class="n">run_code</span><span class="p">:</span>
-                  <span class="nb">print</span><span class="p">(</span><span class="s2">"Downloading of the Model file Started"</span><span class="p">)</span>
-                  <span class="k">if</span> <span class="n">model_encryption</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-                      <span class="n">model_url</span> <span class="o">=</span> <span class="s2">"https://huggingface.co/Pankaj001/TimeSeries-Forecasting-ML-Model/resolve/main/model.zip"</span>
-                      <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">model_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_path</span><span class="p">))</span>
-                  <span class="k">else</span><span class="p">:</span>
-                      <span class="n">model_url</span> <span class="o">=</span> <span class="s2">"https://aisdocs.blob.core.windows.net/reference/upload/EncryptedModels/encrypt_model_TSF_MEA_ML.zip"</span>
-                      <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">model_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">encrypt_model_path</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">run_code</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"loading of the Model file Started"</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">model_encryption</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+                    <span class="n">model_url</span> <span class="o">=</span> <span class="s2">"https://huggingface.co/Pankaj001/ImageClassification-MNIST/resolve/main/model_onnx.zip"</span>
+                    <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">model_url</span><span class="p">,</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_url</span><span class="p">),</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">onnx_model_path</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">model_url</span> <span class="o">=</span> <span class="s2">"https://aisdocs.blob.core.windows.net/reference/upload/EncryptedModels/encrypt_model_ic_mea.zip"</span>
+                    <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">model_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">encrypt_model_path</span><span class="p">))</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Model file loaded succesfully"</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">training_parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'X_train'</span> <span class="p">:</span> <span class="n">X_train</span> <span class="p">,</span>
+                          <span class="s1">'y_train'</span><span class="p">:</span><span class="n">y_train</span> <span class="p">,</span>
+                          <span class="s1">'X_test'</span> <span class="p">:</span> <span class="n">X_test</span> <span class="p">,</span>
+                          <span class="s1">'y_test'</span> <span class="p">:</span> <span class="n">y_test</span><span class="p">,</span>
+                          <span class="s1">'Normalized'</span> <span class="p">:</span> <span class="n">Normalized</span> <span class="p">,</span>
+                          <span class="s1">'epochs'</span> <span class="p">:</span> <span class="n">epochs</span> <span class="p">,</span>
+                          <span class="s1">'batch_size'</span> <span class="p">:</span> <span class="n">batch_size</span><span class="p">,</span>
+                          <span class="s1">'model_path'</span> <span class="p">:</span> <span class="n">model_path</span> <span class="p">,</span>
+                          <span class="s1">'model_name'</span> <span class="p">:</span> <span class="s1">'mnist_model.h5'</span><span class="p">,</span>
+                          <span class="s1">'num_classes'</span> <span class="p">:</span> <span class="n">num_classes</span>
+                          <span class="p">}</span>
 
-                  <span class="nb">print</span><span class="p">(</span><span class="s2">"Model file downloaded succesfully"</span><span class="p">)</span>
-              <span class="k">else</span><span class="p">:</span>
-                  <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">df_test</span> <span class="o">=</span> <span class="n">preprocess_data</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-
-                  <span class="n">training_parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'X_train'</span> <span class="p">:</span> <span class="n">X_train</span> <span class="p">,</span>
-                                <span class="s1">'y_train'</span><span class="p">:</span><span class="n">y_train</span> <span class="p">,</span>
-                                <span class="s1">'X_test'</span> <span class="p">:</span> <span class="n">X_test</span> <span class="p">,</span>
-                                <span class="s1">'y_test'</span> <span class="p">:</span> <span class="n">y_test</span><span class="p">,</span>
-                                <span class="s1">'model_path'</span> <span class="p">:</span> <span class="n">model_path</span> <span class="p">,</span>
-                                <span class="s1">'model_name'</span> <span class="p">:</span> <span class="s1">'xgboost_tsf_mdl.pkl'</span><span class="p">,</span>
-
-                              <span class="p">}</span>
-
-                  <span class="n">model</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">training</span><span class="p">(</span><span class="n">training_parameters</span><span class="p">)</span>
-                  <span class="nb">print</span><span class="p">(</span><span class="s1">'RMSE score of the model is </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">RMSE_score</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
+                <span class="n">model</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_val</span> <span class="o">=</span> <span class="n">training</span><span class="p">(</span><span class="n">parameter_payload</span><span class="o">=</span><span class="n">training_parameters</span><span class="p">)</span>
+            
+                <span class="n">model_name</span> <span class="o">=</span> <span class="s2">"mnist_model.onnx"</span>
+                <span class="n">onnx_model_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">onnx_model_path</span><span class="p">,</span><span class="n">model_name</span><span class="p">)</span>
+                <span class="n">input_signature</span> <span class="o">=</span> <span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">TensorSpec</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">img_row</span><span class="p">,</span> <span class="n">img_col</span><span class="p">,</span> <span class="n">channel</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">),)</span>
+                <span class="n">tf2onnx</span><span class="o">.</span><span class="n">convert</span><span class="o">.</span><span class="n">from_keras</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">input_signature</span><span class="o">=</span><span class="n">input_signature</span><span class="p">,</span> <span class="n">output_path</span><span class="o">=</span><span class="n">onnx_model_path</span><span class="p">)</span>
 
 
+        <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
+            <span class="k">if</span> <span class="n">run_code</span><span class="p">:</span>
+                <span class="n">prepare_data_label</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">label_path</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">,</span> <span class="n">Normalized</span><span class="p">)</span>
 
-          <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-              <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
-
-              <span class="k">if</span> <span class="n">run_code</span><span class="p">:</span>
-                  <span class="n">no_samples_taken</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.05</span><span class="p">)</span> <span class="c1"># Considering just 5% of the total dataset</span>
-                  <span class="n">final_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[:</span><span class="n">no_samples_taken</span><span class="p">]</span>
-                  <span class="n">final_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span><span class="s2">"dataset.csv"</span><span class="p">),</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-                  <span class="n">prepare_min_max</span><span class="p">(</span><span class="n">final_df</span><span class="p">)</span>
-
-              <span class="c1">#Zip Data</span>
-              <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"data"</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">data_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">'zip'</span><span class="p">)</span>
-
+             <span class="c1">#Zip Data</span>
+            <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"data"</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">data_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">'zip'</span><span class="p">)</span>
               <span class="c1">#Zip Label</span>
-              <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"minmax"</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">minmax_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">'zip'</span><span class="p">)</span>
-              <span class="n">model_framework</span> <span class="o">=</span> <span class="s2">"scikit-learn"</span>
+            <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"label"</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">label_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">'zip'</span><span class="p">)</span>
 
-              <span class="c1">#Description: Zip Model</span>
-              <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"model.zip"</span><span class="p">)):</span>
-                  <span class="n">delete_directory</span><span class="p">(</span><span class="n">directorys</span><span class="o">=</span><span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"model.zip"</span><span class="p">)])</span>
-              <span class="k">if</span> <span class="n">model_encryption</span><span class="p">:</span>
-                  <span class="k">if</span> <span class="ow">not</span> <span class="n">run_code</span><span class="p">:</span>
-                      <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"encrypt_model"</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">'zip'</span><span class="p">)</span>
-                  <span class="k">else</span><span class="p">:</span>
-                      <span class="n">encrypt_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">training_parameters</span><span class="p">[</span><span class="s2">"model_name"</span><span class="p">],</span> <span class="n">model_framework</span><span class="p">,</span> <span class="n">encrypt_model_path</span><span class="p">)</span>
-                      <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"encrypt_model"</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">'zip'</span><span class="p">)</span>
-              <span class="k">else</span><span class="p">:</span>
-                  <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"model"</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">'zip'</span><span class="p">)</span>
+            <span class="c1">#Description: Zip Model</span>
+            <span class="k">if</span> <span class="n">model_encryption</span><span class="p">:</span>
+                
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">run_code</span><span class="p">:</span>
+                    <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"encrypt_model"</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">'zip'</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">encrypt_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">encrypt_model_path</span><span class="p">)</span>
+                    <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"encrypt_model"</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">'zip'</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"onnx_model"</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">onnx_model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">'zip'</span><span class="p">)</span>
+                
+        <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Below Cells will see How to integrate and Call AIShield for Vulnerability Analysis"</span><span class="p">)</span>
+            <span class="k">break</span>
 
-          <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
-              <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
-              <span class="nb">print</span><span class="p">(</span><span class="s2">"Below Cells will see How to integrate and Call AIShield for Vulnerability Analysis"</span><span class="p">)</span>
-              <span class="k">break</span>
-
-          <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8449,7 +8392,7 @@ Installed all the prerequisites packages
 Started of installing all the prerequisites packages
 Collecting tqdm==4.66.1
   Downloading tqdm-4.66.1-py3-none-any.whl (78 kB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">78.3/78.3 kB</span> <span class="ansi-red-fg">2.2 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">78.3/78.3 kB</span> <span class="ansi-red-fg">2.3 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
 Installing collected packages: tqdm
   Attempting uninstall: tqdm
     Found existing installation: tqdm 4.66.2
@@ -8461,32 +8404,9 @@ Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (3.6)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (2.0.7)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (2024.2.2)
-Collecting pyminizip
-  Downloading pyminizip-0.2.6.tar.gz (261 kB)
-     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">261.2/261.2 kB</span> <span class="ansi-red-fg">3.0 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
-  Preparing metadata (setup.py) ... done
-Building wheels for collected packages: pyminizip
-  Building wheel for pyminizip (setup.py) ... done
-  Created wheel for pyminizip: filename=pyminizip-0.2.6-cp310-cp310-linux_x86_64.whl size=207079 sha256=a5ea4706d1b69031e3688b9763add95d70961c79d1a8baa5bb4343df608f3d17
-  Stored in directory: /root/.cache/pip/wheels/ed/6c/ae/0ee601d1139f7ba48c1b572b04707f27427af5290e6fb7afb9
-Successfully built pyminizip
-Installing collected packages: pyminizip
-Successfully installed pyminizip-0.2.6
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>load the Dataset and MinMax:   0%|          | 0/4 [00:00&lt;?, ?it/s]</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Failed to removed: /content/data
+Failed to removed: /content/data
 Failed to removed: /content/model
-Failed to removed: /content/minmax
+Failed to removed: /content/label
 Failed to removed: /content/encrypt_model
 Failed to removed: /content/onnx_model
 Failed to removed: /content/reports
@@ -8494,37 +8414,49 @@ Failed to removed: /content/zip
 Failed to removed: /content/reports/sample_data
 directory /content/data created successfully
 directory /content/model created successfully
-directory /content/minmax created successfully
+directory /content/label created successfully
 directory /content/reports created successfully
 directory /content/encrypt_model created successfully
 directory /content/onnx_model created successfully
 directory /content/zip created successfully
 directory /content/reports/sample_data created successfully
-Downloading of the Data Started
-Data downloaded succesfully
-Downloading of the Min-Max Started
-minmax file downloaded succesfully
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Model Development:  25%|██▌       | 1/4 [00:04&lt;00:13,  4.36s/it]          </pre>
+<pre>loading the Dataset and Label:   0%|          | 0/4 [00:00&lt;?, ?it/s]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Downloading of the Model file Started
-Model file downloaded succesfully
+<pre>loading of the Data Started
+Data loaded succesfully
+loading of the Label Started
+Label loaded succesfully
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>AIShield API Call:  75%|███████▌  | 3/4 [00:06&lt;00:02,  2.25s/it]</pre>
+<pre>Model Development:  25%|██▌       | 1/4 [00:02&lt;00:07,  2.51s/it]            </pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>loading of the Model file Started
+Model file loaded succesfully
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>AIShield API Call:  75%|███████▌  | 3/4 [00:05&lt;00:01,  1.88s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -8544,7 +8476,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=097daf8f">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9775ce40">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8554,7 +8486,17 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=db975542">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=aecb7b1b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=80782b1d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8565,7 +8507,27 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a8d564a0">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d78d4789">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=74404585">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7e49ea41">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8577,7 +8539,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=106f5f5f">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5a5c2dd7">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8588,25 +8550,25 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e8afd879">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6475ab6a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="No description has been provided for this image" src="https://aisdocs.blob.core.windows.net/reference/dashboard_images/TSF_MEA_ML_Dashboard.png"/></p>
+<p><img alt="No description has been provided for this image" src="https://aisdocs.blob.core.windows.net/reference/dashboard_images/IC_MEA_Dashboard.png"/></p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e8fe019d">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0ca157e6">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">hosted_pdf_url</span> <span class="o">=</span> <span class="s2">"https://aisdocs.blob.core.windows.net/reference/Reports/TimeSeries/Forecasting/MEA/ML/VulnerabilityReport.pdf"</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">hosted_pdf_url</span> <span class="o">=</span> <span class="s1">'https://aisdocs.blob.core.windows.net/reference/Reports/Image/ImageClassification/MEA/VulnerabilityReport.pdf'</span>
 <span class="n">display_pdf</span><span class="p">(</span> <span class="n">output_filename</span> <span class="o">=</span> <span class="s2">"vul_sample"</span><span class="p">,</span><span class="n">runtime_environment</span> <span class="o">=</span> <span class="n">runtime_environment</span><span class="p">,</span><span class="n">pdf_path</span> <span class="o">=</span><span class="n">hosted_pdf_url</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -8620,20 +8582,20 @@ Model file downloaded succesfully
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<embed height="600px" src="https://aisdocs.blob.core.windows.net/reference/Reports/TimeSeries/Forecasting/MEA/ML/VulnerabilityReport.pdf" type="application/pdf" width="100%"/>
+<embed height="600px" src="https://aisdocs.blob.core.windows.net/reference/Reports/Image/ImageClassification/MEA/VulnerabilityReport.pdf" type="application/pdf" width="100%"/>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e297c568">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9ef68548">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">hosted_defense_pdf_url</span> <span class="o">=</span> <span class="s1">'https://aisdocs.blob.core.windows.net/reference/Reports/TimeSeries/Forecasting/MEA/ML/DefenseReport.pdf'</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">hosted_defense_pdf_url</span> <span class="o">=</span> <span class="s1">'https://aisdocs.blob.core.windows.net/reference/Reports/Image/ImageClassification/MEA/DefenseReport.pdf'</span>
 <span class="n">display_pdf</span><span class="p">(</span><span class="n">output_filename</span> <span class="o">=</span> <span class="s2">"def_sample"</span><span class="p">,</span> <span class="n">runtime_environment</span><span class="o">=</span><span class="n">runtime_environment</span><span class="p">,</span> <span class="n">pdf_path</span> <span class="o">=</span><span class="n">hosted_defense_pdf_url</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -8647,13 +8609,33 @@ Model file downloaded succesfully
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<embed height="600px" src="https://aisdocs.blob.core.windows.net/reference/Reports/TimeSeries/Forecasting/MEA/ML/DefenseReport.pdf" type="application/pdf" width="100%"/>
+<embed height="600px" src="https://aisdocs.blob.core.windows.net/reference/Reports/Image/ImageClassification/MEA/DefenseReport.pdf" type="application/pdf" width="100%"/>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9e488be8">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=12bfb0e6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5c51b0fe">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=015d1110">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8678,7 +8660,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=39a1c524">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8f15872b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8689,7 +8671,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fe5fcb07">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c3e41392">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8699,12 +8681,12 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d5bd6214">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=91fcac5f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -8715,16 +8697,15 @@ Model file downloaded succesfully
 <span class="n">url</span><span class="o">=</span><span class="n">base_url</span><span class="o">+</span><span class="s2">"/api/ais/v1.5"</span>
 <span class="n">org_id</span> <span class="o">=</span> <span class="s1">'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'</span> <span class="c1">#&lt;&lt;Copy Org_id mentioned in welcome mail after AIShield Subscription&gt;&gt;</span>
 
-
 <span class="sd">"""</span>
 <span class="sd">Description: Initialize the AIShield API</span>
 <span class="sd">"""</span>
-
 <span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>
     <span class="c1">#if pypi then , x-api-key generation is taken care from pypi side using given org_id</span>
     <span class="n">aishield_client</span> <span class="o">=</span> <span class="n">ais</span><span class="o">.</span><span class="n">AIShieldApi</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span><span class="n">org_id</span><span class="o">=</span><span class="n">org_id</span><span class="p">)</span>
 
 <span class="k">else</span><span class="p">:</span>
+
     <span class="c1">#if using AIShield API then , need an x-api-key for accessing AIShield registration / Analysis APIs</span>
     <span class="c1"># below function will get insight of how to generate the x-api-key</span>
     <span class="k">def</span> <span class="nf">get_aws_api_key</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">org_id</span><span class="p">):</span>
@@ -8739,8 +8720,6 @@ Model file downloaded succesfully
         <span class="n">x_api_key_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
         <span class="n">status_code</span> <span class="o">=</span> <span class="n">x_api_key_request</span><span class="o">.</span><span class="n">status_code</span>
         <span class="n">x_api_key_request</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">x_api_key_request</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-
-
         <span class="k">if</span> <span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
             <span class="n">x_api_key</span> <span class="o">=</span> <span class="n">x_api_key_request</span><span class="p">[</span><span class="s1">'x_api_key'</span><span class="p">]</span>
             <span class="k">return</span> <span class="n">x_api_key</span>
@@ -8767,15 +8746,15 @@ Model file downloaded succesfully
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[1]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'\nDescription: Initialize the AIShield API\n'</pre>
+<pre>'\nDescription : AIShield URL , subscription key and orgid\n              Initialize the\n'</pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5e43a3f5">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=81cdb00a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8786,7 +8765,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f8acfb3c">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b7914958">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8796,23 +8775,24 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0566eb71">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e5db4de5">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
 <span class="sd">Description: Define the task and analysis type for model registration</span>
-<span class="sd">              "task_type" : refers to the specific type of task being performed, for eg : "timeseries_forecasting."</span>
+<span class="sd">              "task_type" : refers to the specific type of task being performed, for eg : "image_classification."</span>
 <span class="sd">              "analysis_type" : refers to the specific type of analysis being performed,for eg : "extraction.</span>
 <span class="sd">              For more information, check out [https://docs.boschaishield.com/api-docs/lesspostgreater-model-registration#-a-xGGsdVJB3d09cBAck-]</span>
 <span class="sd">"""</span>
 
 <span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>
-    <span class="n">task_type</span> <span class="o">=</span> <span class="n">ais</span><span class="o">.</span><span class="n">get_type</span><span class="p">(</span><span class="s2">"task"</span><span class="p">,</span> <span class="s2">"timeseries_forecasting"</span><span class="p">)</span>
+
+    <span class="n">task_type</span> <span class="o">=</span> <span class="n">ais</span><span class="o">.</span><span class="n">get_type</span><span class="p">(</span><span class="s2">"task"</span><span class="p">,</span> <span class="s2">"image_classification"</span><span class="p">)</span>
     <span class="n">analysis_type</span> <span class="o">=</span> <span class="n">ais</span><span class="o">.</span><span class="n">get_type</span><span class="p">(</span><span class="s2">"analysis"</span><span class="p">,</span> <span class="s2">"extraction"</span><span class="p">)</span>
 
 
@@ -8827,23 +8807,20 @@ Model file downloaded succesfully
 <span class="sd">    Description: call Model registration api to get unique model it and url to upload data, model and label</span>
 <span class="sd">    """</span>
     <span class="n">model_registration_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">"/model_registration/upload"</span>
+
     <span class="n">model_registration_payload</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">'task_type'</span><span class="p">:</span><span class="s2">"timeseries_forecasting"</span><span class="p">,</span>
+        <span class="s1">'task_type'</span><span class="p">:</span><span class="s2">"image_classification"</span><span class="p">,</span>
         <span class="s2">"analysis_type"</span><span class="p">:</span> <span class="s2">"extraction"</span>
     <span class="p">}</span>
 
-    <span class="n">new_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">model_registration_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">model_registration_payload</span><span class="p">)</span>
-    <span class="n">status_cd</span> <span class="o">=</span> <span class="n">new_request</span><span class="o">.</span><span class="n">status_code</span>
-    <span class="n">new_request</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">new_request</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">status_cd</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
-            <span class="n">model_id</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][</span><span class="s1">'model_id'</span><span class="p">]</span>
-            <span class="n">data_upload_obj</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][</span><span class="s1">'urls'</span><span class="p">][</span><span class="s1">'data_upload_url'</span><span class="p">]</span>
-            <span class="n">minmax_upload_obj</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][</span><span class="s1">'urls'</span><span class="p">][</span><span class="s1">'minmax_upload_url'</span><span class="p">]</span>
-            <span class="n">model_upload_obj</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][</span><span class="s1">'urls'</span><span class="p">][</span><span class="s1">'model_upload_url'</span><span class="p">]</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">'model_id: '</span><span class="p">,</span> <span class="n">model_id</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">new_request</span><span class="p">)</span>
+        <span class="n">new_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">model_registration_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">model_registration_payload</span><span class="p">)</span>
+        <span class="n">new_request</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">new_request</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">model_id</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][</span><span class="s1">'model_id'</span><span class="p">]</span>
+        <span class="n">data_upload_obj</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][</span><span class="s1">'urls'</span><span class="p">][</span><span class="s1">'data_upload_url'</span><span class="p">]</span>
+        <span class="n">label_upload_obj</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][</span><span class="s1">'urls'</span><span class="p">][</span><span class="s1">'label_upload_url'</span><span class="p">]</span>
+        <span class="n">model_upload_obj</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][</span><span class="s1">'urls'</span><span class="p">][</span><span class="s1">'model_upload_url'</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'model_id: '</span><span class="p">,</span> <span class="n">model_id</span><span class="p">)</span>
 
     <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">new_request</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
@@ -8857,15 +8834,15 @@ Model file downloaded succesfully
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'\nDescription: Define the task and analysis type for model registration\n              "task_type" : refers to the specific type of task being performed, for eg : "timeseries_forecasting."\n              "analysis_type" : refers to the specific type of analysis being performed,for eg : "extraction.\n              For more information, check out [https://docs.boschaishield.com/api-docs/lesspostgreater-model-registration#-a-xGGsdVJB3d09cBAck-]\n'</pre>
+<pre>'\nDescription: Define the task and analysis type for model registration\n              "task_type" : refers to the specific type of task being performed, for eg : "image_classification."\n              "analysis_type" : refers to the specific type of analysis being performed,for eg : "extraction.\n              For more information, check out [https://docs.boschaishield.com/api-docs/lesspostgreater-model-registration#-a-xGGsdVJB3d09cBAck-]\n'</pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fcc66723">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8475dc38">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8876,7 +8853,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9d9af44f">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c8769c47">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8886,12 +8863,12 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6b14e2ea">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bcb368b4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -8899,15 +8876,14 @@ Model file downloaded succesfully
 <span class="sd">"""</span>
 <span class="n">zip_path</span> <span class="o">=</span> <span class="s1">'zip/'</span>
 <span class="n">data_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s1">'data.zip'</span><span class="p">)</span> <span class="c1">#full path of data zip</span>
-<span class="n">minmax_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s1">'minmax.zip'</span><span class="p">)</span> <span class="c1">#full path of label zip</span>
-<span class="n">model_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s1">'model.zip'</span><span class="p">)</span> <span class="c1">#full path of model zip</span>
-<span class="c1"># model_path=os.path.join(zip_path,'encrypt_model.zip') #full path of model zip, uncomment if model encryption is 1</span>
+<span class="n">label_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s1">'label.zip'</span><span class="p">)</span> <span class="c1">#full path of label zip</span>
+<span class="n">model_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s1">'onnx_model.zip'</span><span class="p">)</span> <span class="c1">#full path of model zip. uncomment if onnx is 1</span>
 
 <span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>
     <span class="c1">#upload input artifacts</span>
     <span class="n">upload_status</span> <span class="o">=</span> <span class="n">aishield_client</span><span class="o">.</span><span class="n">upload_input_artifacts</span><span class="p">(</span><span class="n">job_details</span><span class="o">=</span><span class="n">model_registration_repsone</span><span class="p">,</span>
                                                   <span class="n">data_path</span><span class="o">=</span><span class="n">data_path</span><span class="p">,</span>
-                                                  <span class="n">minmax_path</span><span class="o">=</span><span class="n">minmax_path</span><span class="p">,</span>
+                                                  <span class="n">label_path</span><span class="o">=</span><span class="n">label_path</span><span class="p">,</span>
                                                   <span class="n">model_path</span><span class="o">=</span><span class="n">model_path</span><span class="p">,</span> <span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'Upload status: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">', '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">upload_status</span><span class="p">)))</span>
 
@@ -8933,18 +8909,33 @@ Model file downloaded succesfully
 <span class="sd">    Description: Hit AIShield File Upload API</span>
 <span class="sd">    """</span>
     <span class="n">data_upload_status</span> <span class="o">=</span> <span class="n">upload_file</span><span class="p">(</span><span class="n">data_upload_obj</span><span class="p">,</span> <span class="n">data_path</span><span class="p">)</span>
-    <span class="n">minmax_upload_status</span> <span class="o">=</span> <span class="n">upload_file</span><span class="p">(</span><span class="n">minmax_upload_obj</span><span class="p">,</span> <span class="n">minmax_path</span><span class="p">)</span>
+    <span class="n">label_upload_status</span> <span class="o">=</span> <span class="n">upload_file</span><span class="p">(</span><span class="n">label_upload_obj</span><span class="p">,</span> <span class="n">label_path</span><span class="p">)</span>
     <span class="n">model_upload_status</span> <span class="o">=</span> <span class="n">upload_file</span><span class="p">(</span><span class="n">model_upload_obj</span><span class="p">,</span> <span class="n">model_path</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'data_upload_status: '</span><span class="p">,</span> <span class="n">data_upload_status</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">'minmax_upload_status: '</span><span class="p">,</span> <span class="n">minmax_upload_status</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'label_upload_status: '</span><span class="p">,</span> <span class="n">label_upload_status</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'model_upload_status: '</span><span class="p">,</span> <span class="n">model_upload_status</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=72300a7c">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>data_upload_status:  upload sucessful
+label_upload_status:  upload sucessful
+model_upload_status:  upload sucessful
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f705377c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8955,7 +8946,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a5253322">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0758139d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8965,12 +8956,12 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=db84a04a">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=251ad457">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -8983,14 +8974,15 @@ Model file downloaded succesfully
                                  <span class="n">analysis_type</span><span class="o">=</span><span class="n">analysis_type</span><span class="p">,</span>
                                  <span class="n">defense_generate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-    <span class="n">vuln_config</span><span class="o">.</span><span class="n">input_dimensions</span> <span class="o">=</span> <span class="n">input_shape</span> <span class="c1"># input dimension of banking marketing dataset</span>
+    <span class="n">vuln_config</span><span class="o">.</span><span class="n">input_dimensions</span> <span class="o">=</span> <span class="n">input_shape</span>  <span class="c1"># input dimension for mnist digit classification</span>
+    <span class="n">vuln_config</span><span class="o">.</span><span class="n">number_of_classes</span> <span class="o">=</span> <span class="n">num_classes</span>  <span class="c1"># number of classes for mnist digit classification</span>
+    <span class="n">vuln_config</span><span class="o">.</span><span class="n">attack_type</span> <span class="o">=</span> <span class="s2">"blackbox"</span>  <span class="c1"># greybox or blackbox depending upon the availability of information about Model, Data and Parameters</span>
+    <span class="n">vuln_config</span><span class="o">.</span><span class="n">number_of_attack_queries</span> <span class="o">=</span> <span class="mi">20000</span>  <span class="c1"># Number of attack queries to be generated for testing model vulnerability</span>
     <span class="n">vuln_config</span><span class="o">.</span><span class="n">encryption_strategy</span> <span class="o">=</span> <span class="n">model_encryption</span>  <span class="c1"># value 0 (or) 1, if model is unencrypted or encrypted(pyc) respectively</span>
-    <span class="n">vuln_config</span><span class="o">.</span><span class="n">model_framework</span> <span class="o">=</span> <span class="s2">"scikit-learn"</span>
-    <span class="n">vuln_config</span><span class="o">.</span><span class="n">vulnerability_threshold</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">vuln_config</span><span class="o">.</span><span class="n">attack_type</span> <span class="o">=</span> <span class="s2">"blackbox"</span>
-    <span class="n">vuln_config</span><span class="o">.</span><span class="n">number_of_attack_queries</span> <span class="o">=</span> <span class="mi">10000</span>
+    <span class="n">vuln_config</span><span class="o">.</span><span class="n">model_framework</span> <span class="o">=</span> <span class="s2">"onnx"</span> <span class="c1"># "onnx" when model is in onnx format</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'IC-Extraction parameters are: </span><span class="se">\n</span><span class="s1"> </span><span class="si">{}</span><span class="s1"> '</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vuln_config</span><span class="o">.</span><span class="n">get_all_params</span><span class="p">()))</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="s1">'TSF-Extraction parameters are: </span><span class="se">\n</span><span class="s1"> </span><span class="si">{}</span><span class="s1"> '</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vuln_config</span><span class="o">.</span><span class="n">get_all_params</span><span class="p">()))</span>
+
 
     <span class="c1">#Run vulnerability analysis</span>
     <span class="n">job_status</span><span class="p">,</span> <span class="n">job_details</span> <span class="o">=</span> <span class="n">aishield_client</span><span class="o">.</span><span class="n">vuln_analysis</span><span class="p">(</span><span class="n">model_id</span><span class="o">=</span><span class="n">model_registration_repsone</span><span class="o">.</span><span class="n">model_id</span><span class="p">,</span> <span class="n">vuln_config</span><span class="o">=</span><span class="n">vuln_config</span><span class="p">)</span>
@@ -9002,6 +8994,7 @@ Model file downloaded succesfully
     <span class="c1">#Monitor progress for given Job ID using the Link below</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'Click on the URL to view Vulnerability Dashboard (GUI): </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">job_details</span><span class="o">.</span><span class="n">job_dashboard_uri</span><span class="p">))</span>
 
+
 <span class="k">else</span><span class="p">:</span>
 
 <span class="w">    </span><span class="sd">"""</span>
@@ -9010,20 +9003,22 @@ Model file downloaded succesfully
     <span class="n">payload</span><span class="o">=</span><span class="p">{}</span>
     <span class="n">payload</span><span class="p">[</span><span class="s1">'use_model_api'</span><span class="p">]</span><span class="o">=</span><span class="s2">"no"</span>
     <span class="n">payload</span><span class="p">[</span><span class="s1">'model_api_details'</span><span class="p">]</span><span class="o">=</span><span class="s2">"no"</span>
+    <span class="n">payload</span><span class="p">[</span><span class="s1">'normalize_data'</span><span class="p">]</span><span class="o">=</span><span class="s2">"Yes"</span>
     <span class="n">payload</span><span class="p">[</span><span class="s1">'input_dimensions'</span><span class="p">]</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">input_shape</span><span class="p">)</span>
-    <span class="n">payload</span><span class="p">[</span><span class="s1">'model_framework'</span><span class="p">]</span><span class="o">=</span><span class="s1">'scikit-learn'</span>
+    <span class="n">payload</span><span class="p">[</span><span class="s1">'number_of_classes'</span><span class="p">]</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">num_classes</span><span class="p">)</span>
+    <span class="n">payload</span><span class="p">[</span><span class="s1">'attack_type'</span><span class="p">]</span><span class="o">=</span><span class="s2">"blackbox"</span>
+    <span class="n">payload</span><span class="p">[</span><span class="s1">'number_of_attack_queries'</span><span class="p">]</span><span class="o">=</span><span class="mi">20000</span>
+    <span class="n">payload</span><span class="p">[</span><span class="s1">'model_framework'</span><span class="p">]</span><span class="o">=</span><span class="s1">'onnx'</span>
+    <span class="n">payload</span><span class="p">[</span><span class="s1">'vulnerability_threshold'</span><span class="p">]</span><span class="o">=</span><span class="s2">"0"</span>
     <span class="n">payload</span><span class="p">[</span><span class="s1">'defense_bestonly'</span><span class="p">]</span><span class="o">=</span><span class="s2">"no"</span>
     <span class="n">payload</span><span class="p">[</span><span class="s1">'encryption_strategy'</span><span class="p">]</span><span class="o">=</span> <span class="n">model_encryption</span>
-    <span class="n">payload</span><span class="p">[</span><span class="s1">'attack_type'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"blackbox"</span>
-    <span class="n">payload</span><span class="p">[</span><span class="s1">'number_of_attack_queries'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10000</span>
-    <span class="n">payload</span><span class="p">[</span><span class="s1">'vulnerability_threshold'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"TSF-Extraction parameters are:"</span><span class="p">,</span><span class="n">payload</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"IC-Extraction parameters are:"</span><span class="p">,</span><span class="n">payload</span><span class="p">)</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Description: Hit AIShield VulnerabilityReport api</span>
 <span class="sd">    """</span>
     <span class="n">model_analysis_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">"/model_analyse/</span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">data_upload_status</span> <span class="o">==</span> <span class="s2">"upload sucessful"</span> <span class="ow">and</span> <span class="n">model_upload_status</span> <span class="o">==</span> <span class="s2">"upload sucessful"</span> <span class="ow">and</span> <span class="n">minmax_upload_status</span> <span class="o">==</span> <span class="s2">"upload sucessful"</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">data_upload_status</span> <span class="o">==</span> <span class="s2">"upload sucessful"</span> <span class="ow">and</span> <span class="n">model_upload_status</span> <span class="o">==</span> <span class="s2">"upload sucessful"</span> <span class="ow">and</span> <span class="n">label_upload_status</span> <span class="o">==</span> <span class="s2">"upload sucessful"</span><span class="p">:</span>
         <span class="n">new_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">model_analysis_url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
         <span class="n">new_request</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">new_request</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">new_request</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -9035,8 +9030,20 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b607ee62">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>'\nDescription: Specify the appropriate configs required for vulnerability analysis and trigger model analysis\n'</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=78c6e269">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9047,7 +9054,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d1214a5b">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f46c938b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9057,12 +9064,12 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=3d53027b">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=55003c2e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -9088,7 +9095,6 @@ Model file downloaded succesfully
         <span class="n">counts</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">status_dictionary</span><span class="p">)</span>
         <span class="n">failed_api_hit_count</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-
             <span class="k">try</span><span class="p">:</span>
                 <span class="n">job_status_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">job_status_url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{},</span>
                                                        <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
@@ -9148,8 +9154,20 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=379e9892">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>'\nDescription: Fetch Job status using Job ID\n'</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=066faf3e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9160,7 +9178,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cb3de379">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0f27f7b1">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9170,7 +9188,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ed1442b6">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=56bd0d06">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9185,7 +9203,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=666ea4a7">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=1f8a5a01">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9244,7 +9262,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d25607b8">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ce56da2b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9272,7 +9290,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=138c15be">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=094f5a93">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9297,7 +9315,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e8fd5876">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6dda4e59">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9323,7 +9341,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f72df282">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=77c57373">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9347,7 +9365,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d638a29b">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=Odv5kzeYFTOZ">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9395,7 +9413,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0e297509">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6f2c29ad">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9417,7 +9435,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=bf68cd81">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f67ff9a4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9440,7 +9458,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3b657cb6">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d3b6693e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9451,7 +9469,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=67a47047">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c450fbca">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9466,7 +9484,7 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=9bb6cc6b">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=588b21f8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
