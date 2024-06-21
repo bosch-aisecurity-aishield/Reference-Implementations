@@ -7546,7 +7546,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<a href="https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/TimeSeries_Forecasting/Timeseries_Forecasting_Extraction_ML.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Onnx_implementation/Timeseries_Forecasting_Extraction_ML.ipynb" target="_blank">
 <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/>
 </a>
 </div>
@@ -7568,7 +7568,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -7587,7 +7587,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_code_input_scrollable</span><span class="p">():</span>
@@ -7783,6 +7783,7 @@ a.anchor-link {
 <ul>
 <li><strong><code>input_shape</code></strong>: Shape of the input data, defined as <strong>(number_of_timestamp, number of features)</strong>.</li>
 <li><strong><code>model_encryption</code></strong>: Indicates whether the model is uploaded directly as a zip file (<strong>0</strong>) or encrypted as <code>.pyc</code> and then uploaded as a zip file (<strong>1</strong>).</li>
+<li><strong><code>model_framework</code></strong>: onnx</li>
 </ul>
 <h4 id="These-values-are-pre-configured-for-seamless-execution-in-the-notebook.-Adjustments-can-be-made-as-per-your-specific-dataset-and-requirements.">These values are pre-configured for seamless execution in the notebook. Adjustments can be made as per your specific dataset and requirements.<a class="anchor-link" href="#These-values-are-pre-configured-for-seamless-execution-in-the-notebook.-Adjustments-can-be-made-as-per-your-specific-dataset-and-requirements.">¶</a></h4>
 </div>
@@ -7801,8 +7802,10 @@ a.anchor-link {
 <span class="sd">Description:</span>
 <span class="sd">    user input about dataset information, for eg: number of classes, input_shape</span>
 <span class="sd">'''</span>
-<span class="n">input_shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">number_time_stamps</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">input_shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">number_time_stamps</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">model_encryption</span><span class="o">=</span><span class="mi">0</span> <span class="c1">#0 if model is uploaded directly as a zip, 1 if model is encryted as .pyc and uploaded as a zip</span>
+<span class="n">model_framework</span><span class="o">=</span><span class="s2">"onnx"</span>
 <span class="c1">## installing libraries if not and then importing</span>
 
 <span class="k">if</span> <span class="n">install</span><span class="p">:</span>
@@ -7825,7 +7828,8 @@ a.anchor-link {
         <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">humanfriendly</span><span class="o">==</span><span class="m">10</span>.0
         <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">tqdm</span><span class="o">==</span><span class="m">4</span>.66.1
         <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">requests</span><span class="o">==</span><span class="m">2</span>.31.0
-    
+        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>onnxmltools
+        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>skl2onnx
 
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Skipped the installation of all the prerequisites packages"</span><span class="p">)</span>
@@ -7853,6 +7857,8 @@ a.anchor-link {
     <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
     <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span><span class="p">,</span> <span class="n">LabelEncoder</span>
     <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+    <span class="kn">from</span> <span class="nn">onnxmltools.convert</span> <span class="kn">import</span> <span class="n">convert_xgboost</span>
+    <span class="kn">from</span> <span class="nn">onnxmltools.convert.common.data_types</span> <span class="kn">import</span> <span class="n">FloatTensorType</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">io</span>
     <span class="kn">import</span> <span class="nn">os</span>
@@ -8142,18 +8148,20 @@ a.anchor-link {
     <span class="n">model_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"model"</span><span class="p">)</span>
     <span class="n">label_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"minmax"</span><span class="p">)</span>
     <span class="n">encrypt_model_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"encrypt_model"</span><span class="p">)</span>
+    <span class="n">onnx_model_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"onnx_model"</span><span class="p">)</span>
+
     <span class="n">report_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"reports"</span><span class="p">)</span>
     <span class="n">sample_data</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">report_path</span><span class="p">,</span> <span class="s2">"sample_data"</span><span class="p">)</span>
     <span class="c1">#Create Zip Path which contains data , model and label zip files</span>
     <span class="n">zip_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"zip"</span><span class="p">)</span>
 
     <span class="c1">#deleting previously generated folders</span>
-    <span class="n">delete_directory</span><span class="p">(</span><span class="n">directorys</span><span class="o">=</span><span class="p">[</span><span class="n">data_path</span><span class="p">,</span><span class="n">model_path</span><span class="p">,</span><span class="n">label_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span><span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span><span class="p">])</span>
+    <span class="n">delete_directory</span><span class="p">(</span><span class="n">directorys</span><span class="o">=</span><span class="p">[</span><span class="n">data_path</span><span class="p">,</span><span class="n">model_path</span><span class="p">,</span><span class="n">label_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">onnx_model_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span><span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span><span class="p">])</span>
 
     <span class="c1">#creating folders</span>
-    <span class="n">make_directory</span><span class="p">([</span><span class="n">data_path</span><span class="p">,</span><span class="n">model_path</span><span class="p">,</span><span class="n">label_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span><span class="p">])</span>
+    <span class="n">make_directory</span><span class="p">([</span><span class="n">data_path</span><span class="p">,</span><span class="n">model_path</span><span class="p">,</span><span class="n">label_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">onnx_model_path</span><span class="p">,</span><span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span><span class="p">])</span>
 
-    <span class="k">return</span> <span class="n">data_path</span><span class="p">,</span> <span class="n">model_path</span><span class="p">,</span> <span class="n">label_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span> <span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span>
+    <span class="k">return</span> <span class="n">data_path</span><span class="p">,</span> <span class="n">model_path</span><span class="p">,</span> <span class="n">label_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">onnx_model_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span> <span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span>
 
 <span class="k">def</span> <span class="nf">create_model</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">"""</span>
@@ -8336,7 +8344,7 @@ a.anchor-link {
                 <span class="s1">'4'</span> <span class="p">:</span> <span class="s1">'AIShield API Call'</span>
           <span class="p">}</span>
       <span class="n">steps_tqdm</span> <span class="o">=</span> <span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-      <span class="n">data_path</span><span class="p">,</span> <span class="n">model_path</span><span class="p">,</span> <span class="n">minmax_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span> <span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span> <span class="o">=</span> <span class="n">create_folders</span><span class="p">()</span>
+      <span class="n">data_path</span><span class="p">,</span> <span class="n">model_path</span><span class="p">,</span> <span class="n">minmax_path</span><span class="p">,</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">onnx_model_path</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span> <span class="n">zip_path</span><span class="p">,</span> <span class="n">sample_data</span> <span class="o">=</span> <span class="n">create_folders</span><span class="p">()</span>
 
       <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="n">steps_tqdm</span><span class="p">:</span>
 
@@ -8365,8 +8373,8 @@ a.anchor-link {
               <span class="k">if</span> <span class="ow">not</span> <span class="n">run_code</span><span class="p">:</span>
                   <span class="nb">print</span><span class="p">(</span><span class="s2">"Downloading of the Model file Started"</span><span class="p">)</span>
                   <span class="k">if</span> <span class="n">model_encryption</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-                      <span class="n">model_url</span> <span class="o">=</span> <span class="s2">"https://huggingface.co/Pankaj001/TimeSeries-Forecasting-ML-Model/resolve/main/model.zip"</span>
-                      <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">model_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_path</span><span class="p">))</span>
+                      <span class="n">model_url</span> <span class="o">=</span> <span class="s2">"https://huggingface.co/Pankaj001/TimeSeries-Forecasting-ML-Model/resolve/main/tsf-mea-ml-model.zip"</span>
+                      <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">model_url</span><span class="p">,</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_url</span><span class="p">),</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">onnx_model_path</span><span class="p">))</span>
                   <span class="k">else</span><span class="p">:</span>
                       <span class="n">model_url</span> <span class="o">=</span> <span class="s2">"https://aisdocs.blob.core.windows.net/reference/upload/EncryptedModels/encrypt_model_TSF_MEA_ML.zip"</span>
                       <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">model_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">encrypt_model_path</span><span class="p">))</span>
@@ -8385,6 +8393,16 @@ a.anchor-link {
                               <span class="p">}</span>
 
                   <span class="n">model</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">training</span><span class="p">(</span><span class="n">training_parameters</span><span class="p">)</span>
+                  <span class="n">model_name</span> <span class="o">=</span> <span class="s2">"onnx_tsf_ml_mdl.onnx"</span>
+                  <span class="n">full_model_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">onnx_model_path</span><span class="p">,</span><span class="n">model_name</span><span class="p">)</span>
+                  <span class="n">initial_type</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'float_input'</span><span class="p">,</span> <span class="n">FloatTensorType</span><span class="p">([</span><span class="kc">None</span><span class="p">,</span> <span class="n">number_time_stamps</span><span class="p">]))]</span>
+                  <span class="c1"># Convert the XGBoost model to ONNX format</span>
+                  <span class="n">onnx_model</span> <span class="o">=</span> <span class="n">convert_xgboost</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">initial_types</span><span class="o">=</span><span class="n">initial_type</span><span class="p">)</span>
+
+                  <span class="c1"># Save the ONNX model to a file</span>
+                  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">full_model_path</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                      <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">onnx_model</span><span class="o">.</span><span class="n">SerializeToString</span><span class="p">())</span>
+
                   <span class="nb">print</span><span class="p">(</span><span class="s1">'RMSE score of the model is </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">RMSE_score</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)))</span>
 
 
@@ -8415,8 +8433,8 @@ a.anchor-link {
                       <span class="n">encrypt_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">training_parameters</span><span class="p">[</span><span class="s2">"model_name"</span><span class="p">],</span> <span class="n">model_framework</span><span class="p">,</span> <span class="n">encrypt_model_path</span><span class="p">)</span>
                       <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"encrypt_model"</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">'zip'</span><span class="p">)</span>
               <span class="k">else</span><span class="p">:</span>
-                  <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"model"</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">'zip'</span><span class="p">)</span>
-
+                  <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"onnx_model"</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">onnx_model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">'zip'</span><span class="p">)</span>
+                  
           <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
               <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
               <span class="nb">print</span><span class="p">(</span><span class="s2">"Below Cells will see How to integrate and Call AIShield for Vulnerability Analysis"</span><span class="p">)</span>
@@ -8653,6 +8671,16 @@ Model file downloaded succesfully
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=25992a7e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9e488be8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8769,7 +8797,7 @@ Model file downloaded succesfully
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'\nDescription: Initialize the AIShield API\n'</pre>
+<pre>'\nDescription : AIShield URL , subscription key and orgid\n              Initialize the\n'</pre>
 </div>
 </div>
 </div>
@@ -8900,9 +8928,7 @@ Model file downloaded succesfully
 <span class="n">zip_path</span> <span class="o">=</span> <span class="s1">'zip/'</span>
 <span class="n">data_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s1">'data.zip'</span><span class="p">)</span> <span class="c1">#full path of data zip</span>
 <span class="n">minmax_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s1">'minmax.zip'</span><span class="p">)</span> <span class="c1">#full path of label zip</span>
-<span class="n">model_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s1">'model.zip'</span><span class="p">)</span> <span class="c1">#full path of model zip</span>
-<span class="c1"># model_path=os.path.join(zip_path,'encrypt_model.zip') #full path of model zip, uncomment if model encryption is 1</span>
-
+<span class="n">model_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s1">'onnx_model.zip'</span><span class="p">)</span> <span class="c1">#full path of onnx model zip, </span>
 <span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>
     <span class="c1">#upload input artifacts</span>
     <span class="n">upload_status</span> <span class="o">=</span> <span class="n">aishield_client</span><span class="o">.</span><span class="n">upload_input_artifacts</span><span class="p">(</span><span class="n">job_details</span><span class="o">=</span><span class="n">model_registration_repsone</span><span class="p">,</span>
@@ -8985,7 +9011,7 @@ Model file downloaded succesfully
 
     <span class="n">vuln_config</span><span class="o">.</span><span class="n">input_dimensions</span> <span class="o">=</span> <span class="n">input_shape</span> <span class="c1"># input dimension of banking marketing dataset</span>
     <span class="n">vuln_config</span><span class="o">.</span><span class="n">encryption_strategy</span> <span class="o">=</span> <span class="n">model_encryption</span>  <span class="c1"># value 0 (or) 1, if model is unencrypted or encrypted(pyc) respectively</span>
-    <span class="n">vuln_config</span><span class="o">.</span><span class="n">model_framework</span> <span class="o">=</span> <span class="s2">"scikit-learn"</span>
+    <span class="n">vuln_config</span><span class="o">.</span><span class="n">model_framework</span> <span class="o">=</span> <span class="n">model_framework</span>
     <span class="n">vuln_config</span><span class="o">.</span><span class="n">vulnerability_threshold</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">vuln_config</span><span class="o">.</span><span class="n">attack_type</span> <span class="o">=</span> <span class="s2">"blackbox"</span>
     <span class="n">vuln_config</span><span class="o">.</span><span class="n">number_of_attack_queries</span> <span class="o">=</span> <span class="mi">10000</span>
@@ -9011,7 +9037,7 @@ Model file downloaded succesfully
     <span class="n">payload</span><span class="p">[</span><span class="s1">'use_model_api'</span><span class="p">]</span><span class="o">=</span><span class="s2">"no"</span>
     <span class="n">payload</span><span class="p">[</span><span class="s1">'model_api_details'</span><span class="p">]</span><span class="o">=</span><span class="s2">"no"</span>
     <span class="n">payload</span><span class="p">[</span><span class="s1">'input_dimensions'</span><span class="p">]</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">input_shape</span><span class="p">)</span>
-    <span class="n">payload</span><span class="p">[</span><span class="s1">'model_framework'</span><span class="p">]</span><span class="o">=</span><span class="s1">'scikit-learn'</span>
+    <span class="n">payload</span><span class="p">[</span><span class="s1">'model_framework'</span><span class="p">]</span><span class="o">=</span><span class="n">model_framework</span>
     <span class="n">payload</span><span class="p">[</span><span class="s1">'defense_bestonly'</span><span class="p">]</span><span class="o">=</span><span class="s2">"no"</span>
     <span class="n">payload</span><span class="p">[</span><span class="s1">'encryption_strategy'</span><span class="p">]</span><span class="o">=</span> <span class="n">model_encryption</span>
     <span class="n">payload</span><span class="p">[</span><span class="s1">'attack_type'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"blackbox"</span>

@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Image_Classification_Extraction_UseModelAPI 3</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Image_Classification_Extraction_UseModelAPI</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7789,7 +7789,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -7834,7 +7834,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#@title Show/Hide Code</span>
@@ -7849,7 +7849,6 @@ a.anchor-link {
 <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">img_row</span><span class="p">,</span><span class="n">img_col</span><span class="p">,</span><span class="n">channel</span><span class="p">)</span>
 <span class="n">model_encryption</span><span class="o">=</span><span class="mi">0</span> <span class="c1">#0 if model is uploaded directly as a zip, 1 if model is encryted as .pyc and uploaded as a zip</span>
 <span class="n">Normalized</span> <span class="o">=</span>  <span class="s1">'yes'</span>
-
 <span class="c1">## installing libraries if not and then importing</span>
 <span class="k">if</span> <span class="n">install</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Starting installing aishield library"</span><span class="p">)</span>
@@ -8352,7 +8351,7 @@ a.anchor-link {
                     <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"encrypt_model"</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">encrypt_model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">'zip'</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">make_archive</span><span class="p">(</span><span class="n">base_name</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s2">"model"</span><span class="p">),</span><span class="n">root_dir</span><span class="o">=</span><span class="n">model_path</span><span class="p">,</span><span class="n">zip_format</span><span class="o">=</span><span class="s1">'zip'</span><span class="p">)</span>
-
+                
         <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
             <span class="n">steps_tqdm</span><span class="o">.</span><span class="n">set_description</span><span class="p">(</span><span class="n">user_workflow</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">step</span><span class="p">)])</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">"Below Cells will see How to integrate and Call AIShield for Vulnerability Analysis"</span><span class="p">)</span>
@@ -8372,31 +8371,44 @@ a.anchor-link {
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Starting installing aishield library
-Requirement already satisfied: aishield in /usr/local/lib/python3.10/dist-packages (0.1.5)
+Collecting aishield
+  Downloading aishield-0.1.5-py3-none-any.whl (25 kB)
 Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from aishield) (2.31.0)
 Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (3.3.2)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (3.6)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2.0.7)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2024.2.2)
-Requirement already satisfied: tqdm==4.66.1 in /usr/local/lib/python3.10/dist-packages (4.66.1)
+Installing collected packages: aishield
+Successfully installed aishield-0.1.5
+Collecting tqdm==4.66.1
+  Downloading tqdm-4.66.1-py3-none-any.whl (78 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">78.3/78.3 kB</span> <span class="ansi-red-fg">1.2 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+Installing collected packages: tqdm
+  Attempting uninstall: tqdm
+    Found existing installation: tqdm 4.66.2
+    Uninstalling tqdm-4.66.2:
+      Successfully uninstalled tqdm-4.66.2
+Successfully installed tqdm-4.66.1
 Requirement already satisfied: requests==2.31.0 in /usr/local/lib/python3.10/dist-packages (2.31.0)
 Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (3.3.2)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (3.6)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (2.0.7)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (2024.2.2)
 Installed all the prerequisites packages
-Removed: /content/data
-Removed: /content/model
-Removed: /content/label
-Removed: /content/encrypt_model
-Removed: /content/reports
-Removed: /content/zip
+Failed to removed: /content/data
+Failed to removed: /content/model
+Failed to removed: /content/label
+Failed to removed: /content/encrypt_model
+Failed to removed: /content/onnx_model
+Failed to removed: /content/reports
+Failed to removed: /content/zip
 Failed to removed: /content/reports/sample_data
 directory /content/data created successfully
 directory /content/model created successfully
 directory /content/label created successfully
 directory /content/reports created successfully
 directory /content/encrypt_model created successfully
+directory /content/onnx_model created successfully
 directory /content/zip created successfully
 directory /content/reports/sample_data created successfully
 </pre>
@@ -8421,7 +8433,7 @@ Label loaded succesfully
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Model Development:  25%|██▌       | 1/4 [00:01&lt;00:05,  1.91s/it]            </pre>
+<pre>Model Development:  25%|██▌       | 1/4 [00:02&lt;00:06,  2.23s/it]            </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -8435,7 +8447,7 @@ Model file loaded succesfully
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>AIShield API Call:  75%|███████▌  | 3/4 [00:05&lt;00:01,  1.74s/it]</pre>
+<pre>AIShield API Call:  75%|███████▌  | 3/4 [00:05&lt;00:01,  1.71s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -8688,7 +8700,7 @@ Model file loaded succesfully
 <span class="sd">    Description: to get the x_api_key</span>
 <span class="sd">    """</span>
     <span class="n">url</span> <span class="o">=</span> <span class="n">url</span><span class="o">+</span><span class="s2">"/get_aws_api_key"</span>
-    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'org_id'</span><span class="p">:</span> <span class="n">org_id</span><span class="p">}</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Org-Id'</span><span class="p">:</span> <span class="n">org_id</span><span class="p">}</span>
     <span class="n">payload</span> <span class="o">=</span> <span class="p">{}</span>
 
     <span class="n">x_api_key_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
@@ -8818,7 +8830,6 @@ Model file loaded succesfully
 <span class="n">label_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s1">'label.zip'</span><span class="p">)</span> <span class="c1">#full path of label zip</span>
 <span class="n">model_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s1">'model.zip'</span><span class="p">)</span> <span class="c1">#full path of model zip</span>
 <span class="c1"># model_path=os.path.join(zip_path,'encrypt_model.zip') #full path of model zip. uncomment if model_encryption is 1</span>
-
 <span class="k">def</span> <span class="nf">upload_file</span><span class="p">(</span><span class="n">upload_obj</span><span class="p">,</span> <span class="n">file_path</span><span class="p">):</span>
 
     <span class="n">url</span> <span class="o">=</span> <span class="n">upload_obj</span><span class="p">[</span><span class="s1">'url'</span><span class="p">]</span>
@@ -9148,7 +9159,6 @@ label_upload_status:  upload sucessful
     <span class="n">counts</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">status_dictionary</span><span class="p">)</span>
     <span class="n">failed_api_hit_count</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">job_status_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">job_status_url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{},</span>
                                                    <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
@@ -9199,6 +9209,7 @@ label_upload_status:  upload sucessful
             <span class="nb">print</span><span class="p">(</span><span class="s2">"Error </span><span class="si">{}</span><span class="s2">. trying </span><span class="si">{}</span><span class="s2"> ..."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">),</span> <span class="n">failed_api_hit_count</span><span class="p">))</span>
             <span class="k">if</span> <span class="n">failed_api_hit_count</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
                 <span class="k">break</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">status_dictionary</span>
 
 <span class="n">status_dictionary</span> <span class="o">=</span> <span class="n">monitor_api_progress</span><span class="p">(</span><span class="n">new_job_id</span><span class="o">=</span><span class="n">job_id</span><span class="p">)</span>

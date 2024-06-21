@@ -7782,7 +7782,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -7826,7 +7826,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#@title Show/Hide Code</span>
@@ -7839,8 +7839,7 @@ a.anchor-link {
 <span class="n">number_of_sample</span> <span class="o">=</span> <span class="mi">2058</span><span class="c1"># it should be approx 5% of total data</span>
 <span class="n">input_shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">number_of_sample</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
 <span class="n">model_framework</span> <span class="o">=</span> <span class="s2">"scikit-learn"</span>
-
-<span class="c1">## installing libraries if not and then importing</span>
+<span class="c1">#installing libraries if not and then importing</span>
 <span class="k">if</span> <span class="n">install</span><span class="p">:</span><span class="c1">#</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Starting installing aishield library"</span><span class="p">)</span>
     <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>aishield
@@ -7855,9 +7854,8 @@ a.anchor-link {
         <span class="o">!</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>scikit-learn
         <span class="o">!</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>numpy
         <span class="o">!</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pyminizip
-        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">requests</span><span class="o">==</span><span class="m">2</span>.31.0
-        <span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">humanfriendly</span><span class="o">==</span><span class="m">10</span>.0
-
+        <span class="o">!</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">requests</span><span class="o">==</span><span class="m">2</span>.31.0
+        <span class="o">!</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">humanfriendly</span><span class="o">==</span><span class="m">10</span>.0
 
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Installed all the prerequisites packages"</span><span class="p">)</span>
 
@@ -8351,6 +8349,7 @@ a.anchor-link {
                 <span class="k">if</span> <span class="n">model_encryption</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span>
                     <span class="n">model_url</span> <span class="o">=</span> <span class="s2">"https://huggingface.co/Pankaj001/TabularClassification-banking-data/resolve/main/model.zip"</span>
                     <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">model_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_path</span><span class="p">))</span>
+                    
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">model_url</span> <span class="o">=</span> <span class="s2">"https://aisdocs.blob.core.windows.net/reference/upload/EncryptedModels/encrypt_model_TC_EVA.zip"</span>
                     <span class="n">download_extract_artifacts</span><span class="p">(</span><span class="n">model_url</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">model_url</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">encrypt_model_path</span><span class="p">))</span>
@@ -8372,7 +8371,6 @@ a.anchor-link {
 
                               <span class="p">}</span>
                 <span class="n">model</span> <span class="o">=</span> <span class="n">training</span><span class="p">(</span><span class="n">training_parameters</span><span class="p">)</span>
-
 
 <span class="w">                </span><span class="sd">"""</span>
 <span class="sd">                Description: Get prediction on validation data</span>
@@ -8450,48 +8448,46 @@ a.anchor-link {
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Starting installing aishield library
-Requirement already satisfied: aishield in /usr/local/lib/python3.10/dist-packages (0.1.5)
+Collecting aishield
+  Downloading aishield-0.1.5-py3-none-any.whl (25 kB)
 Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from aishield) (2.31.0)
 Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (3.3.2)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (3.6)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2.0.7)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests-&gt;aishield) (2024.2.2)
+Installing collected packages: aishield
+Successfully installed aishield-0.1.5
 Started of installing all the prerequisites packages
-Requirement already satisfied: xgboost==2.0.3 in /usr/local/lib/python3.10/dist-packages (2.0.3)
-Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from xgboost==2.0.3) (1.25.2)
-Requirement already satisfied: scipy in /usr/local/lib/python3.10/dist-packages (from xgboost==2.0.3) (1.11.4)
-Requirement already satisfied: pandas==2.2.0 in /usr/local/lib/python3.10/dist-packages (2.2.0)
-Requirement already satisfied: numpy&lt;2,&gt;=1.22.4 in /usr/local/lib/python3.10/dist-packages (from pandas==2.2.0) (1.25.2)
-Requirement already satisfied: python-dateutil&gt;=2.8.2 in /usr/local/lib/python3.10/dist-packages (from pandas==2.2.0) (2.8.2)
-Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas==2.2.0) (2023.4)
-Requirement already satisfied: tzdata&gt;=2022.7 in /usr/local/lib/python3.10/dist-packages (from pandas==2.2.0) (2024.1)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.8.2-&gt;pandas==2.2.0) (1.16.0)
-Requirement already satisfied: scikit-learn in /usr/local/lib/python3.10/dist-packages (1.2.2)
-Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.10/dist-packages (from scikit-learn) (1.25.2)
-Requirement already satisfied: scipy&gt;=1.3.2 in /usr/local/lib/python3.10/dist-packages (from scikit-learn) (1.11.4)
-Requirement already satisfied: joblib&gt;=1.1.1 in /usr/local/lib/python3.10/dist-packages (from scikit-learn) (1.3.2)
-Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /usr/local/lib/python3.10/dist-packages (from scikit-learn) (3.3.0)
-Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (1.25.2)
-Requirement already satisfied: pyminizip in /usr/local/lib/python3.10/dist-packages (0.2.6)
+Collecting pyminizip
+  Downloading pyminizip-0.2.6.tar.gz (261 kB)
+     <span class="ansi-black-intense-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">261.2/261.2 kB</span> <span class="ansi-red-fg">4.2 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+  Preparing metadata (setup.py) ... done
+Building wheels for collected packages: pyminizip
+  Building wheel for pyminizip (setup.py) ... done
+  Created wheel for pyminizip: filename=pyminizip-0.2.6-cp310-cp310-linux_x86_64.whl size=207077 sha256=d77f1108c36fa09e958b83aceb292e39d68c56bdb10b139543a847dacf681589
+  Stored in directory: /root/.cache/pip/wheels/ed/6c/ae/0ee601d1139f7ba48c1b572b04707f27427af5290e6fb7afb9
+Successfully built pyminizip
+Installing collected packages: pyminizip
+Successfully installed pyminizip-0.2.6
 Requirement already satisfied: requests==2.31.0 in /usr/local/lib/python3.10/dist-packages (2.31.0)
 Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (3.3.2)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (3.6)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (2.0.7)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests==2.31.0) (2024.2.2)
-Requirement already satisfied: humanfriendly==10.0 in /usr/local/lib/python3.10/dist-packages (10.0)
-Installed all the prerequisites packages
-Removed: /content/data
-Removed: /content/model
-Removed: /content/minmax
-Removed: /content/encrypt_model
-Removed: /content/reports
-Removed: /content/zip
+Failed to removed: /content/data
+Failed to removed: /content/model
+Failed to removed: /content/minmax
+Failed to removed: /content/encrypt_model
+Failed to removed: /content/onnx_model
+Failed to removed: /content/reports
+Failed to removed: /content/zip
 Failed to removed: /content/reports/sample_data
 directory /content/data created successfully
 directory /content/model created successfully
 directory /content/minmax created successfully
 directory /content/reports created successfully
 directory /content/encrypt_model created successfully
+directory /content/onnx_model created successfully
 directory /content/zip created successfully
 directory /content/reports/sample_data created successfully
 </pre>
@@ -8506,42 +8502,31 @@ directory /content/reports/sample_data created successfully
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Extraction completed.
-Dataset Loaded
+<pre>Downloading of the Data Started
+Data downloaded succesfully
+Downloading of the Minmax Started
+Minmax downloaded succesfully
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Model Development and Training:  25%|██▌       | 1/4 [00:02&lt;00:07,  2.46s/it]</pre>
+<pre>Model Development and Training:  25%|██▌       | 1/4 [00:02&lt;00:07,  2.44s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Accuracy score of the Decision Tree model is 0.9073516558220841
-F1 score of the Decision Tree model is 0.5558659217877095
-Confusion Matrix 
- [[8746  386]
- [ 568  597]]
-Classification Report 
-               precision    recall  f1-score   support
-
-           0       0.94      0.96      0.95      9132
-           1       0.61      0.51      0.56      1165
-
-    accuracy                           0.91     10297
-   macro avg       0.77      0.74      0.75     10297
-weighted avg       0.90      0.91      0.90     10297
-
+<pre>Downloading of the Model file Started
+Model file downloaded succesfully
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>AIShield API Call:  75%|███████▌  | 3/4 [03:37&lt;01:12, 72.52s/it]</pre>
+<pre>AIShield API Call:  75%|███████▌  | 3/4 [00:05&lt;00:01,  1.95s/it]</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -8766,12 +8751,12 @@ weighted avg       0.90      0.91      0.90     10297
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=91fcac5f">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=91fcac5f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -8780,13 +8765,12 @@ weighted avg       0.90      0.91      0.90     10297
 <span class="sd">"""</span>
 <span class="n">base_url</span> <span class="o">=</span> <span class="s2">"https://api.aws.boschaishield.com/prod"</span>
 <span class="n">url</span><span class="o">=</span><span class="n">base_url</span><span class="o">+</span><span class="s2">"/api/ais/v1.5"</span>
-<span class="n">org_id</span> <span class="o">=</span> <span class="s1">'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'</span> <span class="c1">#&lt;&lt;Copy Org_id mentioned in welcome mail after AIShield Subscription&gt;&gt;</span>
+<span class="n">org_id</span> <span class="o">=</span> <span class="s1">'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'</span> <span class="c1">#&lt;&lt;Copy Org_id mentioned in welcome mail after AIShield Subscription&gt;&gt;</span>
 
 
 <span class="sd">"""</span>
 <span class="sd">Description: Initialize the AIShield API</span>
 <span class="sd">"""</span>
-
 <span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>
     <span class="c1">#if pypi then , x-api-key generation is taken care from pypi side using given org_id</span>
     <span class="n">aishield_client</span> <span class="o">=</span> <span class="n">ais</span><span class="o">.</span><span class="n">AIShieldApi</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span><span class="n">org_id</span><span class="o">=</span><span class="n">org_id</span><span class="p">)</span>
@@ -8800,7 +8784,7 @@ weighted avg       0.90      0.91      0.90     10297
 <span class="sd">        Description: to get the x_api_key</span>
 <span class="sd">        """</span>
         <span class="n">url</span> <span class="o">=</span> <span class="n">url</span><span class="o">+</span><span class="s2">"/get_aws_api_key"</span>
-        <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'org_id'</span><span class="p">:</span> <span class="n">org_id</span><span class="p">}</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Org-Id'</span><span class="p">:</span> <span class="n">org_id</span><span class="p">}</span>
         <span class="n">payload</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="n">x_api_key_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
@@ -8829,6 +8813,18 @@ weighted avg       0.90      0.91      0.90     10297
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>'\nDescription : AIShield URL , subscription key and orgid\n              Initialize the\n'</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=559d3410">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -8851,12 +8847,12 @@ weighted avg       0.90      0.91      0.90     10297
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6f87cb0c">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6f87cb0c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -8908,6 +8904,18 @@ weighted avg       0.90      0.91      0.90     10297
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>'\nDescription: Define the task and analysis type for model registration\n              "task_type" : refers to the specific type of task being performed, for eg : "tabular_classification."\n              "analysis_type" : refers to the specific type of analysis being performed,for eg : "evasion.\n              For more information, check out [https://docs.boschaishield.com/api-docs/lesspostgreater-model-registration#-a-xGGsdVJB3d09cBAck-]\n'</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2aef1487">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -8935,7 +8943,7 @@ weighted avg       0.90      0.91      0.90     10297
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -8946,7 +8954,6 @@ weighted avg       0.90      0.91      0.90     10297
 <span class="n">minmax_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s1">'minmax.zip'</span><span class="p">)</span> <span class="c1">#full path of label zip</span>
 <span class="n">model_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s1">'model.zip'</span><span class="p">)</span> <span class="c1">#full path of model zip</span>
 <span class="c1"># model_path=os.path.join(zip_path,'encrypt_model.zip') #full path of model zip, uncomment it if model_encryption is 1</span>
-
 
 <span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>
     <span class="c1">#upload input artifacts</span>
@@ -8995,7 +9002,9 @@ weighted avg       0.90      0.91      0.90     10297
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Upload status: data file upload successful, minmax file upload successful, model file upload successful
+<pre>data_upload_status:  upload sucessful
+minmax_upload_status:  upload sucessful
+model_upload_status:  upload sucessful
 </pre>
 </div>
 </div>
@@ -9023,12 +9032,12 @@ weighted avg       0.90      0.91      0.90     10297
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a65baac1">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a65baac1">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -9043,10 +9052,10 @@ weighted avg       0.90      0.91      0.90     10297
 
     <span class="n">vuln_config</span><span class="o">.</span><span class="n">input_dimensions</span> <span class="o">=</span> <span class="n">input_shape</span> <span class="c1"># input dimension of banking marketing dataset</span>
     <span class="n">vuln_config</span><span class="o">.</span><span class="n">number_of_classes</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># number of classes of banking marketing dataset</span>
-    <span class="n">vuln_config</span><span class="o">.</span><span class="n">is_category_columns</span> <span class="o">=</span> <span class="s2">"yes"</span>  <span class="c1"># if cetgorical columns are present</span>
+    <span class="n">vuln_config</span><span class="o">.</span><span class="n">is_category_columns</span> <span class="o">=</span> <span class="s2">"yes"</span>  <span class="c1"># if categorical columns are present</span>
     <span class="n">vuln_config</span><span class="o">.</span><span class="n">categorical_columns_info</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"job"</span><span class="p">,</span><span class="s2">"marital"</span><span class="p">,</span><span class="s2">"education"</span><span class="p">,</span><span class="s2">"default"</span><span class="p">,</span><span class="s2">"housing"</span><span class="p">,</span><span class="s2">"loan"</span><span class="p">,</span><span class="s2">"contact"</span><span class="p">,</span><span class="s2">"poutcome"</span><span class="p">]</span>  <span class="c1"># name of categorical columns</span>
     <span class="n">vuln_config</span><span class="o">.</span><span class="n">encryption_strategy</span> <span class="o">=</span> <span class="n">model_encryption</span>  <span class="c1"># value 0 (or) 1, if model is unencrypted or encrypted(pyc) respectively</span>
-
+    <span class="n">vuln_config</span><span class="o">.</span><span class="n">model_framework</span> <span class="o">=</span> <span class="s2">"scikit-learn"</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'TC-Evasion parameters are: </span><span class="se">\n</span><span class="s1"> </span><span class="si">{}</span><span class="s1"> '</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vuln_config</span><span class="o">.</span><span class="n">get_all_params</span><span class="p">()))</span>
 
     <span class="c1">#Run vulnerability analysis</span>
@@ -9093,6 +9102,18 @@ weighted avg       0.90      0.91      0.90     10297
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>'\nDescription: Specify the appropriate configs required for vulnerability analysis and trigger model analysis\n'</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=00daeb82">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -9120,7 +9141,7 @@ weighted avg       0.90      0.91      0.90     10297
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -9146,7 +9167,7 @@ weighted avg       0.90      0.91      0.90     10297
         <span class="n">counts</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">status_dictionary</span><span class="p">)</span>
         <span class="n">failed_api_hit_count</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
             <span class="k">try</span><span class="p">:</span>
                 <span class="n">job_status_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">job_status_url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{},</span>
                                                        <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
@@ -9197,6 +9218,7 @@ weighted avg       0.90      0.91      0.90     10297
                 <span class="nb">print</span><span class="p">(</span><span class="s2">"Error </span><span class="si">{}</span><span class="s2">. trying </span><span class="si">{}</span><span class="s2"> ..."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">),</span> <span class="n">failed_api_hit_count</span><span class="p">))</span>
                 <span class="k">if</span> <span class="n">failed_api_hit_count</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
                     <span class="k">break</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">status_dictionary</span>
 
     <span class="n">status_dictionary</span> <span class="o">=</span> <span class="n">monitor_api_progress</span><span class="p">(</span><span class="n">new_job_id</span><span class="o">=</span><span class="n">job_id</span><span class="p">)</span>
