@@ -1,5 +1,5 @@
 
-FROM tensorflow/tensorflow:2.9.1-gpu
+FROM tensorflow/tensorflow:2.13.0rc0-gpu
 WORKDIR /root
 
 RUN apt-get install python3
