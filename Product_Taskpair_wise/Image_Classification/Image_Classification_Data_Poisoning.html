@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Image_Classification_Data_Poisoning</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>LocalRun_Image_Classification_Data_Poisoning (1)</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -8036,7 +8036,6 @@ a.anchor-link {
 
     <span class="n">data_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"data"</span><span class="p">)</span>
     <span class="n">universal_data_path</span><span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"universal_data"</span><span class="p">)</span>
-    <span class="c1"># universal_label_path = os.path.join(os.getcwd(), 'universal_label')</span>
     <span class="n">model_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"model"</span><span class="p">)</span>
     <span class="n">label_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s2">"label"</span><span class="p">)</span>
     <span class="n">report_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s2">"reports"</span><span class="p">)</span>
@@ -8312,9 +8311,9 @@ a.anchor-link {
 <span class="sd">Description : AIShield URL , subscription key and orgid</span>
 <span class="sd">              Initialize the</span>
 <span class="sd">"""</span>
-<span class="n">base_url</span> <span class="o">=</span> <span class="s1">'https://api.awsqa.boschaishield.com/aishieldqa'</span> <span class="c1">#"https://api.aws.boschaishield.com/prod"</span>
+<span class="n">base_url</span> <span class="o">=</span> <span class="s2">"https://api.aws.boschaishield.com/prod"</span>
 <span class="n">url</span><span class="o">=</span><span class="n">base_url</span><span class="o">+</span><span class="s2">"/api/ais/v1.5"</span>
-<span class="n">org_id</span> <span class="o">=</span> <span class="s1">'gAAAAABnZoRJlMv-fB155lpNlJEsh64szXZobSmXmm_PKiN0QsQQjdj2-qKl-KJ5tz2cRBIT7JvHMTx6ya5yWDNGOscFmsQtSQ=='</span> <span class="c1">#&lt;&lt;Copy Org_id mentioned in welcome mail after AIShield Subscription&gt;&gt;</span>
+<span class="n">org_id</span> <span class="o">=</span> <span class="c1">#&lt;&lt;Copy Org_id mentioned in welcome mail after AIShield Subscription&gt;&gt;</span>
 
 <span class="sd">"""</span>
 <span class="sd">Description: Initialize the AIShield API</span>
@@ -8422,12 +8421,14 @@ a.anchor-link {
     <span class="n">new_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">model_registration_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">model_registration_payload</span><span class="p">)</span>
     <span class="n">status_cd</span> <span class="o">=</span> <span class="n">new_request</span><span class="o">.</span><span class="n">status_code</span>
     <span class="n">new_request</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">new_request</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+  
     <span class="k">try</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">status_cd</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
             <span class="n">model_id</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][</span><span class="s1">'model_id'</span><span class="p">]</span>
             <span class="n">data_upload_obj</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][</span><span class="s1">'urls'</span><span class="p">][</span><span class="s1">'data_upload_url'</span><span class="p">]</span>
             <span class="n">label_upload_obj</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][</span><span class="s1">'urls'</span><span class="p">][</span><span class="s1">'label_upload_url'</span><span class="p">]</span>
             <span class="n">universal_data_upload_obj</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][</span><span class="s1">'urls'</span><span class="p">][</span><span class="s1">'universal_data_upload_url'</span><span class="p">]</span>
+            <span class="n">universal_label_upload_obj</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][</span><span class="s1">'urls'</span><span class="p">][</span><span class="s1">'universal_label_upload_url'</span><span class="p">]</span>
             <span class="n">model_upload_obj</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][</span><span class="s1">'urls'</span><span class="p">][</span><span class="s1">'model_upload_url'</span><span class="p">]</span>
             <span class="nb">print</span><span class="p">(</span><span class="s1">'model_id: '</span><span class="p">,</span> <span class="n">model_id</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
@@ -8473,7 +8474,7 @@ a.anchor-link {
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
 <span class="sd">Description: Full File paths and upload input artifacts</span>
 <span class="sd">"""</span>
-<span class="c1"># Need to check this afterwards</span>
+
 <span class="n">zip_path</span> <span class="o">=</span> <span class="s1">'zip/'</span>
 <span class="n">data_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s1">'data.zip'</span><span class="p">)</span> <span class="c1">#full path of data zip</span>
 <span class="n">universal_data_path</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span><span class="s1">'universal_data.zip'</span><span class="p">)</span> <span class="c1">#full path of universal_data  zip</span>
@@ -8514,6 +8515,7 @@ a.anchor-link {
 <span class="sd">    Description: Hit AIShield File Upload API</span>
 <span class="sd">    """</span>
     <span class="n">data_upload_status</span> <span class="o">=</span> <span class="n">upload_file</span><span class="p">(</span><span class="n">data_upload_obj</span><span class="p">,</span> <span class="n">data_path</span><span class="p">)</span>
+    <span class="n">universal_label_status</span> <span class="o">=</span> <span class="n">upload_file</span><span class="p">(</span><span class="n">universal_label_upload_obj</span><span class="p">,</span><span class="n">universal_label_path</span> <span class="p">)</span>
     <span class="n">universal_data_upload_status</span> <span class="o">=</span> <span class="n">upload_file</span><span class="p">(</span><span class="n">universal_data_upload_obj</span><span class="p">,</span> <span class="n">universal_data_path</span><span class="p">)</span>
     <span class="n">label_upload_status</span> <span class="o">=</span> <span class="n">upload_file</span><span class="p">(</span><span class="n">label_upload_obj</span><span class="p">,</span> <span class="n">label_path</span><span class="p">)</span>
     <span class="n">model_upload_status</span> <span class="o">=</span> <span class="n">upload_file</span><span class="p">(</span><span class="n">model_upload_obj</span><span class="p">,</span> <span class="n">model_path</span><span class="p">)</span>
@@ -8523,6 +8525,7 @@ a.anchor-link {
     <span class="nb">print</span><span class="p">(</span><span class="s1">'universal_data_upload_status: '</span><span class="p">,</span> <span class="n">universal_data_upload_status</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'label_upload_status: '</span><span class="p">,</span> <span class="n">label_upload_status</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'model_upload_status: '</span><span class="p">,</span> <span class="n">model_upload_status</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"universal_label_upload_status"</span><span class="p">,</span> <span class="n">universal_label_status</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8602,12 +8605,11 @@ a.anchor-link {
 <span class="sd">    Description: Hit AIShield VulnerabilityReport api</span>
 <span class="sd">    """</span>
     <span class="n">model_analysis_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">"/model_analyse/</span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">data_upload_status</span> <span class="o">==</span> <span class="s2">"upload sucessful"</span> <span class="ow">and</span> <span class="n">model_upload_status</span> <span class="o">==</span> <span class="s2">"upload sucessful"</span> <span class="ow">and</span> <span class="n">label_upload_status</span> <span class="o">==</span> <span class="s2">"upload sucessful"</span> <span class="ow">and</span> <span class="n">universal_data_upload_status</span> <span class="o">==</span> <span class="s2">"upload sucessful"</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">data_upload_status</span> <span class="o">==</span> <span class="s2">"upload sucessful"</span> <span class="ow">and</span> <span class="n">model_upload_status</span> <span class="o">==</span> <span class="s2">"upload sucessful"</span> <span class="ow">and</span> <span class="n">label_upload_status</span> <span class="o">==</span> <span class="s2">"upload sucessful"</span> <span class="ow">and</span> <span class="n">universal_label_status</span><span class="o">==</span> <span class="s1">'upload sucessful'</span> <span class="ow">and</span> <span class="n">universal_data_upload_status</span> <span class="o">==</span> <span class="s2">"upload sucessful"</span><span class="p">:</span>
         <span class="n">new_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">model_analysis_url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
         <span class="n">new_request</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">new_request</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">new_request</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">"* </span><span class="si">{}</span><span class="s2"> : </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">))</span>
-
         <span class="n">job_id</span><span class="o">=</span><span class="n">new_request</span><span class="p">[</span><span class="s1">'job_id'</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -8660,7 +8662,9 @@ a.anchor-link {
         <span class="n">status_dictionary</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">'ModelExploration_Status'</span><span class="p">:</span> <span class="s1">'na'</span><span class="p">,</span>
             <span class="s1">'SanityCheck_Status'</span><span class="p">:</span> <span class="s1">'na'</span><span class="p">,</span>
+            <span class="s1">'QueryGenerator_Status'</span> <span class="p">:</span> <span class="s1">'na'</span><span class="p">,</span>
             <span class="s1">'VunerabilityEngine_Status'</span><span class="p">:</span> <span class="s1">'na'</span><span class="p">,</span>
+            
         <span class="p">}</span>
         <span class="n">counts</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">status_dictionary</span><span class="p">)</span>
         <span class="n">failed_api_hit_count</span> <span class="o">=</span> <span class="mi">0</span>
@@ -8672,6 +8676,7 @@ a.anchor-link {
                 
 
                 <span class="n">job_status_payload</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">job_status_response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+                
                
                 <span class="n">failing_key</span> <span class="o">=</span> <span class="s1">'ModelExploration_Status'</span>
                 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">status_dictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
@@ -8701,6 +8706,9 @@ a.anchor-link {
                             <span class="n">failing_key</span> <span class="o">=</span> <span class="n">key</span>
                             <span class="n">status_dictionary</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">job_status_payload</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
                             <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="p">),</span> <span class="s2">":"</span><span class="p">,</span> <span class="n">status_dictionary</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+                
+                <span class="k">if</span> <span class="n">job_status_payload</span><span class="p">[</span><span class="s1">'VunerabilityEngine_Status'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'completed'</span><span class="p">:</span>
+                    <span class="k">break</span>
 
                 <span class="k">if</span> <span class="n">job_status_payload</span><span class="p">[</span><span class="n">failing_key</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'failed'</span><span class="p">:</span>
                     <span class="k">break</span>
