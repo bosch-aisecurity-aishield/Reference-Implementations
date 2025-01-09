@@ -10,8 +10,11 @@ This repository contains reference implementations of an Whisper model for Autom
 
 ## Reference Implementations
 
-- **Evasion:** This implementation demonstrates evasion attacks on the whisper model using.
+- **Evasion:** This implementation demonstrates the evasion assessment on Whisper ASR model
   - [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Audio_Speech_Recognition/audio_speech_recognition_evasion.ipynb)
+ 
+- **Poisoning:** This implementation demonstrates the poisoning assessment on ASR Dataset
+  - [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Audio_Speech_Recognition/audio_speech_recognition_poisoning.ipynb)
 
 ## Dataset
 
