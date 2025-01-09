@@ -1,5 +1,5 @@
 
-# MNIST Image Classification Model with AIShield Integration using Use Model API 
+# MNIST Image Classification Model with AIShield Integration
 
 ![AIShield Logo](https://github.com/bosch-aisecurity-aishield/Reference-Implementations/blob/main/images/AIShield_logo.png)
 
