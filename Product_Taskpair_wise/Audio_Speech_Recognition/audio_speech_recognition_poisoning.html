@@ -7312,6 +7312,7 @@ a.anchor-link {
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -7546,7 +7547,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<a href="https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Audio_Speech_Recognition/audio_speech_recognition_evasion.ipynb" target="_blank">
+<a href="https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Audio_Speech_Recognition/audio_speech_recognition_poisoning.ipynb" target="_blank">
 <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/>
 </a>
 </div>
@@ -8196,10 +8197,10 @@ a.anchor-link {
 <span class="sd">Description : AIShield URL , subscription key and orgid</span>
 <span class="sd">              Initialize the</span>
 <span class="sd">"""</span>
-<span class="n">AIShield</span> <span class="n">Subscription</span><span class="o">&gt;&gt;</span>
-<span class="c1"># base_url = "https://api.aws.boschaishield.com/prod"</span>
-<span class="c1"># url=base_url+"/api/ais/v1.5"</span>
-<span class="c1"># org_id = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' #&lt;&lt;Copy Org_id mentioned in welcome mail after AIShield Subscription&gt;&gt;</span>
+<span class="c1">#&lt;&lt;AIShield Subscription&gt;&gt;</span>
+<span class="n">base_url</span> <span class="o">=</span> <span class="s2">"https://api.aws.boschaishield.com/prod"</span>
+<span class="n">url</span><span class="o">=</span><span class="n">base_url</span><span class="o">+</span><span class="s2">"/api/ais/v1.5"</span>
+<span class="n">org_id</span> <span class="o">=</span> <span class="s1">'&lt;&lt;Org_Id&gt;&gt;'</span> <span class="c1">#&lt;&lt;Copy Org_id mentioned in welcome mail after AIShield Subscription&gt;&gt;</span>
 
 <span class="sd">"""</span>
 <span class="sd">Description: Initialize the AIShield API</span>
@@ -8426,11 +8427,7 @@ a.anchor-link {
 <span class="sd">Description: Payload for AIShield VulnerabilityReport api call</span>
 <span class="sd">"""</span>
 <span class="n">payload</span><span class="o">=</span><span class="p">{}</span>
-<span class="n">payload</span><span class="p">[</span><span class="s1">'use_model_api'</span><span class="p">]</span><span class="o">=</span> <span class="s2">"no"</span>
-<span class="n">payload</span><span class="p">[</span><span class="s1">'model_api_details'</span><span class="p">]</span><span class="o">=</span><span class="s2">"XXXX"</span>
 <span class="n">payload</span><span class="p">[</span><span class="s1">'model_framework'</span><span class="p">]</span><span class="o">=</span><span class="s2">"pytorch"</span>
-<span class="n">payload</span><span class="p">[</span><span class="s1">'normalize_data'</span><span class="p">]</span><span class="o">=</span><span class="s1">'no'</span>
-
 
 <span class="sd">"""</span>
 <span class="sd">Description: Hit AIShield VulnerabilityReport api</span>
