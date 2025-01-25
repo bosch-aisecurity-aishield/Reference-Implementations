@@ -10,7 +10,7 @@ This repository contains reference implementations of an supply chain attacks  f
 ## Reference Implementations
 
 - **Supply Chain Attacks:** This implementation demonstrates supply chain attacks on the models and notebooks.
-  - [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Supply_Chain_Attacks/supply_chain_attacks.ipynb)
+  - [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bosch-aisecurity-aishield/Reference-Implementations/blob/main/Product_Taskpair_wise/Supply_Chain_Attack_Analysis/Supplychain_Analysis_Reference_Implementation.ipynb)
 
 
 ## Dataset
