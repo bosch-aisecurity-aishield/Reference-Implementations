@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>supply_chain_attacks</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Supplychain_Analysis_Reference_Implementation</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7312,6 +7312,7 @@ a.anchor-link {
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -7566,7 +7567,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [80]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -7574,18 +7575,18 @@ a.anchor-link {
 <span class="sd">              if PyPi = True (this notebook will use aishield pypi package for vulnerability analysis)</span>
 <span class="sd">              else = False (this notebook will use aishield api for vulnerability analysis)</span>
 <span class="sd">"""</span>
-<span class="n">pypi</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">pypi</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=95fb5754">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=95fb5754">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [81]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_code_input_scrollable</span><span class="p">():</span>
@@ -7663,29 +7664,6 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<style>
-        .scrollable-code-input {
-            max-height: 500px;
-            overflow-y: scroll;
-        }
-        </style>
-<script>
-        var codeInputCells = document.querySelectorAll('div.code_cell .input');
-        codeInputCells.forEach(function(cell) {
-            cell.classList.add('scrollable-code-input');
-        });
-        </script>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=452a83b9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -7753,7 +7731,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [82]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># #@title Show/Hide Code</span>
@@ -7941,7 +7919,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0ca157e6">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0ca157e6">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7952,18 +7930,6 @@ a.anchor-link {
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">hosted_pdf_url</span> <span class="o">=</span> <span class="s1">'https://aisdocs.blob.core.windows.net/reference/Reports/supply-chain/VulnerabilityReport.pdf'</span>
 <span class="n">display_pdf</span><span class="p">(</span> <span class="n">output_filename</span> <span class="o">=</span> <span class="s2">"vul_sample"</span><span class="p">,</span><span class="n">runtime_environment</span> <span class="o">=</span> <span class="n">runtime_environment</span><span class="p">,</span><span class="n">pdf_path</span> <span class="o">=</span><span class="n">hosted_pdf_url</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<embed height="600px" src="https://aisdocs.blob.core.windows.net/reference/Reports/supply-chain/VulnerabilityReport.pdf" type="application/pdf" width="100%"/>
 </div>
 </div>
 </div>
@@ -8040,7 +8006,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [83]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -8049,11 +8015,12 @@ a.anchor-link {
 <span class="sd">"""</span>
 <span class="n">base_url</span> <span class="o">=</span> <span class="s2">"https://api.aws.boschaishield.com/prod"</span>
 <span class="n">url</span><span class="o">=</span><span class="n">base_url</span><span class="o">+</span><span class="s2">"/api/ais/v1.5"</span>
-<span class="n">org_id</span> <span class="o">=</span> <span class="s1">'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'</span> <span class="c1">#&lt;&lt;Copy Org_id mentioned in welcome mail after AIShield Subscription&gt;&gt;</span>
+<span class="n">org_id</span> <span class="o">=</span> <span class="s1">'xxxx'</span> <span class="c1">#&lt;&lt;Replace xxxx with Org_id mentioned in welcome mail after AIShield Subscription&gt;&gt;</span>
 
 <span class="sd">"""</span>
 <span class="sd">Description: Initialize the AIShield API</span>
 <span class="sd">"""</span>
+<span class="n">pypi</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>
     <span class="c1">#if pypi then , x-api-key generation is taken care from pypi side using given org_id</span>
     <span class="n">aishield_client</span> <span class="o">=</span> <span class="n">ais</span><span class="o">.</span><span class="n">AIShieldApi</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span><span class="n">org_id</span><span class="o">=</span><span class="n">org_id</span><span class="p">)</span>
@@ -8108,83 +8075,41 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b7914958">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="3.2-Model-Registration">3.2 Model Registration<a class="anchor-link" href="#3.2-Model-Registration">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e5db4de5">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [86]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
-<span class="sd">Description: Define the task and analysis type for model registration</span>
-<span class="sd">              "task_type" : refers to the specific type of task being performed, for eg : "image_classification."</span>
-<span class="sd">              "analysis_type" : refers to the specific type of analysis being performed,for eg : "supply-chain.</span>
-<span class="sd">              For more information, check out [https://docs.boschaishield.com/api-docs/lesspostgreater-model-registration#-a-xGGsdVJB3d09cBAck-]</span>
-<span class="sd">"""</span>
-
-<span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>
-
-    <span class="n">task_type</span> <span class="o">=</span> <span class="n">ais</span><span class="o">.</span><span class="n">get_type</span><span class="p">(</span><span class="s2">"task"</span><span class="p">,</span> <span class="s2">"image_classification"</span><span class="p">)</span>
-    <span class="n">analysis_type</span> <span class="o">=</span> <span class="n">ais</span><span class="o">.</span><span class="n">get_type</span><span class="p">(</span><span class="s2">"analysis"</span><span class="p">,</span> <span class="s2">"supply-chain"</span><span class="p">)</span>
-
-
-    <span class="c1">#Perform model registration</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">status</span><span class="p">,</span> <span class="n">job_details</span> <span class="o">=</span> <span class="n">aishield_client</span><span class="o">.</span><span class="n">register_model</span><span class="p">(</span><span class="n">task_type</span><span class="o">=</span><span class="n">task_type</span><span class="p">,</span> <span class="n">analysis_type</span><span class="o">=</span><span class="n">analysis_type</span><span class="p">)</span>
-        <span class="n">model_id</span><span class="p">,</span> <span class="n">file_upload_url</span><span class="p">,</span> <span class="n">model_upload_url</span> <span class="o">=</span> <span class="n">job_details</span><span class="o">.</span><span class="n">model_id</span><span class="p">,</span> <span class="n">job_details</span><span class="o">.</span><span class="n">file_upload_uri</span><span class="p">,</span> \
-                                                                <span class="n">job_details</span><span class="o">.</span><span class="n">model_upload_uri</span>
-
-        <span class="nb">print</span><span class="p">(</span><span class="s1">'Model id is: </span><span class="si">{}</span><span class="s1">. Input artifacts will be uploaded as </span><span class="se">\n</span><span class="s1"> file_upload_url: </span><span class="si">{}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">'</span>
-        <span class="s1">'</span><span class="se">\n</span><span class="s1"> model_upload_url: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">file_upload_url</span><span class="p">,</span> <span class="n">model_upload_url</span><span class="p">))</span>
-    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
-
-<span class="k">else</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Description: call Model registration api to get unique model it and url to upload data, model and label</span>
-<span class="sd">    """</span>
-    <span class="n">model_registration_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">"/model_registration/upload"</span>
-
-    <span class="n">model_registration_payload</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">'task_type'</span><span class="p">:</span><span class="s2">"image_classification"</span><span class="p">,</span>
-        <span class="s2">"analysis_type"</span><span class="p">:</span> <span class="s2">"supply-chain"</span>
-    <span class="p">}</span>
-
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">new_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">model_registration_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">model_registration_payload</span><span class="p">)</span>
-        <span class="n">new_request</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">new_request</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-        <span class="n">model_id</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][</span><span class="s1">'model_id'</span><span class="p">]</span>
-        <span class="n">model_upload_obj</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][</span><span class="s1">'urls'</span><span class="p">][</span><span class="s1">'model_upload_url'</span><span class="p">]</span>
-        <span class="n">files_upload_obj</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][</span><span class="s1">'urls'</span><span class="p">][</span><span class="s1">'file_upload_url'</span><span class="p">]</span>
-
-        <span class="nb">print</span><span class="p">(</span><span class="s1">'model_id: '</span><span class="p">,</span> <span class="n">model_id</span><span class="p">)</span>
-
-    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">new_request</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=CN8Tw6heBU59">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="3.3-Upload-files-(model-and-notebook)-directly-in-.zip-format">3.3 Upload files (model and notebook) directly in .zip format<a class="anchor-link" href="#3.3-Upload-files-(model-and-notebook)-directly-in-.zip-format">¶</a></h3>
+<h3 id="3.2-Supply-chain-Upload-files-(model-and-notebook)-directly-in-.zip-format">3.2 Supply chain Upload files (model and notebook) directly in .zip format<a class="anchor-link" href="#3.2-Supply-chain-Upload-files-(model-and-notebook)-directly-in-.zip-format">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=hjDeTh-sCFEv">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
+<span class="sd">  Description: call Model generate api to get unique model it and url to upload data</span>
+
+<span class="sd">"""</span>
+<span class="n">model_generate_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">"/generate_model_id"</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">new_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">model_generate_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+    <span class="n">new_request</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">new_request</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">model_id</span> <span class="o">=</span> <span class="n">new_request</span><span class="p">[</span><span class="s1">'model_id'</span><span class="p">]</span>
+    <span class="n">upload_obj</span> <span class="o">=</span> <span class="n">new_request</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'model_id: '</span><span class="p">,</span> <span class="n">model_id</span><span class="p">)</span>
+
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">new_request</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -8193,7 +8118,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [71]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -8201,8 +8126,49 @@ a.anchor-link {
 <span class="sd">            or can directly give the path of model or notebook in zip format for performing supply chain scanning</span>
 
 <span class="sd">"""</span>
+<span class="n">to_clone</span><span class="o">=</span><span class="kc">True</span> <span class="c1"># True if directly giving a link to Huggingface,Github or S3 , False is uploading a zip directly</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8ewNLgWrIe3c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">download_zip</span><span class="p">(</span><span class="n">artifact_url</span><span class="p">,</span> <span class="n">dest_dir</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Downloads a ZIP file from the specified URL and saves it to the destination directory.</span>
 
-<span class="n">to_clone</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1">#True for clone repository and false for upload directly to cloud</span>
+<span class="sd">    :param artifact_url: str: URL of the ZIP file to download</span>
+<span class="sd">    :param dest_dir: str: Path to the directory where the ZIP file should be downloaded</span>
+<span class="sd">    :return: str: Path to the downloaded ZIP file</span>
+<span class="sd">    """</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Create the directory if it doesn't exist</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">dest_dir</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">dest_dir</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Created directory: </span><span class="si">{</span><span class="n">dest_dir</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+        <span class="c1"># Download the ZIP file</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">artifact_url</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>  <span class="c1"># Raise an error for HTTP errors</span>
+        <span class="n">zip_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dest_dir</span><span class="p">,</span> <span class="s2">"mnist_model.zip"</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">zip_path</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">iter_content</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="mi">8192</span><span class="p">):</span>
+                <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Downloaded ZIP file to: </span><span class="si">{</span><span class="n">zip_path</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">zip_path</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"An error occurred: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
 </pre></div>
 </div>
 </div>
@@ -8213,60 +8179,64 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [87]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
-<span class="sd">Description: Upload model or notebook in zip format</span>
+<span class="sd">Description: Upload file or notebook in zip format</span>
 
 <span class="sd">"""</span>
+<span class="k">if</span> <span class="n">to_clone</span><span class="o">==</span><span class="kc">True</span><span class="p">:</span>  <span class="c1"># Handle direct upload scenario</span>
 
-<span class="k">if</span> <span class="ow">not</span> <span class="n">to_clone</span><span class="p">:</span>
-    <span class="n">file_path</span> <span class="o">=</span> <span class="s2">""</span> <span class="c1">#full path of files(Notebooks) with file name of 'files.zip'</span>
-    <span class="n">model_path</span> <span class="o">=</span> <span class="s2">""</span>  <span class="c1">#full path of model zip with name of 'model.zip'</span>
-    <span class="n">file_upload</span><span class="o">=</span><span class="kc">True</span>
-    <span class="n">model_upload</span><span class="o">=</span><span class="kc">True</span>
+  <span class="c1"># If the user wants to upload the file manually, specify the artifact path here</span>
+  <span class="c1"># Uncomment and update the line below with the full path of the manually uploaded ZIP file</span>
+  <span class="n">artifact_path</span> <span class="o">=</span> <span class="s2">"xxxx"</span>  <span class="c1"># Replace xxxx with Full path of the ZIP file uploaded manually</span>
 
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">model_path</span><span class="p">):</span>
-        <span class="n">model_upload</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
-        <span class="n">file_upload</span> <span class="o">=</span> <span class="kc">False</span>
+  <span class="n">file_upload</span><span class="o">=</span><span class="kc">True</span>
 
-    <span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Currently pypi is not available for direct upload"</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">def</span> <span class="nf">upload_file</span><span class="p">(</span><span class="n">upload_obj</span><span class="p">,</span> <span class="n">file_path</span><span class="p">):</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">artifact_path</span><span class="p">):</span>
+      <span class="n">file_upload</span> <span class="o">=</span> <span class="kc">True</span>
 
-            <span class="n">url</span> <span class="o">=</span> <span class="n">upload_obj</span><span class="p">[</span><span class="s1">'url'</span><span class="p">]</span>
-            <span class="n">request_payload</span> <span class="o">=</span> <span class="n">upload_obj</span><span class="p">[</span><span class="s1">'fields'</span><span class="p">]</span>
-            <span class="n">files</span><span class="o">=</span><span class="p">[</span>
-                      <span class="p">(</span><span class="s1">'file'</span><span class="p">,(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">file_path</span><span class="p">),</span><span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">),</span><span class="s1">'application/zip'</span><span class="p">))</span>
-                    <span class="p">]</span>
+  <span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">"Currently pypi is not available for direct upload"</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+      <span class="k">def</span> <span class="nf">upload_file</span><span class="p">(</span><span class="n">upload_obj</span><span class="p">,</span> <span class="n">file_path</span><span class="p">):</span>
 
-            <span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>
-            <span class="n">new_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">request_payload</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
-            <span class="n">status_cd</span> <span class="o">=</span> <span class="n">new_request</span><span class="o">.</span><span class="n">status_code</span>
-            <span class="k">if</span> <span class="n">status_cd</span> <span class="o">==</span> <span class="mi">204</span><span class="p">:</span>
-                <span class="n">status</span> <span class="o">=</span> <span class="s1">'upload sucessful'</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">status</span> <span class="o">=</span> <span class="s1">'upload failed'</span>
-            <span class="k">return</span> <span class="n">status</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">upload_obj</span><span class="p">[</span><span class="s1">'artifact_path'</span><span class="p">][</span><span class="s1">'url'</span><span class="p">]</span>
+        <span class="n">request_payload</span> <span class="o">=</span> <span class="n">upload_obj</span><span class="p">[</span><span class="s1">'artifact_path'</span><span class="p">][</span><span class="s1">'fields'</span><span class="p">]</span>
+        <span class="n">files</span><span class="o">=</span><span class="p">[</span>
+                  <span class="p">(</span><span class="s1">'file'</span><span class="p">,(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">file_path</span><span class="p">),</span><span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">),</span><span class="s1">'application/zip'</span><span class="p">))</span> <span class="c1"># Use file_path instead of artifact_path</span>
+                <span class="p">]</span>
 
-<span class="w">        </span><span class="sd">"""</span>
-<span class="sd">        Description: Hit AIShield File Upload API</span>
-<span class="sd">        """</span>
-
-        <span class="k">if</span> <span class="n">file_upload</span><span class="p">:</span>
-          <span class="n">file_upload_status</span> <span class="o">=</span> <span class="n">upload_file</span><span class="p">(</span><span class="n">files_upload_obj</span><span class="p">,</span> <span class="n">file_path</span><span class="p">)</span>
-          <span class="nb">print</span><span class="p">(</span><span class="s1">'files_upload_status: '</span><span class="p">,</span> <span class="n">file_upload_status</span><span class="p">)</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">new_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">request_payload</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
+        <span class="n">status_cd</span> <span class="o">=</span> <span class="n">new_request</span><span class="o">.</span><span class="n">status_code</span>
+        <span class="k">if</span> <span class="n">status_cd</span> <span class="o">==</span> <span class="mi">204</span><span class="p">:</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="s1">'upload sucessful'</span>
         <span class="k">else</span><span class="p">:</span>
-          <span class="nb">print</span><span class="p">(</span><span class="s2">"file is not present at file path"</span><span class="p">)</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="s1">'upload failed'</span>
+        <span class="k">return</span> <span class="n">status</span>
 
-        <span class="k">if</span> <span class="n">model_upload</span><span class="p">:</span>
-           <span class="n">model_upload_status</span> <span class="o">=</span> <span class="n">upload_file</span><span class="p">(</span><span class="n">model_upload_obj</span><span class="p">,</span> <span class="n">model_path</span><span class="p">)</span>
-           <span class="nb">print</span><span class="p">(</span><span class="s1">'model_upload_status: '</span><span class="p">,</span> <span class="n">model_upload_status</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-          <span class="nb">print</span><span class="p">(</span><span class="s2">"model is not present at model path"</span><span class="p">)</span>
+<span class="w">      </span><span class="sd">"""</span>
+<span class="sd">  Description: Hit AIShield File Upload API</span>
+<span class="sd">  """</span>
+  <span class="k">if</span> <span class="n">file_upload</span><span class="p">:</span>
+    <span class="n">file_upload_status</span> <span class="o">=</span> <span class="n">upload_file</span><span class="p">(</span><span class="n">upload_obj</span><span class="p">,</span> <span class="n">artifact_path</span><span class="p">)</span> <span class="c1"># Pass artifact_path to upload_file function</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'files_upload_status: '</span><span class="p">,</span> <span class="n">file_upload_status</span><span class="p">)</span>
+    <span class="n">supply_chain_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">"/supplychain"</span>
+    <span class="n">payload</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">"model_id"</span><span class="p">:</span><span class="n">model_id</span><span class="p">,</span>
+        <span class="s2">"repo_type"</span><span class="p">:</span><span class="s2">"upload"</span>
+             <span class="p">}</span>
+
+    <span class="n">new_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">supply_chain_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+    <span class="n">new_request</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">new_request</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">new_request</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">"* </span><span class="si">{}</span><span class="s2"> : </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">))</span>
+
+    <span class="n">job_id</span><span class="o">=</span><span class="n">new_request</span><span class="p">[</span><span class="s1">'job_id'</span><span class="p">]</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"file is not present at file path"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8290,7 +8260,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="3.4-Clone-Repository-to-detect-files-(model-and-notebook)">3.4 Clone Repository to detect files (model and notebook)<a class="anchor-link" href="#3.4-Clone-Repository-to-detect-files-(model-and-notebook)">¶</a></h3>
+<h3 id="3.3-Clone-Repository-for-scanning">3.3 Clone Repository for scanning<a class="anchor-link" href="#3.3-Clone-Repository-for-scanning">¶</a></h3>
 </div>
 </div>
 </div>
@@ -8299,100 +8269,45 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [73]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
-<span class="sd">Description: Define the repo_type and repo_url for scanning of models and files</span>
-<span class="sd">              "repo_type" : refers to the repository type that supply chain support . e.g - huggingface, github</span>
-<span class="sd">              "repo_url" : refers to the url of repository either from github or huggingface.</span>
-<span class="sd">              For more information, check out [https://docs.boschaishield.com/api-docs/supply-chain-attacks#qxjssSdXPwcv1agc6L12_]</span>
-<span class="sd">"""</span>
-<span class="k">if</span> <span class="n">to_clone</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>
-        <span class="n">repo_type</span><span class="o">=</span><span class="s1">'huggingface'</span> <span class="c1"># github or huggingface</span>
-        <span class="n">repo_url</span><span class="o">=</span><span class="s1">'url of repository'</span><span class="c1">#url of repository that need to be analysed</span>
-        <span class="n">branch_name</span><span class="o">=</span><span class="s1">'main'</span> <span class="c1">#by default it is main</span>
-        <span class="n">depth</span><span class="o">=</span><span class="mi">1</span> <span class="c1"># by default it is 1</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">to_clone</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>  <span class="c1"># Set to False for direct uploads or S3 use</span>
 
-        <span class="n">status</span><span class="p">,</span> <span class="n">detected_files</span><span class="p">,</span> <span class="n">detected_models</span> <span class="o">=</span> <span class="n">aishield_client</span><span class="o">.</span><span class="n">file_and_model_detector</span><span class="p">(</span><span class="n">repo_type</span><span class="o">=</span><span class="n">repo_type</span><span class="p">,</span>
-                                                                                <span class="n">repo_url</span><span class="o">=</span><span class="n">repo_url</span><span class="p">,</span>
-                                                                                <span class="n">branch_name</span><span class="o">=</span><span class="n">branch_name</span><span class="p">,</span>
-                                                                                <span class="n">depth</span><span class="o">=</span><span class="n">depth</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">'Detected models: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">detected_models</span><span class="p">))</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">'Detected files: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">detected_files</span><span class="p">))</span>
+  <span class="n">repo_type</span> <span class="o">=</span> <span class="s2">"xxxx"</span>  <span class="c1"># Replace xxxx with either keywords github or huggingface or s3_bucket</span>
+  <span class="n">repo_url</span> <span class="o">=</span> <span class="s2">"xxxx"</span>  <span class="c1"># Enter your repository URL to scan</span>
+  <span class="n">branch_name</span> <span class="o">=</span> <span class="s2">"main"</span>  <span class="c1"># Default branch (main or master or custom)</span>
+  <span class="n">depth</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Default depth</span>
 
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">repo_type</span> <span class="o">=</span> <span class="s2">"huggingface"</span>  <span class="c1"># github or huggingface</span>
-        <span class="c1"># repo_type = 'github'</span>
-        <span class="n">repo_url</span> <span class="o">=</span> <span class="s2">"url of the repository"</span> <span class="c1"># url of repository that need to be analysed</span>
-        <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
-                <span class="s1">'repo_type'</span><span class="p">:</span><span class="n">repo_type</span><span class="p">,</span>
-                <span class="s2">"repo_url"</span><span class="p">:</span> <span class="n">repo_url</span><span class="p">,</span>
-                <span class="s2">"branch_name"</span><span class="p">:</span><span class="s2">"main"</span><span class="p">,</span> <span class="c1"># default value is  main branch</span>
-                <span class="s2">"depth"</span><span class="p">:</span> <span class="mi">1</span> <span class="c1"># default value is 1</span>
-            <span class="p">}</span>
+  <span class="c1"># Construct payload</span>
+  <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"repo_type"</span><span class="p">:</span> <span class="n">repo_type</span><span class="p">,</span>
+  <span class="s2">"repo_url"</span><span class="p">:</span> <span class="n">repo_url</span><span class="p">,</span>
+  <span class="s2">"branch_name"</span><span class="p">:</span> <span class="n">branch_name</span><span class="p">,</span>
+  <span class="s2">"depth"</span><span class="p">:</span> <span class="n">depth</span>
+  <span class="p">}</span>
 
-        <span class="n">supply_chain_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">"/supplychain"</span>
+  <span class="c1"># Case: Using S3 # Uncomment below lines</span>
+  <span class="c1"># bucket_name = "&lt;your_bucket_name&gt;"</span>
+  <span class="c1"># region = "&lt;your_region&gt;"</span>
+  <span class="c1"># aws_access_key_id = "&lt;your_aws_access_key&gt;"</span>
+  <span class="c1"># aws_secret_access_key = "&lt;your_aws_secret_key&gt;"</span>
 
-        <span class="n">new_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">supply_chain_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
-        <span class="n">new_request</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">new_request</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+  <span class="c1"># Construct payload for S3 # Uncomment below lines</span>
+  <span class="c1"># payload = {</span>
+  <span class="c1"># "repo_type": repo_type,</span>
+  <span class="c1"># "bucket_name": bucket_name,</span>
+  <span class="c1"># "region": region,</span>
+  <span class="c1"># "aws_access_key_id": aws_access_key_id,</span>
+  <span class="c1">#  "aws_secret_access_key": aws_secret_access_key</span>
+  <span class="c1"># }</span>
 
-        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">new_request</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-            <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s2">"status"</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{}</span><span class="s2"> are : "</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
-                <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">value</span><span class="p">:</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="s2">" "</span><span class="o">*</span><span class="mi">20</span><span class="o">+</span><span class="n">file</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{}</span><span class="s2">: </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c8769c47">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="3.5-Select-files-to-Upload-for-performing-supply-chain-scanning">3.5 Select files to Upload for performing supply chain scanning<a class="anchor-link" href="#3.5-Select-files-to-Upload-for-performing-supply-chain-scanning">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2210e50f">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [74]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="n">to_clone</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>
-        <span class="n">model_file_for_scan</span> <span class="o">=</span> <span class="s1">'path of model separated by comma'</span>
-        <span class="n">file_for_scan</span> <span class="o">=</span> <span class="s1">'path of notebooks separated by commma'</span>
-
-        <span class="n">upload_status</span> <span class="o">=</span> <span class="n">aishield_client</span><span class="o">.</span><span class="n">upload_repo_artifacts</span><span class="p">(</span><span class="n">model_id</span><span class="o">=</span><span class="n">model_id</span><span class="p">,</span>
-                                                    <span class="n">repo_type</span><span class="o">=</span><span class="n">repo_type</span><span class="p">,</span>
-                                                    <span class="n">repo_url</span><span class="o">=</span><span class="n">repo_url</span><span class="p">,</span>
-                                                    <span class="n">branch_name</span><span class="o">=</span><span class="n">branch_name</span><span class="p">,</span>
-                                                    <span class="n">depth</span><span class="o">=</span><span class="n">depth</span><span class="p">,</span>
-                                                    <span class="n">model_file</span><span class="o">=</span><span class="n">model_file_for_scan</span><span class="p">,</span>
-                                                    <span class="n">files</span><span class="o">=</span><span class="n">file_for_scan</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">'upload status: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">', '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">upload_status</span><span class="p">)))</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">payload</span><span class="p">[</span><span class="s2">"upload_file"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"yes"</span>
-        <span class="n">payload</span><span class="p">[</span><span class="s2">"model_id"</span><span class="p">]</span> <span class="o">=</span> <span class="n">model_id</span>
-        <span class="n">payload</span><span class="p">[</span><span class="s2">"model_file"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"path of the model"</span><span class="p">]</span><span class="c1"># give coma separated list of model path from repo</span>
-        <span class="n">payload</span><span class="p">[</span><span class="s2">"files"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"path of file"</span><span class="p">]</span> <span class="c1"># give coma separated list of notebooks and requirements.txt files</span>
-
-        <span class="n">new_request_upload</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">supply_chain_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
-        <span class="n">data_upload_status</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">new_request_upload</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"model and file upload status"</span><span class="p">,</span><span class="n">data_upload_status</span><span class="p">)</span>
+  <span class="n">supply_chain_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">"/supplychain"</span>
+  <span class="n">new_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">supply_chain_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+  <span class="n">new_request</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">new_request</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+  <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">new_request</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"* </span><span class="si">{}</span><span class="s2"> : </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">))</span>
+  <span class="n">job_id</span><span class="o">=</span><span class="n">new_request</span><span class="p">[</span><span class="s1">'job_id'</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -8406,80 +8321,6 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><img alt="No description has been provided for this image" src="https://aisdocs.blob.core.windows.net/reference/Workflow Images/aw3.png"/></p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0758139d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="3.6-Model-Analysis">3.6 Model Analysis<a class="anchor-link" href="#3.6-Model-Analysis">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=251ad457">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [88]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
-<span class="sd">Description: Specify the appropriate configs required for vulnerability analysis and trigger model analysis</span>
-<span class="sd">"""</span>
-
-
-<span class="k">if</span> <span class="n">pypi</span><span class="p">:</span>
-    <span class="n">vuln_config</span> <span class="o">=</span> <span class="n">ais</span><span class="o">.</span><span class="n">VulnConfig</span><span class="p">(</span><span class="n">task_type</span><span class="o">=</span><span class="n">task_type</span><span class="p">,</span>
-                                 <span class="n">analysis_type</span><span class="o">=</span><span class="n">analysis_type</span><span class="p">,</span>
-                                 <span class="n">defense_generate</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-
-    <span class="n">my_status</span><span class="p">,</span> <span class="n">job_details</span> <span class="o">=</span> <span class="n">aishield_client</span><span class="o">.</span><span class="n">vuln_analysis</span><span class="p">(</span><span class="n">model_id</span><span class="o">=</span><span class="n">model_id</span><span class="p">,</span> <span class="n">vuln_config</span><span class="o">=</span><span class="n">vuln_config</span><span class="p">)</span>
-    <span class="n">job_id</span> <span class="o">=</span> <span class="n">job_details</span><span class="o">.</span><span class="n">job_id</span>
-    <span class="n">job_dashboard_uri</span> <span class="o">=</span> <span class="n">job_details</span><span class="o">.</span><span class="n">job_dashboard_uri</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">'status: </span><span class="si">{}</span><span class="s1">. Job_id: </span><span class="si">{}</span><span class="s1">. Please save this job_id for future reference'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">my_status</span><span class="p">,</span> <span class="n">job_id</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">'job_dashboard_uri: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">job_dashboard_uri</span><span class="p">))</span>
-
-
-<span class="k">else</span><span class="p">:</span>
-
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Description: Payload for AIShield VulnerabilityReport api call</span>
-<span class="sd">    """</span>
-    <span class="n">payload</span><span class="o">=</span><span class="p">{}</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"IC--Supply_chain parameters are:"</span><span class="p">,</span><span class="n">payload</span><span class="p">)</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Description: Hit AIShield VulnerabilityReport api</span>
-<span class="sd">    """</span>
-    <span class="n">model_analysis_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">"/model_analyse/</span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">to_clone</span><span class="p">:</span>
-
-        <span class="k">if</span> <span class="n">data_upload_status</span><span class="p">[</span><span class="s1">'model_upload_status'</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"successful"</span> <span class="p">:</span>
-            <span class="n">new_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">model_analysis_url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
-            <span class="n">new_request</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">new_request</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">new_request</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">"* </span><span class="si">{}</span><span class="s2"> : </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">))</span>
-
-    <span class="k">else</span><span class="p">:</span>
-
-        <span class="k">if</span> <span class="n">model_upload_status</span><span class="o">==</span><span class="s1">'upload sucessful'</span><span class="p">:</span>
-            <span class="n">new_request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">"POST"</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">model_analysis_url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
-            <span class="n">new_request</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">new_request</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">new_request</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">"* </span><span class="si">{}</span><span class="s2"> : </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">))</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">model_upload_status</span> <span class="o">==</span><span class="s2">"upload failed"</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">"Model or notebook is not uploaded."</span><span class="p">)</span>
-
-    <span class="n">job_id</span><span class="o">=</span><span class="n">new_request</span><span class="p">[</span><span class="s1">'job_id'</span><span class="p">]</span>
-</pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -8499,7 +8340,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [90]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -8603,7 +8444,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [77]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">report_path</span> <span class="o">=</span> <span class="s2">"reports/"</span>
@@ -8618,7 +8459,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [78]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">download_artifact</span><span class="p">(</span><span class="n">job_id</span><span class="p">,</span> <span class="n">report_path</span><span class="p">,</span> <span class="n">report_type</span><span class="o">=</span><span class="s1">'Vulnerability'</span><span class="p">,</span> <span class="n">file_format</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
@@ -8672,12 +8513,12 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ce56da2b">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ce56da2b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [79]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
@@ -8696,19 +8537,6 @@ a.anchor-link {
 
     <span class="n">vul_report</span> <span class="o">=</span> <span class="n">download_artifact</span><span class="p">(</span><span class="n">job_id</span><span class="o">=</span><span class="n">job_id</span><span class="p">,</span> <span class="n">report_path</span><span class="o">=</span> <span class="n">report_path</span><span class="p">,</span> <span class="n">report_type</span><span class="o">=</span><span class="s1">'Vulnerability'</span><span class="p">,</span> <span class="n">file_format</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>received report_type : Vulnerability and file format is: 2
-</pre>
 </div>
 </div>
 </div>
